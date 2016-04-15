@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+#
+# install packages
+#
+sudo apt-get install openssh-client openssh-server openssh-sftp-server
+
+# link config files
+
+# generate host keys
+
+# generate user keys
+
+# generate moduli

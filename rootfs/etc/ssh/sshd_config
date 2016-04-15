@@ -1,0 +1,241 @@
+# https://lists.debian.org/debian-ssh/2015/01/msg00015.html
+
+#*******************************************************************************
+#*** General
+#*** ***
+#*******************************************************************************
+##LogLevel		INFO
+##SyslogFacility	AUTH
+
+
+##PidFile		/var/run/sshd.pid
+
+
+##StrictModes	yes
+
+
+
+
+#*******************************************************************************
+#*** System Techniques
+#*** ***
+#*******************************************************************************
+UsePrivilegeSeparation	sandbox
+
+
+
+
+#*******************************************************************************
+#*** Networking
+#*** ***
+#*******************************************************************************
+##AddressFamily	any
+
+##Port		22
+ListenAddress	0.0.0.0
+ListenAddress	::
+
+
+TCPKeepAlive	no
+##IPQoS		lowdelay throughput
+
+
+##UseDNS	yes
+
+
+##MaxStartups	10:30:100
+##MaxSessions	10
+
+
+
+
+#*******************************************************************************
+#*** Secure Shell (SSH) Protocol
+#*** ***
+#*******************************************************************************
+Protocol	2
+
+
+##VersionAddendum	none
+##DebianBanner		yes
+
+##Banner		
+
+
+#Note: In general, compression may be abused as an oracle for side-channel attacks when attackers can inject chosen-plaintexts into the transferred (and encrypted) data (see for example the CRIME attack). Therefore, compression must not be used when such injection (for example via content like URIs or account names within log files, mails or via uploaded files) into SSH-transferred data (from both, the client or the server) might be possible. If compression is enabled, then only “delayed” compression (algorithm “zlib@openssh.com”) must be used.
+Compression		no
+
+ClientAliveInterval	15
+ClientAliveCountMax	8
+
+
+GSSAPIKeyExchange	no
+
+#
+# https://stribika.github.io/2015/01/04/secure-secure-shell.html
+#
+
+KexAlgorithms		curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+ 
+#Note: Non-AEAD cipher algorithms (for example “aes256-ctr”, “aes192-ctr” and “aes128-ctr”) must not be allowed when non-EtM MAC algorithms are used.
+Ciphers			chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+ 
+#Note: Non-EtM MAC algorithms should generally not be allowed and must not be allowed when non-AEAD cipher algorithms (for example “aes256-ctr”, “aes192-ctr” and “aes128-ctr”) are used.
+#MACs			hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com
+
+#PuTTY does not support Encrypt-then-MAC, gnaaa!
+MACs			hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+
+ServerKeyBits		4096
+KeyRegenerationInterval	10m
+RekeyLimit		default 1h
+
+
+
+
+#*******************************************************************************
+#*** Server Authentication
+#*** ***
+#*******************************************************************************
+HostKey			/etc/ssh/keys/ssh_host_key_ed25519
+HostKey			/etc/ssh/keys/ssh_host_key_rsa
+
+# Do not use! https://stribika.github.io/2015/01/04/secure-secure-shell.html
+#HostKey		/etc/ssh/keys/ssh_host_key_ecdsa
+
+#Note: SSH Version 2 DSA host keys are implicitly disabled.
+#HostKey		/etc/ssh/keys/ssh_host_key_dsa
+#Note: SSH Version 1 RSA host keys are implicitly disabled.
+#HostKey		/etc/ssh/keys/ssh_host_key
+##HostKeyAgent		
+##HostCertificate	
+
+
+
+
+#*******************************************************************************
+#*** Client Authentication Methods
+#*** ***
+#*******************************************************************************
+PasswordAuthentication		yes
+PermitEmptyPasswords		no
+
+KbdInteractiveAuthentication	yes
+
+ChallengeResponseAuthentication	no
+
+RhostsRSAAuthentication		no
+
+HostbasedAuthentication		no
+HostbasedUsesNameFromPacketOnly	no
+
+KerberosAuthentication		no
+KerberosOrLocalPasswd		no
+##KerberosGetAFSToken		no
+##KerberosTicketCleanup		yes
+
+GSSAPIAuthentication		no
+GSSAPIStrictAcceptorCheck	yes
+##GSSAPIStoreCredentialsOnRekey	no
+##GSSAPICleanupCredentials	yes
+
+RSAAuthentication		no
+
+PubkeyAuthentication		yes
+
+
+IgnoreUserKnownHosts	yes
+IgnoreRhosts		yes
+
+
+
+
+#*******************************************************************************
+#*** Client Authentication And Authorisation
+#*** ***
+#*******************************************************************************
+#AuthenticationMethods	publickey
+
+LoginGraceTime		60
+MaxAuthTries		4
+
+
+##RevokedKeys			
+
+##AuthorizedKeysCommand		none
+AuthorizedKeysCommandUser	invalid
+AuthorizedKeysFile		.ssh/authorized_keys
+
+##TrustedUserCAKeys		
+##AuthorizedPrincipalsFile	
+
+
+#Note: These directives are processed in the following order: DenyUsers,
+#AllowUsers, DenyGroups, AllowGroups
+##DenyUsers	
+#DenyUsers	*
+#AllowUsers	nonexistent
+#AllowUsers	root
+##DenyGroups	
+##AllowGroups	*
+
+PermitRootLogin	yes
+
+
+
+
+#*******************************************************************************
+#*** Session
+#*** ***
+#*******************************************************************************
+UsePAM		yes
+##UseLogin	no
+
+
+##PermitTTY		yes
+##AllowAgentForwarding	yes
+##PermitUserRC		yes
+
+AcceptEnv		LANG LC_*
+PermitUserEnvironment	no
+
+
+##PrintLastLog	yes
+PrintMotd	yes
+
+
+##ChrootDirectory	
+##ForceCommand		
+
+
+
+
+#*******************************************************************************
+#*** Forwarding
+#*** ***
+#*******************************************************************************
+##AllowStreamLocalForwarding	yes
+StreamLocalBindMask		0177
+StreamLocalBindUnlink		no
+
+##AllowTcpForwarding		yes
+##PermitOpen			any
+
+PermitTunnel			no
+
+X11Forwarding			yes
+X11UseLocalhost			yes
+##X11DisplayOffset		10
+##XAuthLocation			/usr/bin/xauth
+
+
+GatewayPorts	no
+
+
+
+
+#*******************************************************************************
+#*** Subsystems
+#*** ***
+#*******************************************************************************
+Subsystem	sftp /usr/lib/openssh/sftp-server

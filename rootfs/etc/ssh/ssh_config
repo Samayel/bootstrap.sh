@@ -1,0 +1,231 @@
+# https://lists.debian.org/debian-ssh/2015/01/msg00015.html
+
+Host *
+
+
+
+
+#*******************************************************************************
+#*** General
+#*** ***
+#*******************************************************************************
+##IgnoreUnknown	
+
+
+##LogLevel	INFO
+
+
+##BatchMode			no
+##NumberOfPasswordPrompts	3
+
+# Ensure KnownHosts are unreadable if leaked - it is otherwise easier to know which hosts your keys have access to.
+HashKnownHosts			yes
+##VisualHostKey			no
+
+
+
+
+#*******************************************************************************
+#*** Networking
+#*** ***
+#*******************************************************************************
+##AddressFamily			any
+
+##UsePrivilegedPort		no
+##BindAddress			
+
+##Port				22
+##HostName			
+
+##CanonicalizeHostname		no
+##CanonicalDomains		
+##CanonicalizePermittedCNAMEs	
+CanonicalizeMaxDots		0
+##CanonicalizeFallbackLocal	yes
+
+
+TCPKeepAlive	no
+##IPQoS		lowdelay throughput
+
+
+##ProxyCommand		none
+##ProxyUseFdpass	no
+
+UseRoaming		no
+
+
+##ConnectTimeout	none
+##ConnectionAttempts	1
+
+
+
+
+#*******************************************************************************
+#*** Secure Shell (SSH) Protocol
+#*** ***
+#*******************************************************************************
+Protocol	2
+
+
+#Note: This is not set system-widely to a value like “~/.ssh/control-mux/%l_%r@%h:%p” (TODO: plus the “identity symbol” and similar as from #2321) because not every user has a home directory. 
+#TODO: Once OpenSSH bugs #2311 (https://bugzilla.mindrot.org/show_bug.cgi?id=2311) and #2321 (https://bugzilla.mindrot.org/show_bug.cgi?id=2321) have been solved, consider(!) to either set this to a value like “/tmp/ssh-control-mux_%u@%l_%r@%h:%p” (plus the “identity symbol” and similar as from #2321) or change it to the implicit default value of “none” (since it is then no longer security relevant because of #2311). But take into account, that even further things than just the identity (as in #2321) may change the SSH connection (that would result depending on whether control channel multiplexing is used or not) and therefore it may be desired to keep an explicit value of “none”.
+ControlPath	none
+##ControlMaster	no
+ControlPersist	1s
+
+
+#Note: In general, compression may be abused as an oracle for side-channel attacks when attackers can inject chosen-plaintexts into the transferred (and encrypted) data (see for example the CRIME attack). Therefore, compression must not be used when such injection (for example via content like URIs or account names within log files, mails or via uploaded files) into SSH-transferred data (from both, the client or the server) might be possible.
+Compression		no
+##CompressionLevel	6
+
+ServerAliveInterval	15
+ServerAliveCountMax	8
+
+
+GSSAPIKeyExchange	no
+
+
+#
+# https://stribika.github.io/2015/01/04/secure-secure-shell.html
+#
+
+HostKeyAlgorithms	ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa
+
+KexAlgorithms		curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+
+#Note: Non-AEAD cipher algorithms (for example “aes256-ctr”, “aes192-ctr” and “aes128-ctr”) must not be allowed when non-EtM MAC algorithms are used.
+Ciphers			chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+
+#Note: Non-EtM MAC algorithms should generally not be allowed and must not be allowed when non-AEAD cipher algorithms (for example “aes256-ctr”, “aes192-ctr” and “aes128-ctr”) are used.
+#MACs			hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com
+
+#GitHub does not support Encrypt-then-MAC, gnaaa!
+MACs			hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+
+RekeyLimit		default 1h
+
+
+
+
+#*******************************************************************************
+#*** Server Authentication
+#*** ***
+#*******************************************************************************
+StrictHostKeyChecking			no
+
+CheckHostIP				yes
+VerifyHostKeyDNS			no
+NoHostAuthenticationForLocalhost	no
+
+
+GlobalKnownHostsFile	/etc/ssh/ssh_known_hosts
+UserKnownHostsFile	~/.ssh/known_hosts
+
+
+##HostKeyAlias	
+
+
+
+
+#*******************************************************************************
+#*** Client Authentication Methods
+#*** ***
+#*******************************************************************************
+##PasswordAuthentication		yes
+
+##KbdInteractiveAuthentication		yes
+##KbdInteractiveDevices			
+
+##ChallengeResponseAuthentication	yes
+
+##RhostsRSAAuthentication		no
+
+##HostbasedAuthentication		no
+EnableSSHKeysign			no
+
+##GSSAPIAuthentication			no
+GSSAPIDelegateCredentials		no
+GSSAPIRenewalForcesRekey		no
+GSSAPITrustDns				no
+##GSSAPIClientIdentity			
+##GSSAPIServerIdentity			
+
+RSAAuthentication			no
+
+##PubkeyAuthentication			yes
+
+
+
+
+#*******************************************************************************
+#*** Client Authentication And Authorisation
+#*** ***
+#*******************************************************************************
+PreferredAuthentications		gssapi-keyex,gssapi-with-mic,hostbased,publickey,keyboard-interactive,password
+
+
+##IdentitiesOnly	no
+
+#Note: Identities are presented to SSH servers in the order as they are specified in the SSH client configuration and followed by identities provided by the SSH authentication agent.
+IdentityFile		~/.ssh/id_ed25519
+IdentityFile		~/.ssh/id_rsa
+
+# Do not use! https://stribika.github.io/2015/01/04/secure-secure-shell.html
+#IdentityFile		~/.ssh/id_ecdsa
+
+#Note: SSH Version 2 DSA identities are implicitly disabled.
+#IdentityFile		~/.ssh/id_dsa
+#Note: SSH Version 1 RSA identities are implicitly disabled.
+#IdentityFile		~/.ssh/identity
+##PKCS11Provider	
+
+
+##User	
+
+
+
+
+#*******************************************************************************
+#*** Session
+#*** ***
+#*******************************************************************************
+##RequestTTY	auto
+ForwardAgent	no
+SendEnv		LANG LC_*
+
+
+##EscapeChar		~
+
+PermitLocalCommand	no
+
+
+##LocalCommand	none
+
+
+
+
+#*******************************************************************************
+#*** Forwarding
+#*** ***
+#*******************************************************************************
+StreamLocalBindMask	0177
+StreamLocalBindUnlink	no
+
+Tunnel			no
+##TunnelDevice		any:any
+
+ForwardX11		no
+ForwardX11Trusted	no
+ForwardX11Timeout	0s
+##XAuthLocation		/usr/bin/xauth
+
+
+ExitOnForwardFailure	yes
+##ClearAllForwardings	no
+
+GatewayPorts		no
+
+
+##LocalForward		
+##RemoteForward		
+##DynamicForward	
