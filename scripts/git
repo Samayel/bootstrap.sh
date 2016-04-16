@@ -6,4 +6,4 @@
 
 mv ~/.gitconfig ~/.gitconfig~
 
-ln -s ~/bootstrap.sh/homefs/.gitconfig ~/.gitconfig
+ln -sr ~/bootstrap.sh/homefs/.gitconfig ~/.gitconfig

@@ -6,4 +6,4 @@
 
 mv ~/.joerc ~/.joerc~
 
-ln -s ~/bootstrap.sh/homefs/.joerc ~/.joerc
+ln -sr ~/bootstrap.sh/homefs/.joerc ~/.joerc

@@ -6,4 +6,4 @@
 
 mv ~/.screenrc ~/.screenrc~
 
-ln -s ~/bootstrap.sh/homefs/.screenrc ~/.screenrc
+ln -sr ~/bootstrap.sh/homefs/.screenrc ~/.screenrc
