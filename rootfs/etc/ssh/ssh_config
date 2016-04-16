@@ -168,10 +168,8 @@ PreferredAuthentications		gssapi-keyex,gssapi-with-mic,hostbased,publickey,keybo
 
 #Note: Identities are presented to SSH servers in the order as they are specified in the SSH client configuration and followed by identities provided by the SSH authentication agent.
 IdentityFile		~/.ssh/id_ed25519
+IdentityFile		~/.ssh/id_ecdsa
 IdentityFile		~/.ssh/id_rsa
-
-# Do not use! https://stribika.github.io/2015/01/04/secure-secure-shell.html
-#IdentityFile		~/.ssh/id_ecdsa
 
 #Note: SSH Version 2 DSA identities are implicitly disabled.
 #IdentityFile		~/.ssh/id_dsa

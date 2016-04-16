@@ -3,12 +3,71 @@
 #
 # install packages
 #
-sudo apt-get install openssh-client openssh-server openssh-sftp-server
 
+apt-get install openssh-client openssh-server openssh-sftp-server
+
+
+
+#
 # link config files
+#
 
+mv /etc/ssh/ssh_config  /etc/ssh/ssh_config~
+mv /etc/ssh/sshd_config /etc/ssh/sshd_config~
+
+ln -s ~/bootstrap.sh/rootfs/etc/ssh/ssh_config  /etc/ssh/ssh_config
+ln -s ~/bootstrap.sh/rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
+
+
+
+#
 # generate host keys
+#
 
+rm /etc/ssh/ssh_host_dsa_key     /etc/ssh/ssh_host_dsa_key.pub
+rm /etc/ssh/ssh_host_ecdsa_key   /etc/ssh/ssh_host_ecdsa_key.pub
+rm /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub
+rm /etc/ssh/ssh_host_rsa_key     /etc/ssh/ssh_host_rsa_key.pub
+
+mkdir /etc/ssh/keys
+
+ssh-keygen -t rsa     -b 4096 -f /etc/ssh/keys/ssh_host_key_rsa
+ssh-keygen -t ecdsa   -b 384  -f /etc/ssh/keys/ssh_host_key_ecdsa
+ssh-keygen -t ed25519         -f /etc/ssh/keys/ssh_host_key_ed25519
+
+
+
+#
 # generate user keys
+#
 
-# generate moduli
+ssh-keygen -t rsa     -b 4096 -f ~/.ssh/id_rsa
+ssh-keygen -t ecdsa   -b 384  -f ~/.ssh/id_ecdsa
+ssh-keygen -t ed25519         -f ~/.ssh/id_ed25519
+
+
+
+#
+# download moduli from https://2ton.com.au/dhtool/
+#
+
+apt-get install curl
+
+mv /etc/ssh/moduli /etc/ssh/moduli~
+
+curl https://2ton.com.au/dhparam/2048/ssh  > /etc/ssh/moduli
+curl https://2ton.com.au/dhparam/3072/ssh >> /etc/ssh/moduli
+curl https://2ton.com.au/dhparam/4096/ssh >> /etc/ssh/moduli
+curl https://2ton.com.au/dhparam/8192/ssh >> /etc/ssh/moduli
+
+
+
+#
+# run dhtool from https://2ton.com.au/HeavyThing-1.16.tar.gz
+#
+
+wget https://2ton.com.au/HeavyThing-1.16.tar.gz
+tar xzf HeavyThing-1.16.tar.gz
+cp HeavyThing-1.16/dhtool/dhtool /usr/local/bin
+
+dhtool /etc/ssh/moduli | tee /etc/ssh/moduli.dhtool

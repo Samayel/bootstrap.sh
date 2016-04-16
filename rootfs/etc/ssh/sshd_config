@@ -98,10 +98,9 @@ RekeyLimit		default 1h
 #*** ***
 #*******************************************************************************
 HostKey			/etc/ssh/keys/ssh_host_key_ed25519
+HostKey			/etc/ssh/keys/ssh_host_key_ecdsa
 HostKey			/etc/ssh/keys/ssh_host_key_rsa
 
-# Do not use! https://stribika.github.io/2015/01/04/secure-secure-shell.html
-#HostKey		/etc/ssh/keys/ssh_host_key_ecdsa
 
 #Note: SSH Version 2 DSA host keys are implicitly disabled.
 #HostKey		/etc/ssh/keys/ssh_host_key_dsa
