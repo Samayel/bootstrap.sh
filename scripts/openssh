@@ -60,4 +60,4 @@ wget https://2ton.com.au/HeavyThing-1.16.tar.gz
 tar xzf HeavyThing-1.16.tar.gz
 cp HeavyThing-1.16/dhtool/dhtool /usr/local/bin
 
-dhtool /etc/ssh/moduli | tee /etc/ssh/moduli.dhtool
+### run later: dhtool /etc/ssh/moduli | tee /etc/ssh/moduli.dhtool
