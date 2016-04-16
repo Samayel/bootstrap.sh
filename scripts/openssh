@@ -1,14 +1,6 @@
 #!/usr/bin/env sh
 
 #
-# install packages
-#
-
-apt-get install openssh-client openssh-server openssh-sftp-server
-
-
-
-#
 # link config files
 #
 
@@ -50,8 +42,6 @@ ssh-keygen -t ed25519         -f ~/.ssh/id_ed25519
 #
 # download moduli from https://2ton.com.au/dhtool/
 #
-
-apt-get install curl
 
 mv /etc/ssh/moduli /etc/ssh/moduli~
 

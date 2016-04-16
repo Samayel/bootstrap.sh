@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+#
+# link config files
+#
+
+mv ~/.gitconfig ~/.gitconfig~
+
+ln -s ~/bootstrap.sh/homefs/.gitconfig ~/.gitconfig

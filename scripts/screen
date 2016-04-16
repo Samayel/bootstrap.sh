@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+#
+# link config files
+#
+
+mv ~/.screenrc ~/.screenrc~
+
+ln -s ~/bootstrap.sh/homefs/.screenrc ~/.screenrc
