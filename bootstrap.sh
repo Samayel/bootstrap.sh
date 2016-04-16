@@ -5,3 +5,4 @@
 ./scripts/joe
 ./scripts/screen
 ./scripts/git
+./scripts/postfix

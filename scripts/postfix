@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+echo "root: johm@quyo.de" >> /etc/aliases
+newaliases
+service postfix restart

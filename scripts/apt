@@ -11,3 +11,6 @@ apt-get install vim joe nano
 apt-get install git
 apt-get install mc
 apt-get install haveged
+apt-get install chrony
+apt-get install htop
+apt-get install postfix logcheck
