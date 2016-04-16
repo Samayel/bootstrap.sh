@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+apt-get update
+apt-get upgrade
+apt-get install cron-apt
+
+apt-get install openssh-client openssh-server openssh-sftp-server
+apt-get install wget curl
+apt-get install screen tmux dtach
+apt-get install vim joe nano
+apt-get install git
+apt-get install mc
+apt-get install haveged
