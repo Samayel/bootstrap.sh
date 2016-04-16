@@ -1,8 +1,11 @@
 #!/usr/bin/env sh
 
-./scripts/apt
-./scripts/openssh
-./scripts/joe
-./scripts/screen
-./scripts/git
-./scripts/postfix
+mkdir ~/tmp
+cd ~/tmp
+
+~/bootstrap.sh/scripts/apt
+~/bootstrap.sh/scripts/openssh
+~/bootstrap.sh/scripts/joe
+~/bootstrap.sh/scripts/screen
+~/bootstrap.sh/scripts/git
+~/bootstrap.sh/scripts/postfix

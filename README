@@ -1,8 +1,7 @@
-cd ~
 apt-get update
 apt-get install screen git
 screen
+
+cd ~
 git clone https://github.com/Samayel/bootstrap.sh.git
-mkdir tmp
-cd tmp
 ~/bootstrap.sh/bootstrap.sh
