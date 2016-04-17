@@ -367,7 +367,10 @@
 
  Default local options
 -highlight
+-tab 4
+-spaces 
 -istep 4
+ -linums
 
  Perforce macro: use this macro (put in first column) to have joe "p4 edit"
  a file you're about to change.
