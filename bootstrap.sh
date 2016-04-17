@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+~/bootstrap.sh/scripts/timezone
+
 mkdir ~/tmp
 cd ~/tmp
 
