@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: ssh_dispatch_run_fatal: Connection to [^[:space:]]+: no matching (MAC|cipher|key exchange method) found \[preauth\]$" >> /etc/logcheck/ignore.d.server/ssh
+echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [^[:space:]]+ \[preauth\]$" >> /etc/logcheck/ignore.d.server/ssh
