@@ -4,8 +4,7 @@
 # link config files
 #
 
-mv /etc/joe/joerc   /etc/joe/joerc~
-mv /etc/joe/ftyperc /etc/joe/ftyperc~
+mv ~/.joerc ~/.joerc~
 
-ln -s ~/bootstrap.sh/rootfs/etc/joe/joerc   /etc/joe/joerc
-ln -s ~/bootstrap.sh/rootfs/etc/joe/ftyperc /etc/joe/ftyperc
+ln -sr ~/bootstrap.sh/homefs/.joerc ~/.joerc
+ln -sr ~/bootstrap.sh/homefs/.joe   ~/.joe
