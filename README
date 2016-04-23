@@ -1,3 +1,9 @@
+## Remote
+
+BOOTSTRAP_TARGET=root@host ./remote-bootstrap
+
+## Local
+
 apt-get update
 apt-get install screen git
 screen

@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+# http://zaiste.net/2014/08/a_few_ways_to_execute_commands_remotely_using_ssh/
+
+ssh -t $BOOTSTRAP_TARGET bash -c "'
+    apt-get update
+    apt-get install screen git
+
+    cd ~
+    git clone https://github.com/Samayel/bootstrap.sh.git
+    ~/bootstrap.sh/bootstrap.sh
+'"
