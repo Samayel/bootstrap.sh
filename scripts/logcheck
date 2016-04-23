@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 
-echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: ssh_dispatch_run_fatal: Connection to [^[:space:]]+: no matching (MAC|cipher|key exchange method) found \[preauth\]$" >> /etc/logcheck/ignore.d.server/ssh
-echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [^[:space:]]+ \[preauth\]$" >> /etc/logcheck/ignore.d.server/ssh
+echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by [:.[:xdigit:]]+ port [[:digit:]]+ \[preauth\]$" >> /etc/logcheck/ignore.d.server/ssh
+echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]+:11: disconnected by user$" >> /etc/logcheck/ignore.d.server/ssh
+echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [:.[:xdigit:]]+ port [[:digit:]]+$" >> /etc/logcheck/ignore.d.server/ssh
+echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]+: no matching key exchange method found. Their offer:" >> /etc/logcheck/ignore.d.server/ssh
