@@ -6,4 +6,4 @@
 
 mv /etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh~
 
-ln -s ~/bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh
+ln -s /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh

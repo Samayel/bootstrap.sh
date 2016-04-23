@@ -3,16 +3,16 @@
 apt-get update
 apt-get upgrade
 
-apt-get install console-data
+apt-get install -y console-data
 
-apt-get install openssh-client openssh-server openssh-sftp-server
-apt-get install wget curl
-apt-get install screen tmux dtach
-apt-get install vim joe nano
-apt-get install git
-apt-get install mc
-apt-get install haveged
-apt-get install chrony
-apt-get install htop
-apt-get install postfix logcheck
-apt-get install cron-apt
+apt-get install -y openssh-client openssh-server openssh-sftp-server
+apt-get install -y wget curl
+apt-get install -y screen tmux dtach
+apt-get install -y vim joe nano
+apt-get install -y git
+apt-get install -y mc
+apt-get install -y haveged
+apt-get install -y chrony
+apt-get install -y htop
+apt-get install -y postfix logcheck
+apt-get install -y cron-apt
