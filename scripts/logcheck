@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 
-echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by [:.[:xdigit:]]+ port [[:digit:]]+ \[preauth\]$" >> /etc/logcheck/ignore.d.server/ssh
-echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]+:11: (disconnected by user|Bye Bye)?( \[preauth\])?$" >> /etc/logcheck/ignore.d.server/ssh
-echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [:.[:xdigit:]]+ port [[:digit:]]+( \[preauth\])?$" >> /etc/logcheck/ignore.d.server/ssh
-echo "^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]+: no matching key exchange method found. Their offer:" >> /etc/logcheck/ignore.d.server/ssh
+#
+# link files
+#
+
+mv /etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh~
+
+ln -s ~/bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh
