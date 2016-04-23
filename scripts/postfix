@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+sed --in-place 's/^inet_interfaces = all$/inet_interfaces = loopback-only/' /etc/postfix/main.cf
+
 echo "root: johm@quyo.de" >> /etc/aliases
 newaliases
+
 service postfix restart
