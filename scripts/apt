@@ -2,7 +2,8 @@
 
 apt-get update
 apt-get upgrade
-apt-get install cron-apt
+
+apt-get install console-data
 
 apt-get install openssh-client openssh-server openssh-sftp-server
 apt-get install wget curl
@@ -14,3 +15,4 @@ apt-get install haveged
 apt-get install chrony
 apt-get install htop
 apt-get install postfix logcheck
+apt-get install cron-apt

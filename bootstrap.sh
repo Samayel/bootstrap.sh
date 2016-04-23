@@ -12,3 +12,5 @@ cd ~/tmp
 ~/bootstrap.sh/scripts/git
 ~/bootstrap.sh/scripts/postfix
 ~/bootstrap.sh/scripts/logcheck
+
+shutdown -r +1
