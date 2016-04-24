@@ -4,4 +4,4 @@
 # link files
 #
 
-ln -sf ./rootfs/etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh /etc/logcheck/ignore.d.server/ssh

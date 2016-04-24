@@ -4,8 +4,8 @@
 # link config files
 #
 
-ln -sf ./rootfs/etc/ssh/ssh_config  /etc/ssh/ssh_config
-ln -sf ./rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
+ln -sf /bootstrap.sh/rootfs/etc/ssh/ssh_config  /etc/ssh/ssh_config
+ln -sf /bootstrap.sh/rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
 
 
 
@@ -13,7 +13,7 @@ ln -sf ./rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
 # link authorized_keys
 #
 
-ln -sf ./homefs/.ssh/authorized_keys ~/.ssh/authorized_keys
+ln -sf /bootstrap.sh/homefs/.ssh/authorized_keys ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 
 
