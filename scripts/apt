@@ -1,10 +1,5 @@
 #!/usr/bin/env sh
 
-apt-get update
-apt-get upgrade
-
-apt-get install -y console-data
-
 apt-get install -y openssh-client openssh-server openssh-sftp-server
 apt-get install -y wget curl
 apt-get install -y screen tmux dtach
@@ -14,5 +9,5 @@ apt-get install -y mc
 apt-get install -y haveged
 apt-get install -y chrony
 apt-get install -y htop
-apt-get install -y postfix logcheck
+DEBIAN_FRONTEND=noninteractive apt-get install -y postfix logcheck
 apt-get install -y cron-apt

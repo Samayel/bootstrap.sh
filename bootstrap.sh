@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 
-./scripts/timezone
+apt-get update
+apt-get upgrade
+apt-get install -y debconf-utils
+
+./scripts/configure-timezone
+./scripts/configure-keymap
 ./scripts/apt
 
 ./scripts/ssh
