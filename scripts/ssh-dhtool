@@ -5,12 +5,14 @@
 #
 
 mkdir ~/tmp
-pushd ~/tmp
+
+CURDIR=$(pwd)
+cd ~/tmp
 
 wget https://2ton.com.au/HeavyThing-1.16.tar.gz
 tar xzf HeavyThing-1.16.tar.gz
 cp HeavyThing-1.16/dhtool/dhtool /usr/local/bin
 
-popd
+cd $CURDIR
 
 ### run later: dhtool /etc/ssh/moduli | tee /etc/ssh/moduli.dhtool
