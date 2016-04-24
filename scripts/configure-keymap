@@ -1,16 +1,16 @@
 #!/usr/bin/env sh
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y console-data
-
-debconf-set-selections <<EOF
-    console-data console-data/keymap/policy select Select keymap from arch list
-    console-data console-data/keymap/family select qwertz
-EOF
-dpkg-reconfigure -f noninteractive console-data
-
-debconf-set-selections <<EOF
-    console-data console-data/keymap/qwertz/layout select German
-    console-data console-data/keymap/qwertz/german/variant select Apple USB
-    console-data console-data/keymap/qwertz/german/apple_usb/keymap select latin1
-EOF
-dpkg-reconfigure -f noninteractive console-data
+# DEBIAN_FRONTEND=noninteractive apt-get install -y console-data
+#
+# debconf-set-selections <<EOF
+#     console-data console-data/keymap/policy select Select keymap from arch list
+#     console-data console-data/keymap/family select qwertz
+# EOF
+# dpkg-reconfigure -f noninteractive console-data
+#
+# debconf-set-selections <<EOF
+#     console-data console-data/keymap/qwertz/layout select German
+#     console-data console-data/keymap/qwertz/german/variant select Apple USB
+#     console-data console-data/keymap/qwertz/german/apple_usb/keymap select latin1
+# EOF
+# dpkg-reconfigure -f noninteractive console-data
