@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+#
+# link config files
+#
+
+ln -sf ./rootfs/etc/ssh/ssh_config  /etc/ssh/ssh_config
+ln -sf ./rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
+
+
+
+#
+# link authorized_keys
+#
+
+ln -sf ./homefs/.ssh/authorized_keys ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+
+
+
+./scripts/ssh-hostkeys
+./scripts/ssh-userkeys
+./scripts/ssh-moduli
+./scripts/ssh-dhtool

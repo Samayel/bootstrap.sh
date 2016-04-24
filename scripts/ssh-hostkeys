@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+#
+# generate host keys
+#
+
+rm -f /etc/ssh/ssh_host_dsa_key     /etc/ssh/ssh_host_dsa_key.pub
+rm -f /etc/ssh/ssh_host_ecdsa_key   /etc/ssh/ssh_host_ecdsa_key.pub
+rm -f /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub
+rm -f /etc/ssh/ssh_host_rsa_key     /etc/ssh/ssh_host_rsa_key.pub
+
+mkdir /etc/ssh/keys
+
+ssh-keygen -N '' -t rsa     -b 4096 -f /etc/ssh/keys/ssh_host_key_rsa
+ssh-keygen -N '' -t ecdsa   -b 384  -f /etc/ssh/keys/ssh_host_key_ecdsa
+ssh-keygen -N '' -t ed25519         -f /etc/ssh/keys/ssh_host_key_ed25519

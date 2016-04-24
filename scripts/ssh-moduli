@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+#
+# download moduli from https://2ton.com.au/dhtool/
+#
+
+curl https://2ton.com.au/dhparam/2048/ssh  > /etc/ssh/moduli
+curl https://2ton.com.au/dhparam/3072/ssh >> /etc/ssh/moduli
+curl https://2ton.com.au/dhparam/4096/ssh >> /etc/ssh/moduli
+curl https://2ton.com.au/dhparam/8192/ssh >> /etc/ssh/moduli

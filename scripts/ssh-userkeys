@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+#
+# generate user keys
+#
+
+ssh-keygen -N '' -t rsa     -b 4096 -f ~/.ssh/id_rsa
+ssh-keygen -N '' -t ecdsa   -b 384  -f ~/.ssh/id_ecdsa
+ssh-keygen -N '' -t ed25519         -f ~/.ssh/id_ed25519

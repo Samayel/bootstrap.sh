@@ -4,6 +4,6 @@
 # link config files
 #
 
-ln -sf /bootstrap.sh/homefs/.joerc           ~/.joerc
-ln -sf /bootstrap.sh/homefs/.joe             ~/.joe
-ln -sf /bootstrap.sh/homefs/.selected_editor ~/.selected_editor
+ln -sf ./homefs/.joerc           ~/.joerc
+ln -sf ./homefs/.joe             ~/.joe
+ln -sf ./homefs/.selected_editor ~/.selected_editor

@@ -1,16 +1,13 @@
 #!/usr/bin/env sh
 
-/bootstrap.sh/scripts/timezone
-/bootstrap.sh/scripts/apt
+./scripts/timezone
+./scripts/apt
 
-mkdir ~/tmp
-cd ~/tmp
-
-/bootstrap.sh/scripts/openssh
-/bootstrap.sh/scripts/joe
-/bootstrap.sh/scripts/screen
-/bootstrap.sh/scripts/git
-/bootstrap.sh/scripts/postfix
-/bootstrap.sh/scripts/logcheck
+./scripts/ssh
+./scripts/joe
+./scripts/screen
+./scripts/git
+./scripts/postfix
+./scripts/logcheck
 
 shutdown -r +1

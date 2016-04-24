@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+#
+# run dhtool from https://2ton.com.au/HeavyThing-1.16.tar.gz
+#
+
+mkdir ~/tmp
+pushd ~/tmp
+
+wget https://2ton.com.au/HeavyThing-1.16.tar.gz
+tar xzf HeavyThing-1.16.tar.gz
+cp HeavyThing-1.16/dhtool/dhtool /usr/local/bin
+
+popd
+
+### run later: dhtool /etc/ssh/moduli | tee /etc/ssh/moduli.dhtool
