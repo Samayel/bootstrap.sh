@@ -4,6 +4,4 @@
 # link config files
 #
 
-mv ~/.screenrc ~/.screenrc~
-
-ln -s /bootstrap.sh/homefs/.screenrc ~/.screenrc
+ln -sf /bootstrap.sh/homefs/.screenrc ~/.screenrc

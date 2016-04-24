@@ -4,6 +4,4 @@
 # link config files
 #
 
-mv ~/.gitconfig ~/.gitconfig~
-
-ln -s /bootstrap.sh/homefs/.gitconfig ~/.gitconfig
+ln -sf /bootstrap.sh/homefs/.gitconfig ~/.gitconfig

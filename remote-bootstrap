@@ -4,7 +4,7 @@
 
 ssh -t $BOOTSTRAP_TARGET bash -c "'
     apt-get update
-    apt-get install -y screen git
+    apt-get install -y git
 
     git clone https://github.com/Samayel/bootstrap.sh.git /bootstrap.sh
     /bootstrap.sh/bootstrap.sh

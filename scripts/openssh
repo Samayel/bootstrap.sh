@@ -4,11 +4,8 @@
 # link config files
 #
 
-mv /etc/ssh/ssh_config  /etc/ssh/ssh_config~
-mv /etc/ssh/sshd_config /etc/ssh/sshd_config~
-
-ln -s /bootstrap.sh/rootfs/etc/ssh/ssh_config  /etc/ssh/ssh_config
-ln -s /bootstrap.sh/rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
+ln -sf /bootstrap.sh/rootfs/etc/ssh/ssh_config  /etc/ssh/ssh_config
+ln -sf /bootstrap.sh/rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
 
 
 
@@ -16,10 +13,10 @@ ln -s /bootstrap.sh/rootfs/etc/ssh/sshd_config /etc/ssh/sshd_config
 # generate host keys
 #
 
-rm /etc/ssh/ssh_host_dsa_key     /etc/ssh/ssh_host_dsa_key.pub
-rm /etc/ssh/ssh_host_ecdsa_key   /etc/ssh/ssh_host_ecdsa_key.pub
-rm /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub
-rm /etc/ssh/ssh_host_rsa_key     /etc/ssh/ssh_host_rsa_key.pub
+rm -f /etc/ssh/ssh_host_dsa_key     /etc/ssh/ssh_host_dsa_key.pub
+rm -f /etc/ssh/ssh_host_ecdsa_key   /etc/ssh/ssh_host_ecdsa_key.pub
+rm -f /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub
+rm -f /etc/ssh/ssh_host_rsa_key     /etc/ssh/ssh_host_rsa_key.pub
 
 mkdir /etc/ssh/keys
 
@@ -42,8 +39,6 @@ ssh-keygen -N '' -t ed25519         -f ~/.ssh/id_ed25519
 #
 # download moduli from https://2ton.com.au/dhtool/
 #
-
-mv /etc/ssh/moduli /etc/ssh/moduli~
 
 curl https://2ton.com.au/dhparam/2048/ssh  > /etc/ssh/moduli
 curl https://2ton.com.au/dhparam/3072/ssh >> /etc/ssh/moduli
@@ -68,7 +63,5 @@ cp HeavyThing-1.16/dhtool/dhtool /usr/local/bin
 # link authorized_keys
 #
 
-mv ~/.ssh/authorized_keys ~/.ssh/authorized_keys~
-
-ln -s /bootstrap.sh/homefs/.ssh/authorized_keys ~/.ssh/authorized_keys
+ln -sf /bootstrap.sh/homefs/.ssh/authorized_keys ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
