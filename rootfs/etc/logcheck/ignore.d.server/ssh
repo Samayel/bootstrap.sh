@@ -1,7 +1,7 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted (gssapi(-with-mic|-keyex)?|rsa|dsa|password|publickey|keyboard-interactive/pam|hostbased) for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+( (ssh|ssh2))?(: (RSA|ECDSA) ([[:xdigit:]]{2}:){15}[[:xdigit:]]{2})?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted (gssapi(-with-mic|-keyex)?|rsa|dsa|password|publickey|keyboard-interactive/pam|hostbased) for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]{1,5}( (ssh|ssh2))?(: (RSA|ECDSA) ([[:xdigit:]]{2}:){15}[[:xdigit:]]{2})?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Address [._[:alnum:]-]+ maps to [._[:alnum:]-]+, but this does not map back to the address - POSSIBLE BREAK-?IN ATTEMPT!$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Authorized to [^[:space:]]+, krb5 principal [^[:space:]]+ \(krb5_kuserok\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '[^']*' from ([:.[:xdigit:]]+|UNKNOWN)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '[^']*' from ([:.[:xdigit:]]+|UNKNOWN)( port [[:digit:]]{1,5})?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Did not receive identification string from ([:[:xdigit:].]+|UNKNOWN)+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Bad packet length [[:digit:]]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Corrupted MAC on input\.$
@@ -11,14 +11,14 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: input_userauth_request: invalid user [^[:space:]]* \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Nasty PTR record "[:[:xdigit:].]+" is set up for [:[:xdigit:].]+, ignoring$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: PAM pam_putenv: delete non-existent entry; [[:alnum:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Postponed keyboard-interactive(/pam)? for (invalid user )?[^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+( (ssh|ssh2)( \[preauth\])?)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Postponed keyboard-interactive(/pam)? for (invalid user )?[^[:space:]]+ from [^[:space:]]+ port [[:digit:]]{1,5}( (ssh|ssh2)( \[preauth\])?)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: [12]: Timeout, server not responding\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: 11: (disconnected by user|Closed due to user request\.)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: 11: Bye Bye \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:[:xdigit:].]+: [[:digit:]]+: Client disconnect$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:[:xdigit:].]+: [[:digit:]]+: Disconnect requested by Windows SSH Client\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection closed by [:.[:xdigit:]]+ \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Server listening on [:[:xdigit:].]+ port [[:digit:]]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Server listening on [:[:xdigit:].]+ port [[:digit:]]{1,5}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: User [-_.[:alnum:]]+ from [-_.[:alnum:]]+ not allowed because (listed in Deny|not listed in Allow)Users$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: User [-_.[:alnum:]]+ from [-_.[:alnum:]]+ not allowed because none of user's groups are listed in AllowGroups$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: \(pam_[[:alnum:]]+\) session opened for user [^[:space:]]+( by ([[:alnum:]-]+)?\(uid=[[:digit:]]+\))?$
@@ -45,7 +45,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: syslogin_perform_logout: logout\(\) returned an error$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: warning: /etc/hosts\.(allow|deny), line [[:digit:]]+: can't verify hostname: getaddrinfo\([._[:alnum:]-]+, AF_INET\) failed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: warning: /etc/hosts\.(allow|deny), line [[:digit:]]+: host name/(name|address) mismatch: [._[:alnum:]-]+ != [._[:alnum:]-]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by [:.[:xdigit:]]+ port [[:digit:]]+ \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]+:11: (disconnected by user|Bye Bye)?( \[preauth\])?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [:.[:xdigit:]]+ port [[:digit:]]+( \[preauth\])?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]+: no matching key exchange method found. Their offer:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by [:.[:xdigit:]]+ port [[:digit:]]{1,5} \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:11: (disconnected by user|Bye Bye)?( \[preauth\])?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [:.[:xdigit:]]+ port [[:digit:]]{1,5}( \[preauth\])?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]{1,5}: no matching key exchange method found. Their offer:
