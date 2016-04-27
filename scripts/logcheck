@@ -4,6 +4,7 @@
 # link files
 #
 
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/bind    /etc/logcheck/ignore.d.server/bind
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/chrony  /etc/logcheck/ignore.d.server/chrony
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh     /etc/logcheck/ignore.d.server/ssh
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/systemd /etc/logcheck/ignore.d.server/systemd
