@@ -4,4 +4,4 @@
 # link config files
 #
 
-ln -sf /bootstrap.sh/homefs/.screenrc --target-directory=~/
+ln -sf /bootstrap.sh/homefs/.screenrc ~/
