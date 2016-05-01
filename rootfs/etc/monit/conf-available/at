@@ -1,5 +1,5 @@
  check process atd with pidfile "/var/run/atd.pid"
-   group system
+   group daemon
    group atd
    start program = "/etc/init.d/atd start"
    stop program  = "/etc/init.d/atd stop"

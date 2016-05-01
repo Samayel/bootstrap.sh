@@ -1,5 +1,5 @@
  check process acpid with pidfile "/var/run/acpid.pid"
-   group system
+   group daemon
    group acpid
    start program = "/etc/init.d/acpid start"
    stop program  = "/etc/init.d/acpid stop"

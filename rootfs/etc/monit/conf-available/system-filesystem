@@ -1,6 +1,5 @@
  check filesystem rootfs with path /dev/vda1
    group system
-   group server
    if failed permission 660 then unmonitor
    if failed uid root then unmonitor
    if failed gid disk then unmonitor

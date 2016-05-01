@@ -1,0 +1,6 @@
+ check process haveged with matching "/usr/sbin/haveged"
+   group daemon
+   group haveged
+   start program = "/etc/init.d/haveged start"
+   stop  program = "/etc/init.d/haveged stop"
+   if 5 restarts within 5 cycles then timeout

@@ -1,6 +1,5 @@
  check system $HOST
    group system
-   group server
    if loadavg (1min) > 5 then alert
    if loadavg (5min) > 3 then alert
    if loadavg (15min) > 1 then alert

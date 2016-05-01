@@ -1,5 +1,5 @@
  check process mdadm with pidfile /var/run/mdadm/monitor.pid
-   group system
+   group daemon
    group mdadm
    start program = "/etc/init.d/mdadm start"
    stop  program = "/etc/init.d/mdadm stop"

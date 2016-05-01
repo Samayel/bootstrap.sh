@@ -1,6 +1,5 @@
  check network public-network with interface eth0
    group system
-   group server
    if failed link then alert
    if changed link then alert
    if saturation > 90% then alert
@@ -9,7 +8,6 @@
 
  check network private-network with interface eth1
    group system
-   group server
    if failed link then alert
    if changed link then alert
    if saturation > 90% then alert

@@ -1,5 +1,5 @@
  check process rsyslogd with pidfile /var/run/rsyslogd.pid
-   group system
+   group daemon
    group rsyslogd
    start program = "/etc/init.d/rsyslog start"
    stop  program = "/etc/init.d/rsyslog stop"
