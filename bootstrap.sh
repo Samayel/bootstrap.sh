@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 apt-get update
-apt-get upgrade
-apt-get install -y debconf-utils
+apt-get -y upgrade
+apt-get -y install debconf-utils
 
 ./scripts/configure-timezone
 ./scripts/configure-keymap
