@@ -1,0 +1,7 @@
+ check process chronyd with pidfile /var/run/chronyd.pid
+   group system
+   group chronyd
+   start program = "/etc/init.d/chrony start"
+   stop  program = "/etc/init.d/chrony stop"
+   if failed host localhost port 323 type udp then restart
+   if 5 restarts within 5 cycles then timeout

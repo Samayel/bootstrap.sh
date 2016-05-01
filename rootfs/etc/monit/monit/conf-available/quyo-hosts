@@ -1,0 +1,25 @@
+ check host scratch.stg.fra1 with address scratch.stg.fra1.do.quyo.net
+   group cloud
+   group server
+   if failed ping then alert
+   if failed port 22 protocol ssh with timeout 15 seconds then alert
+
+ check host ns.fra1 with address ns.fra1.do.quyo.net
+   group cloud
+   group server
+   if failed ping then alert
+   if failed port 22 protocol ssh with timeout 15 seconds then alert
+
+ check host mx1.mx.fra1 with address mx1.mx.fra1.do.quyo.net
+   group cloud
+   group server
+   if failed ping then alert
+   if failed port 22 protocol ssh with timeout 15 seconds then alert
+
+
+
+ check host ns.nyc1 with address ns.nyc1.do.quyo.net
+   group cloud
+   group server
+   if failed ping then alert
+   if failed port 22 protocol ssh with timeout 15 seconds then alert

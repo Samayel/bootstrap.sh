@@ -14,5 +14,6 @@ apt-get install -y debconf-utils
 ./scripts/git
 ./scripts/postfix
 ./scripts/logcheck
+./scripts/monit
 
 shutdown -r +1
