@@ -1,0 +1,7 @@
+ check process named with pidfile /var/run/named/named.pid
+   group daemon
+   group named
+   start program = "/etc/init.d/bind9 start"
+   stop  program = "/etc/init.d/bind9 stop"
+   if failed host localhost port 53 use type udp protocol dns then restart
+   if 5 restarts with 5 cycles then timeout
