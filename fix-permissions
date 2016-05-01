@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+chmod 600 homefs/.ssh/authorized_keys
+chmod 600 rootfs/etc/monit/monitrc
