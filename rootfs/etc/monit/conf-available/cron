@@ -1,8 +1,8 @@
  check process crond with pidfile /var/run/crond.pid
    group daemon
    group crond
-   start program = "/etc/init.d/cron start"
-   stop  program = "/etc/init.d/cron stop"
+   start program = "/usr/sbin/service cron start"
+   stop  program = "/usr/sbin/service cron stop"
    if 5 restarts with 5 cycles then timeout
    depend cron_bin
    depend cron_rc

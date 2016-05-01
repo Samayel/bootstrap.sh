@@ -1,8 +1,8 @@
  check process postfix with pidfile /var/spool/postfix/pid/master.pid
    group daemon
    group postfix
-   start program = "/etc/init.d/postfix start"
-   stop  program = "/etc/init.d/postfix stop"
+   start program = "/usr/sbin/service postfix start"
+   stop  program = "/usr/sbin/service postfix stop"
    if failed host localhost port 25 with protocol smtp for 2 times within 3 cycles then restart
    if 5 restarts with 5 cycles then timeout
    depend master_bin

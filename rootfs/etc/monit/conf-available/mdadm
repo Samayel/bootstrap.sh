@@ -1,8 +1,8 @@
  check process mdadm with pidfile /var/run/mdadm/monitor.pid
    group daemon
    group mdadm
-   start program = "/etc/init.d/mdadm start"
-   stop  program = "/etc/init.d/mdadm stop"
+   start program = "/usr/sbin/service mdadm start"
+   stop  program = "/usr/sbin/service mdadm stop"
    if 5 restarts with 5 cycles then timeout
    depend mdadm_bin
    depend mdadm_rc
