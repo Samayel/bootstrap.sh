@@ -4,7 +4,13 @@
 # link files
 #
 
-ln -sf /bootstrap.sh/rootfs/etc/monit/monitrc         /etc/monit/monitrc
-ln -sf /bootstrap.sh/rootfs/etc/monit/conf-available  /etc/monit/conf-available
-ln -sf /bootstrap.sh/rootfs/etc/monit/conf-enabled    /etc/monit/conf-enabled
-ln -sf /bootstrap.sh/rootfs/etc/monit/templates       /etc/monit/templates
+rm -rf /etc/monit/conf-available/
+rm -rf /etc/monit/conf-enabled/
+rm -rf /etc/monit/templates/
+
+ln -sf /bootstrap.sh/rootfs/etc/monit/monitrc          --target-directory=/etc/monit/
+ln -sf /bootstrap.sh/rootfs/etc/monit/conf-available/  --target-directory=/etc/monit/
+ln -sf /bootstrap.sh/rootfs/etc/monit/conf-enabled/    --target-directory=/etc/monit/
+ln -sf /bootstrap.sh/rootfs/etc/monit/templates/       --target-directory=/etc/monit/
+
+chmod 600 /etc/monit/monitrc

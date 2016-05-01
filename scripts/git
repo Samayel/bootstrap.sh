@@ -4,4 +4,4 @@
 # link config files
 #
 
-ln -sf /bootstrap.sh/homefs/.gitconfig ~/.gitconfig
+ln -sf /bootstrap.sh/homefs/.gitconfig --target-directory=~/
