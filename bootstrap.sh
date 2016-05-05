@@ -6,6 +6,7 @@ apt-get -y install debconf-utils
 
 ./scripts/configure-timezone
 ./scripts/configure-keymap
+./scripts/fix-hosts
 ./scripts/apt
 
 ./scripts/ssh

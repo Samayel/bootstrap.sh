@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+sed --in-place 's/^127.0.1.1/127.0.0.1/' /etc/hosts
+sed --in-place 's/^127.0.1.1/127.0.0.1/' /etc/cloud/templates/hosts.debian.tmpl
