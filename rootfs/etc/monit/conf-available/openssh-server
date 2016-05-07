@@ -8,9 +8,11 @@
    depend on sshd_bin
    depend on sftp_bin
    depend on sshd_rc
-   depend on sshd_ed25519_key
-   depend on sshd_ecdsa_key
-   depend on sshd_rsa_key
+   depend on sshd_key_ed25519
+   depend on sshd_key_ecdsa_nistp521
+   depend on sshd_key_ecdsa_nistp384
+   depend on sshd_key_ecdsa_nistp256
+   depend on sshd_key_rsa_4096
 
  check file sshd_bin with path /usr/sbin/sshd
    group sshd
@@ -20,15 +22,23 @@
    group sshd
    include /etc/monit/templates/rootbin
 
- check file sshd_ed25519_key with path /etc/ssh/keys/ssh_host_key_ed25519
+ check file sshd_key_ed25519 with path /etc/ssh/keys/ssh_host_key_ed25519
    group sshd
    include /etc/monit/templates/rootstrict
 
- check file sshd_ecdsa_key with path /etc/ssh/keys/ssh_host_key_ecdsa
+ check file sshd_key_ecdsa_nistp521 with path /etc/ssh/keys/ssh_host_key_ecdsa_nistp521
    group sshd
    include /etc/monit/templates/rootstrict
 
- check file sshd_rsa_key with path /etc/ssh/keys/ssh_host_key_rsa
+ check file sshd_key_ecdsa_nistp384 with path /etc/ssh/keys/ssh_host_key_ecdsa_nistp384
+   group sshd
+   include /etc/monit/templates/rootstrict
+
+ check file sshd_key_ecdsa_nistp256 with path /etc/ssh/keys/ssh_host_key_ecdsa_nistp256
+   group sshd
+   include /etc/monit/templates/rootstrict
+
+ check file sshd_key_rsa_4096 with path /etc/ssh/keys/ssh_host_key_rsa_4096
    group sshd
    include /etc/monit/templates/rootstrict
 

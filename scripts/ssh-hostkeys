@@ -11,6 +11,8 @@ rm -f /etc/ssh/ssh_host_rsa_key     /etc/ssh/ssh_host_rsa_key.pub
 
 mkdir /etc/ssh/keys
 
-ssh-keygen -N '' -t rsa     -b 4096 -f /etc/ssh/keys/ssh_host_key_rsa
-ssh-keygen -N '' -t ecdsa   -b 384  -f /etc/ssh/keys/ssh_host_key_ecdsa
+ssh-keygen -N '' -t rsa     -b 4096 -f /etc/ssh/keys/ssh_host_key_rsa_4096
+ssh-keygen -N '' -t ecdsa   -b 256  -f /etc/ssh/keys/ssh_host_key_ecdsa_nistp256
+ssh-keygen -N '' -t ecdsa   -b 384  -f /etc/ssh/keys/ssh_host_key_ecdsa_nistp384
+ssh-keygen -N '' -t ecdsa   -b 521  -f /etc/ssh/keys/ssh_host_key_ecdsa_nistp521
 ssh-keygen -N '' -t ed25519         -f /etc/ssh/keys/ssh_host_key_ed25519
