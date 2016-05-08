@@ -4,8 +4,9 @@
 # link config files
 #
 
-ln -sf /bootstrap.sh/rootfs/etc/ssh/ssh_config  --target-directory=/etc/ssh/
-ln -sf /bootstrap.sh/rootfs/etc/ssh/sshd_config --target-directory=/etc/ssh/
+ln -sf /bootstrap.sh/rootfs/etc/ssh/ssh_config      --target-directory=/etc/ssh/
+ln -sf /bootstrap.sh/rootfs/etc/ssh/sshd_config     --target-directory=/etc/ssh/
+ln -sf /bootstrap.sh/rootfs/etc/ssh/ssh_known_hosts --target-directory=/etc/ssh/
 
 
 
