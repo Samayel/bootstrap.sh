@@ -37,7 +37,7 @@ IdentityFile            ~/.ssh/id_rsa_4096
 RekeyLimit              default 1h
 
 HashKnownHosts          yes
-UpdateHostKeys          ask
+UpdateHostKeys          no
 
 
 
