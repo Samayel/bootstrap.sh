@@ -16,6 +16,7 @@ ln -sf /bootstrap.sh/rootfs/etc/ssh/ssh_known_hosts --target-directory=/etc/ssh/
 
 ln -sf /bootstrap.sh/homefs/.ssh/authorized_keys ~/.ssh/
 chmod 600 ~/.ssh/authorized_keys
+passwd -dl root
 
 
 
