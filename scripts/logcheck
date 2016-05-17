@@ -4,8 +4,9 @@
 # link files
 #
 
-ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/bind     --target-directory=/etc/logcheck/ignore.d.server/
-ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/chrony   --target-directory=/etc/logcheck/ignore.d.server/
-ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/postfix  --target-directory=/etc/logcheck/ignore.d.server/
-ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh      --target-directory=/etc/logcheck/ignore.d.server/
-ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/systemd  --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/bind       --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/chrony     --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/cron-apt   --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/postfix    --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh        --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/systemd    --target-directory=/etc/logcheck/ignore.d.server/
