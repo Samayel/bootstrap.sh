@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+mkdir /opt/certbot
+cd /opt/certbot
+
+wget https://dl.eff.org/certbot-auto
+chmod a+x ./certbot-auto
+
+mkdir /etc/letsencrypt
+ln -sf /bootstrap.sh/rootfs/etc/letsencrypt/cli.ini --target-directory=/etc/letsencrypt/
+ln -sf /bootstrap.sh/rootfs/etc/cron.daily/certbot  --target-directory=/etc/cron.daily/
+
+./certbot-auto certonly --non-interactive --domain="$(hostname)"
