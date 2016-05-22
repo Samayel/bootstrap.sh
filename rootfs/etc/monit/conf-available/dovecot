@@ -1,0 +1,17 @@
+ check process dovecot with pidfile /var/run/dovecot/master.pid
+   group daemon
+   group dovecot
+   start program = "/usr/sbin/service dovecot start"
+   stop  program = "/usr/sbin/service dovecot stop"
+   if failed host localhost port 993 type tcpssl sslauto protocol imap then restart
+   if 5 restarts with 5 cycles then timeout
+   depends dovecot_init
+   depends dovecot_bin
+
+ check file dovecot_init with path /etc/init.d/dovecot
+   group dovecot
+   include /etc/monit/templates/rootbin
+
+ check file dovecot_bin with path /usr/sbin/dovecot
+   group dovecot
+   include /etc/monit/templates/rootbin
