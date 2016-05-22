@@ -3,7 +3,7 @@
    group dovecot
    start program = "/usr/sbin/service dovecot start"
    stop  program = "/usr/sbin/service dovecot stop"
-   if failed host localhost port 993 type tcpssl sslauto protocol imap then restart
+   if failed host localhost port 993 with protocol imaps and certificate valid > 21 days then restart
    if 5 restarts with 5 cycles then timeout
    depends dovecot_init
    depends dovecot_bin

@@ -1,0 +1,7 @@
+ check process postfix-submission with pidfile /var/spool/postfix/pid/master.pid
+   group daemon
+   group postfix
+   start program = "/usr/sbin/service postfix start"
+   stop  program = "/usr/sbin/service postfix stop"
+   if failed host localhost port 587 with protocol smtp then restart
+   if 5 restarts with 5 cycles then timeout
