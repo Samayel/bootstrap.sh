@@ -26,5 +26,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: MANAGESIEVE\([._[:alnum:]-]+\): (Connection closed|Disconnected: Logged out)( bytes=[[:digit:]]+/[[:digit:]]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts in [[:digit:]]+ secs\): user=<>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, TLS, session=<[+/[:alnum:]]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Connect from local$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: Successful quit$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: (Successful quit|Connection closed \(in DATA finished\))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)\([-_.@[:alnum:]]+\): (Logged out|Connection closed) in=[[:digit:]]+ out=[[:digit:]]+$
