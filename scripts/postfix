@@ -2,7 +2,7 @@
 
 sed --in-place 's/^inet_interfaces = all$/inet_interfaces = loopback-only/' /etc/postfix/main.cf
 
-echo "root: johm@quyo.de" >> /etc/aliases
+ln -sf /bootstrap.sh/rootfs/etc/aliases --target-directory=/etc/
 newaliases
 
 service postfix restart

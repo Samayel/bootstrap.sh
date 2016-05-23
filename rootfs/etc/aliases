@@ -1,0 +1,13 @@
+# See man 5 aliases for format
+
+root:           johm@quyo.de
+sysadmin:       root
+admin:          root
+
+abuse:          root
+hostmaster:     root
+postmaster:     root
+webmaster:      root
+
+logcheck:       root
+monit:          root
