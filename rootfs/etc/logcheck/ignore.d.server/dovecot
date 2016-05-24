@@ -11,7 +11,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: (Disconnected|Aborted login)(: Inactivity)? \((no auth attempts in [[:digit:]]+ secs|auth failed, [[:digit:]]+ attempts|aborted authentication)\): user=<[-_.@[:alnum:]]*>(, method=PLAIN)?, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, (TLS|SSL)(( handshaking)?(: Disconnected)?|: SSL_read\(\) syscall failed: Connection reset by peer)?, session=<[+/[:alnum:]]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected: ((Too many invalid commands|Inactivity): )?(user=<[-_.@[:alnum:]]+>, )?(method=[[:alnum:]-]+, )?rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected: Logged out$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Login: user=<[-_.@[:alnum:]]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, mpid=[[:digit:]]+)?(, (TLS( handshake)?|secured))?(, session=<[+/[:alnum:]]+>)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Login: user=<[-_.@[:alnum:]]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, mpid=[[:digit:]]+)?, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)(, (TLS( handshake)?|secured))?(, session=<[+/[:alnum:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Connection closed(: Connection reset by peer)?( bytes=[[:digit:]]+/[[:digit:]]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Disconnected(: Logged out| for inactivity|: Disconnected| in [[:upper:]]+|: Too many invalid IMAP commands\.)?( bytes=[[:digit:]]+/[[:digit:]]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Fixed index file /[-._/[:alnum:]&]+/dovecot\.index: first_(recent|unseen)_uid_lowwater [[:digit:]]+ -> [[:digit:]]+$
@@ -24,7 +24,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: ssl-build-param: SSL parameters regeneration completed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: managesieve-login: Login: user=<[._[:alnum:]-]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, (TLS( handshake)?|secured)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: MANAGESIEVE\([._[:alnum:]-]+\): (Connection closed|Disconnected: Logged out)( bytes=[[:digit:]]+/[[:digit:]]+)?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts in [[:digit:]]+ secs\): user=<>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, TLS, session=<[+/[:alnum:]]+>$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts in [[:digit:]]+ secs\): user=<>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\), TLS(, session=<[+/[:alnum:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Connect from local$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: (Successful quit|Connection closed \(in DATA finished\))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)\([-_.@[:alnum:]]+\): (Logged out|Connection closed) in=[[:digit:]]+ out=[[:digit:]]+$
