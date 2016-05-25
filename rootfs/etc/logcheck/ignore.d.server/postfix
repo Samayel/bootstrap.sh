@@ -60,7 +60,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtp\[[[:digit:]]+\]: warning: [^[:space:]]+ offered null AUTH mechanism list$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtp\[[[:digit:]]+\]: warning: mailer loop: best MX for [^[:space:]]+ is local$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtp\[[[:digit:]]+\]: warning: no MX host for [^[:space:]]+ has a valid (A|address) record$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: ((Anonymous|Trusted|Verified) )?TLS connection established (to|from) [^[:space:]]+: TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: ((Anonymous|Untrusted|Trusted|Verified) )?TLS connection established (to|from) [^[:space:]]+: TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: (Peer|Server) certificate could not be verified$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: Unverified: subject_CN=.*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: Verified: subject_CN=.*, issuer=.*$
@@ -169,4 +169,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem: [[:digit:]]+:error:[[:xdigit:]]+:SSL routines:SSL23_GET_CLIENT_HELLO:(unknown protocol|http request):s23_srvr\.c:[[:digit:]]+:$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?verify\[[[:digit:]]+\]: cache [-._[:alnum:]/]+ full cleanup: retained=[[:digit:]]+ dropped=[[:digit:]]+ entries$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: disconnect from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]( (helo|ehlo)=[/[:digit:]]+)?( starttls=[/[:digit:]]+)?( auth=[/[:digit:]]+)?( mail=[/[:digit:]]+)?( rcpt=[/[:digit:]]+)?( data=[/[:digit:]]+)?( rset=[/[:digit:]]+)?( quit=[/[:digit:]]+)? commands=[/[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: hostname [^[:space:]]+ does not resolve to address [[:xdigit:].:]{3,39}: Name or service not known$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: hostname [^[:space:]]+ does not resolve to address [[:xdigit:].:]{3,39}(: Name or service not known)?$
