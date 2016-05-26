@@ -1,0 +1,6 @@
+ check process postgrey with pidfile /var/run/postgrey.pid
+   group daemon
+   group postgrey
+   start program = "/usr/sbin/service postgrey start"
+   stop  program = "/usr/sbin/service postgrey stop"
+   if 5 restarts within 5 cycles then timeout
