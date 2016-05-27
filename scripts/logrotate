@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+#
+# link files
+#
+
+ln -sf /bootstrap.sh/rootfs/etc/logrotate.d/rsyslog   --target-directory=/etc/logrotate.d/

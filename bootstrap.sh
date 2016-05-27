@@ -14,6 +14,7 @@ apt-get -y install debconf-utils
 ./scripts/screen
 ./scripts/git
 ./scripts/postfix
+./scripts/logrotate
 ./scripts/logcheck
 ./scripts/monit
 
