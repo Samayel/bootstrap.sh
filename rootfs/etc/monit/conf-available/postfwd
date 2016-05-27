@@ -3,5 +3,4 @@
    group postfwd
    start program = "/usr/sbin/service postfwd start"
    stop  program = "/usr/sbin/service postfwd stop"
-   if failed host localhost port 10040 type tcp then restart 
    if 5 restarts within 5 cycles then timeout
