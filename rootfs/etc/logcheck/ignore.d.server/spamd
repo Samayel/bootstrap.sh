@@ -35,6 +35,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (spamd|check|re(port|voke))\[[[:digit:]]+\]:( spamd:)? server successfully spawned child process, pid [[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (spamd|check|re(port|voke))\[[[:digit:]]+\]:( spamd:)? server (killed by SIGTERM|hit by SIGHUP), (shutting down|restarting)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (spamd|check|re(port|voke))\[[[:digit:]]+\]:( spamd:)? using default config for [-._+=[:alnum:]]+(@[-._[:alnum:]]+)?: /[-./_[:alnum:]]+/\.spamassassin/user_prefs$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (spamd|check|re(port|voke))\[[[:digit:]]+\]:( spamd:)? bad protocol: header error: \(closed before headers\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ admin\[[[:digit:]]+\]: \[ 2\]  Razor-Agents v[.[:digit:]]+ starting razor-admin -register$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ admin\[[[:digit:]]+\]: \[ 3\] Attempting to register\.
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ admin\[[[:digit:]]+\]: \[ 3\] Register successful\.  Identity stored in [-/_.[:alnum:]]+/\.razor/identity-[[:alnum:]]+$
