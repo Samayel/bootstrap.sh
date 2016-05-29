@@ -181,3 +181,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PREGREET [[:digit:]]+ after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+: .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: RCPT from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.5\.1 Protocol error; from=<[^>]*>, to=<[^>]+>, proto=SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: psc_cache_update: btree:/var/lib/postfix/postscreen_cache update average delay is [[:digit:]]+ ms$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/dnsblog\[[[:digit:]]+\]: addr [.:[:xdigit:]]+ listed by domain [-._[:alnum:]]+ as [.[:digit:]]+$
