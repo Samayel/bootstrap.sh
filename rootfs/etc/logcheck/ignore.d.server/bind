@@ -13,4 +13,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: query (\(cache\) )?'[._[:alnum:]-]+/(A|AAAA|ANY|TXT|SOA|NS|DS)/(IN|CH)' denied$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: zone transfer '[._[:alnum:]-]+/AXFR/IN' denied$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: notify question section contains no SOA$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: message parsing failed: (unexpected end of input|bad compression pointer)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: message parsing failed: (unexpected end of input|bad compression pointer|bad label type)$
