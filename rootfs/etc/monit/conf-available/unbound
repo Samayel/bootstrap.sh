@@ -1,0 +1,6 @@
+ check process unbound with pidfile /var/run/unbound.pid
+   group daemon
+   group unbound
+   start program = "/usr/sbin/service unbound start"
+   stop  program = "/usr/sbin/service unbound stop"
+   if 5 restarts within 5 cycles then timeout
