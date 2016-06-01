@@ -44,3 +44,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ check\[[[:digit:]]+\]: \[ 3\] mail [[:digit:]]+ is (not )?known spam\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ check\[[[:digit:]]+\]: rules: meta test [._[:alnum:]]+ has dependency '[._[:alnum:]]+' with a zero score$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ re(voke|port)\[[[:digit:]]+\]: reporter: razor2 re(voke|port) failed: No such file or directory re(voke|port) requires authentication at /usr/share/perl5/Mail/SpamAssassin/Plugin/Razor2\.pm line [[:digit:]]+\. at /usr/share/perl5/Mail/SpamAssassin/Plugin/Razor2\.pm line [[:digit:]]+\.
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ spamd\[[[:digit:]]+\]: pyzor: \[[[:digit:]]+\] error: TERMINATED, signal 15 \(000f\)$

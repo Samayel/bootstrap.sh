@@ -166,7 +166,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: [-._[:alnum:]]+\[[.[:digit:]]+\]: SASL (LOGIN|PLAIN|(DIGEST|CRAM)-MD5|APOP) authentication failed(:[ [:alnum:]]*)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: non-SMTP command from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]: .+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?trivial-rewrite\[[[:digit:]]+\]: warning: valid_ipv4_hostaddr: invalid octet count: ?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem: [[:digit:]]+:error:[[:xdigit:]]+:SSL routines:SSL23_GET_CLIENT_HELLO:(unknown protocol|http request):s23_srvr\.c:[[:digit:]]+:$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem:( [[:digit:]]+:)?error:[[:xdigit:]]+:SSL routines:SSL23_GET_CLIENT_HELLO:(unknown protocol|http request):s23_srvr\.c:[[:digit:]]+:$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(verify|postscreen)\[[[:digit:]]+\]: cache [-.:_[:alnum:]/]+ full cleanup: retained=[[:digit:]]+ dropped=[[:digit:]]+ entries$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: disconnect from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]( (helo|ehlo)=[/[:digit:]]+)?( starttls=[/[:digit:]]+)?( auth=[/[:digit:]]+)?( mail=[/[:digit:]]+)?( rcpt=[/[:digit:]]+)?( data=[/[:digit:]]+)?( rset=[/[:digit:]]+)?( quit=[/[:digit:]]+)? commands=[/[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: hostname [^[:space:]]+ does not resolve to address [[:xdigit:].:]{3,39}(: Name or service not known)?$
@@ -178,7 +178,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: WHITELISTED \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: BLACKLISTED \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: DNSBL rank [[:digit:]]+ for \[[.:[:xdigit:]]+\]:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: HANGUP after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+ in tests after SMTP handshake$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: HANGUP after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+ in tests (before|after) SMTP handshake$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PREGREET [[:digit:]]+ after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+: .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: RCPT from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.5\.1 Protocol error; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: RCPT from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.7\.1 Service unavailable; client \[[.:[:xdigit:]]+\] blocked using [-._[:alnum:]]+; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
