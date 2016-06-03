@@ -168,11 +168,11 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?trivial-rewrite\[[[:digit:]]+\]: warning: valid_ipv4_hostaddr: invalid octet count: ?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem: ([[:digit:]]+:)?error:[[:xdigit:]]+:SSL routines:SSL23_GET_CLIENT_HELLO:(unknown protocol|http request):s23_srvr\.c:[[:digit:]]+:$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(verify|postscreen)\[[[:digit:]]+\]: cache [-.:_[:alnum:]/]+ full cleanup: retained=[[:digit:]]+ dropped=[[:digit:]]+ entries$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: disconnect from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]( (helo|ehlo)=[/[:digit:]]+)?( starttls=[/[:digit:]]+)?( auth=[/[:digit:]]+)?( mail=[/[:digit:]]+)?( rcpt=[/[:digit:]]+)?( data=[/[:digit:]]+)?( rset=[/[:digit:]]+)?( quit=[/[:digit:]]+)? commands=[/[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: disconnect from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]( (helo|ehlo)=[/[:digit:]]+)?( starttls=[/[:digit:]]+)?( auth=[/[:digit:]]+)?( mail=[/[:digit:]]+)?( rcpt=[/[:digit:]]+)?( data=[/[:digit:]]+)?( rset=[/[:digit:]]+)?( quit=[/[:digit:]]+)?( unknown=[/[:digit:]]+)? commands=[/[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: hostname [^[:space:]]+ does not resolve to address [[:xdigit:].:]{3,39}(: Name or service not known)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(verify|postscreen)?\[[[:digit:]]+\]: close database /var/lib/postfix/(verify|postscreen)_cache.db: No such file or directory \(possible Berkeley DB bug\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: CONNECT from \[[.:[:xdigit:]]+\]:[[:digit:]]+ to \[[.:[:xdigit:]]+\]:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: DISCONNECT \[[.:[:xdigit:]]+\]:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(postscreen|tlsproxy)\[[[:digit:]]+\]: CONNECT from \[[.:[:xdigit:]]+\]:[[:digit:]]+( to \[[.:[:xdigit:]]+\]:[[:digit:]]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(postscreen|tlsproxy)\[[[:digit:]]+\]: DISCONNECT \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PASS NEW \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PASS OLD \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: WHITELISTED \[[.:[:xdigit:]]+\]:[[:digit:]]+$
@@ -180,6 +180,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: DNSBL rank [[:digit:]]+ for \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: HANGUP after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+ in tests (before|after) SMTP handshake$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PREGREET [[:digit:]]+ after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+: .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: BARE NEWLINE from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after \.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: COMMAND PIPELINING from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after \.: \\n$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: RCPT from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.5\.1 Protocol error; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: RCPT from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.7\.1 Service unavailable; client \[[.:[:xdigit:]]+\] blocked using [-._[:alnum:]]+; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: psc_cache_update: btree:/var/lib/postfix/postscreen_cache update average delay is [[:digit:]]+ ms$
