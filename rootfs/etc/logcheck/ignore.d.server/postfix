@@ -60,7 +60,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtp\[[[:digit:]]+\]: warning: [^[:space:]]+ offered null AUTH mechanism list$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtp\[[[:digit:]]+\]: warning: mailer loop: best MX for [^[:space:]]+ is local$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtp\[[[:digit:]]+\]: warning: no MX host for [^[:space:]]+ has a valid (A|address) record$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: ((Anonymous|Untrusted|Trusted|Verified) )?TLS connection established (to|from) [^[:space:]]+: TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(smtpd?|tlsproxy)\[[[:digit:]]+\]: ((Anonymous|Untrusted|Trusted|Verified) )?TLS connection established (to|from) [^[:space:]]+: TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: (Peer|Server) certificate could not be verified$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: Unverified: subject_CN=.*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: Verified: subject_CN=.*, issuer=.*$
@@ -106,7 +106,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: NOQUEUE: reject: [[:upper:]]+ from [^[:space:]]+: 554( [[:digit:]]\.[[:digit:]]\.[[:digit:]])? <[^[:space:]]*>: Client host rejected: Access denied;( from=<[^[:space:]]*> to=<[^[:space:]]+>)? proto=E?SMTP( helo=<[^[:space:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: NOQUEUE: reject: [[:upper:]]+ from [^[:space:]]+\[[[:digit:].]{7,15}\]: 503 5\.5\.0 <[^[:space:]]*>: Client host rejected: Improper use of SMTP command pipelining; from=<[^[:space:]]*> to=<[^[:space:]]+> proto=E?SMTP helo=<[^[:space:]]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: OTP unavailable because can't read/write key database /etc/opiekeys: No such file or directory$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: SSL_accept error from [._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]: -?[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: SSL_accept error from [._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]: (-?[[:digit:]]+|lost connection)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: [[:alnum:]]+: client=[._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: [[:alnum:]]+: client=[^[:space:]]+, sasl_method=[-[:alnum:]]+, sasl_username=[-_.@[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: [[:alnum:]]+: client=[^[:space:]]+, sasl_sender=.*$
@@ -162,11 +162,11 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: Peer verification: [[:digit:]]+ dNSNames in certificate found, but no one does match [-_.[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd?\[[[:digit:]]+\]: warning: (tls_text_name: [-._[:alnum:]]+\[[.[:digit:]]+\]: )?peer certificate has no (subject CN|issuer Organization)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: SASL authentication failure: .+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: [-._[:alnum:]]+\[[.[:digit:]]+\]: SASL (LOGIN|PLAIN|(DIGEST|CRAM)-MD5|APOP) authentication failed(:[ [:alnum:]]*)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: [-._[:alnum:]]+\[[.[:digit:]]+\]: SASL (LOGIN|PLAIN|(DIGEST|CRAM)-MD5|APOP|NTLM) authentication failed(:[ [:alnum:]]*)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: non-SMTP command from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]: .+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?trivial-rewrite\[[[:digit:]]+\]: warning: valid_ipv4_hostaddr: invalid octet count: ?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem: [[:digit:]]+:error:[[:xdigit:]]+:SSL routines:SSL3_READ_BYTES:(reason\([[:digit:]]+\)|sslv3 alert (unexpected message|bad certificate)):s3_pkt\.c:[[:digit:]]+:SSL alert number (0|10|42):$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem: ([[:digit:]]+:)?error:[[:xdigit:]]+:SSL routines:SSL23_GET_CLIENT_HELLO:(unknown protocol|http request):s23_srvr\.c:[[:digit:]]+:$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(smtpd|tlsproxy)\[[[:digit:]]+\]: warning: TLS library problem: ([[:digit:]]+:)?error:[[:xdigit:]]+:SSL routines:SSL23_GET_CLIENT_HELLO:(unknown protocol|http request):s23_srvr\.c:[[:digit:]]+:$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: TLS library problem: ([[:digit:]]+:)?error:[[:xdigit:]]+:SSL routines:ssl3_get_client_hello:no shared cipher:s3_srvr\.c:[[:digit:]]+:$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(verify|postscreen)\[[[:digit:]]+\]: cache [-.:_[:alnum:]/]+ full cleanup: retained=[[:digit:]]+ dropped=[[:digit:]]+ entries$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: disconnect from [^[:space:]]+\[[[:xdigit:].:]{3,39}\]( (helo|ehlo)=[/[:digit:]]+)?( starttls=[/[:digit:]]+)?( auth=[/[:digit:]]+)?( mail=[/[:digit:]]+)?( rcpt=[/[:digit:]]+)?( data=[/[:digit:]]+)?( rset=[/[:digit:]]+)?( quit=[/[:digit:]]+)?( unknown=[/[:digit:]]+)? commands=[/[:digit:]]+$
