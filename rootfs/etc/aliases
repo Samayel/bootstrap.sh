@@ -1,10 +1,12 @@
 # See man 5 aliases for format
 
 root:           johm@quyo.de
+sysadmin:       root
 logcheck:       root
 monit:          root
-
-sysadmin:       root
+mailer-daemon:  root
+nobody:         root
+www-data:       root
 
 #
 # CA / Browser Forum Baseline Requirements, v. 1.2.3, 11.1.1 Authorization by Domain Name Registrant
