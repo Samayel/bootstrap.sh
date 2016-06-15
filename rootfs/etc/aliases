@@ -1,13 +1,40 @@
 # See man 5 aliases for format
 
 root:           johm@quyo.de
-sysadmin:       root
-admin:          root
-
-abuse:          root
-hostmaster:     root
-postmaster:     root
-webmaster:      root
-
 logcheck:       root
 monit:          root
+
+sysadmin:       root
+
+#
+# CA / Browser Forum Baseline Requirements, v. 1.2.3, 11.1.1 Authorization by Domain Name Registrant
+#
+admin:          root
+administrator:  root
+
+#
+# RFC 2142, 3. BUSINESS-RELATED MAILBOX NAMES
+#
+INFO:           root
+MARKETING:      root
+SALES:          root
+SUPPORT:        root
+
+#
+# RFC 2142, 4. NETWORK OPERATIONS MAILBOX NAMES
+#
+ABUSE:          root
+NOC:            root
+SECURITY:       root
+
+#
+# RFC 2142, 5. SUPPORT MAILBOX NAMES FOR SPECIFIC INTERNET SERVICES
+#
+POSTMASTER:     root
+HOSTMASTER:     root
+USENET:         root
+NEWS:           root
+WEBMASTER:      root
+WWW:            root
+UUCP:           root
+FTP:            root
