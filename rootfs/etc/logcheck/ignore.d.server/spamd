@@ -45,3 +45,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ check\[[[:digit:]]+\]: rules: meta test [._[:alnum:]]+ has dependency '[._[:alnum:]]+' with a zero score$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ re(voke|port)\[[[:digit:]]+\]: reporter: razor2 re(voke|port) failed: No such file or directory re(voke|port) requires authentication at /usr/share/perl5/Mail/SpamAssassin/Plugin/Razor2\.pm line [[:digit:]]+\. at /usr/share/perl5/Mail/SpamAssassin/Plugin/Razor2\.pm line [[:digit:]]+\.
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ spamd\[[[:digit:]]+\]: pyzor: \[[[:digit:]]+\] error: TERMINATED, signal 15 \(000f\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ spamassassin\.pid --create-prefs --max-children 5 --helper-home-dir: spamd: restarting using '/usr/sbin/spamd -d --pidfile=/var/run/spamassassin\.pid --create-prefs --max-children 5 --helper-home-dir'$
