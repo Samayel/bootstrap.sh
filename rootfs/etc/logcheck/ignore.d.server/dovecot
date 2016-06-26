@@ -30,5 +30,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts in [[:digit:]]+ secs\): user=<>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\), TLS(, session=<[+/[:alnum:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Connect from local$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: (Successful quit|Connection closed \(in DATA finished\))$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)\([-_.@[:alnum:]]+\): (Logged out|Connection closed) in=[[:digit:]]+ out=[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)\([-_.@[:alnum:]]+\): (Logged out|Connection closed)( \(IDLE running for [.[:digit:]]+ \+ waiting input for [.[:digit:]]+ secs, [[:digit:]]+ B in \+ [+[:digit:]]+ B out, state=wait-input\))? in=[[:digit:]]+ out=[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)\([-_.@[:alnum:]]+\): Connection closed: read\(size=[[:digit:]]+\) failed: Connection reset by peer in=[[:digit:]]+ out=[[:digit:]]+$
