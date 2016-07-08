@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+while IFS= read -r -d '' cert; do
+    /bootstrap.sh/externals/haproxy-ocsp-stapling-updater/hapos-upd --cert "${cert}" --VAfile -
+done < <(find /etc/haproxy/ssl -name '*.pem' ! -name 'dh-4096.pem' -print0)
+
+service haproxy reload
