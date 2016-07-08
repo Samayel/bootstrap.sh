@@ -1,3 +1,3 @@
  check file auth-rootkeys with path /root/.ssh/authorized_keys
    group auth
-   if failed sha1 checksum expect 05f930900b04fdedc3a4b73345da8f95843b5ff3 then alert
+   if failed sha1 checksum expect dba36924a1515903829140e3e5349c6029b5f53d then alert
