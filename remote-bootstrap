@@ -6,6 +6,6 @@ ssh -t $BOOTSTRAP_TARGET bash -c "'
     apt-get update
     apt-get install -y git
 
-    git clone https://github.com/Samayel/bootstrap.sh.git /bootstrap.sh
+    git clone --recursive https://github.com/Samayel/bootstrap.sh.git /bootstrap.sh
     cd /bootstrap.sh && ./bootstrap.sh
 '"
