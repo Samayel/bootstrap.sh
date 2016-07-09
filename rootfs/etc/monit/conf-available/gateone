@@ -1,0 +1,6 @@
+ check process gateone with pidfile /var/run/gateone.pid
+   group daemon
+   group gateone
+   start program = "/usr/sbin/service gateone start"
+   stop  program = "/usr/sbin/service gateone stop"
+   if 5 restarts within 5 cycles then timeout
