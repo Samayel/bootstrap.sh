@@ -22,9 +22,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Automatically refresh installed snaps\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Automatically refresh installed snaps\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: snapd\.refresh\.timer: Adding ([[:digit:]]+h )?([[:digit:]]+min )?([.[:digit:]]+s )?([.[:digit:]]+ms )?random time\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: daemon\.go:[[:digit:]]+: DEBUG: uid=0;@ GET /v2/find\?q=&select=refresh [.[:digit:]]+[mµ]s 200$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: daemon\.go:[[:digit:]]+: DEBUG: uid=0;@ GET /v2/snaps [.[:digit:]]+[mµ]s 200$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: No snaps are installed yet\. Try 'snap install hello-world'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reloading Perl-based spam filter using text analysis\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reloaded Perl-based spam filter using text analysis\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Perl-based spam filter using text analysis\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: daemon\.go:[[:digit:]]+: DEBUG: uid=0;@ GET /v2/find\?q=&select=refresh [.[:digit:]]+[mµ]s 200$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: daemon\.go:[[:digit:]]+: DEBUG: uid=0;@ GET /v2/snaps [.[:digit:]]+[mµ]s 200$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: No snaps are installed yet\. Try 'snap install hello-world'\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: All snaps up-to-date\.$
