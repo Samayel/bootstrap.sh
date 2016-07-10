@@ -1,7 +1,3 @@
 #!/usr/bin/env sh
 
-swapon /swapfile
-
 /opt/certbot/certbot-auto renew --quiet --pre-hook /opt/certbot/pre-hook --post-hook /opt/certbot/post-hook --renew-hook /opt/certbot/renew-hook
-
-swapoff /swapfile

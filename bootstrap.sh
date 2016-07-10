@@ -17,5 +17,6 @@ apt-get -y install debconf-utils
 ./scripts/logrotate
 ./scripts/logcheck
 ./scripts/monit
+./scripts/swapfile
 
 shutdown -r +1
