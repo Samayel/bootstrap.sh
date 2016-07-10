@@ -1,0 +1,6 @@
+ check process ttrss with matching "php /var/www/ttrss/update_daemon2.php"
+   group daemon
+   group ttrss
+   start program = "/usr/sbin/service ttrss start"
+   stop  program = "/usr/sbin/service ttrss stop"
+   if 5 restarts within 5 cycles then timeout
