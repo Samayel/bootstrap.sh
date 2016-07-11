@@ -138,7 +138,7 @@
 # the current window which is show on a white background.
 # hostname in red, clock in green, date in yellow.
 # hardstatus alwayslastline "%{= kc}%{Bk} $USER@%H %{Mk} %d.%m.%Y %c %{Bk} Load: %l %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
-  hardstatus alwayslastline "%{KW}$USER@%H ~~~ %l %= %-w<%n %t>%+w %= %1`"
+  hardstatus alwayslastline "%{Wk}$USER@%H ~~~ %l %= %-w<%n %t>%+w %= %1`"
   backtick 1 1 1 sh -c 'date +"%F %T %Z"'
 #
 # note: the use of ANSI color sequences is deprecated.
