@@ -4,4 +4,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfwd2/master\[[[:digit:]]+\]: \[STATS\] Hitrates:( [.[:digit:]]+% ruleset,)?( [.[:digit:]]+% parent,)?( [.[:digit:]]+% child,)?( [.[:digit:]]+% requests,)?( [.[:digit:]]+% dns,)? [.[:digit:]]+% rates$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfwd2/master\[[[:digit:]]+\]: \[STATS\] Timeouts: [.[:digit:]]+% \([[:digit:]]+ of [[:digit:]]+ dns queries\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfwd2/master\[[[:digit:]]+\]: \[STATS\]  *[[:digit:]]+ matches for id: +[_[:alnum:]-]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfwd2/policy\[[[:digit:]]+\]: \[RULES\] rule=[[:digit:]]+, id=[_[:alnum:]-]+, client=[^[]+\[[.:[:xdigit:]]+\], sender=<[^>]*>, recipient=<[^>]+>, helo=<[^>]+>, proto=E?SMTP, state=RCPT, delay=[.[:digit:]]+s, hits=[_[:alnum:]-]+, action=
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfwd2/policy\[[[:digit:]]+\]: \[RULES\] rule=[[:digit:]]+, id=[_[:alnum:]-]+, client=[^[]+\[[.:[:xdigit:]]+\], sender=<[^>]*>, recipient=<[^>]+>, helo=<[^>]+>, proto=E?SMTP, state=RCPT, delay=[.[:digit:]]+s, hits=[_;[:alnum:]-]+, action=
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfwd2/policy\[[[:digit:]]+\]: \[DNSBL\] [.:[:xdigit:]]+ listed on rbl:[._[:alnum:]-]+ \(answer: [.[:digit:]]+, time: [.[:digit:]]+s, ttl: [[:digit:]]+s, '[^']*'\)$
