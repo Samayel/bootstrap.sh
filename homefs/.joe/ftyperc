@@ -552,6 +552,7 @@
 -autoindent
 -syntax conf
 -pound_comment
+--spaces
 
  Windows batch files
 [bat]
