@@ -6,7 +6,7 @@
 
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/amavisd-new       --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/bind              --target-directory=/etc/logcheck/ignore.d.server/
-ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/chron             --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/cron              --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/chrony            --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/cron-apt          --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/dovecot           --target-directory=/etc/logcheck/ignore.d.server/
