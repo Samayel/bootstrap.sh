@@ -49,3 +49,11 @@
    if failed port 22 protocol ssh with timeout 15 seconds       for 3 times within 15 cycles then alert
    if failed port 53 use type tcp protocol dns                  for 3 times within 15 cycles then alert
    if failed port 53 use type udp protocol dns                  for 3 times within 15 cycles then alert
+
+
+
+ check host s2000.cst.fra with address s2000.cst.fra.vu.quyo.net
+   group network
+   if failed ping4                                              for 3 times within 15 cycles then alert  # IPv4 only
+   if failed ping6                                              for 3 times within 15 cycles then alert  # IPv6 only
+   if failed port 22 protocol ssh with timeout 15 seconds       for 3 times within 15 cycles then alert
