@@ -1,0 +1,6 @@
+ check process sandstorm with pidfile /opt/sandstorm/var/pid/sandstorm.pid
+   group daemon
+   group sandstorm
+   start program = "/usr/sbin/service sandstorm start"
+   stop  program = "/usr/sbin/service sandstorm stop"
+   if 5 restarts within 5 cycles then timeout
