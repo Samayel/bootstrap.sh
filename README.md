@@ -10,3 +10,10 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 
 * git clone --recursive https://github.com/Samayel/bootstrap.sh.git /bootstrap.sh
 * cd /bootstrap.sh && ./bootstrap.sh
+
+## Post-Scripts
+
+* Samayel/quyo.net/scripts/*quyo-runall
+* Samayel/bootstrap.sh/rootfs/etc/monit/conf-available/quyo-hosts
+* https://discovery.cryptosense.com
+* johm@shell:~/.ssh/config
