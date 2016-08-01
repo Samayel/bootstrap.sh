@@ -12,7 +12,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Session [[:digit:]]+ of user [.[:alnum:]-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Created slice User Slice of [.[:alnum:]-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Removed slice User Slice of [.[:alnum:]-]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Startup finished in [[:digit:]]+ms\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Startup finished in [.[:digit:]]+m?s\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Exit the Session\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Received SIGRTMIN\+24 from PID [[:digit:]]+ \(kill\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: New session [[:digit:]]+ of user [.[:alnum:]-]+\.$
