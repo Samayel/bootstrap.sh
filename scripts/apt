@@ -4,7 +4,7 @@ apt-get install -y openssh-client openssh-server openssh-sftp-server
 apt-get install -y wget curl
 apt-get install -y screen tmux dtach
 apt-get install -y vim joe nano
-apt-get install -y git
+apt-get install -y git bup
 apt-get install -y mc
 apt-get install -y haveged
 apt-get install -y chrony
