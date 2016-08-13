@@ -1,0 +1,6 @@
+ check process postsrsd with matching "/usr/sbin/postsrsd"
+   group daemon
+   group postsrsd
+   start program = "/usr/sbin/service postsrsd start"
+   stop  program = "/usr/sbin/service postsrsd stop"
+   if 5 restarts within 5 cycles then timeout

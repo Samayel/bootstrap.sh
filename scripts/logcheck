@@ -14,6 +14,7 @@ ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/kernel            --tar
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/postfix           --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/postfwd           --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/postgrey          --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/postsrsd          --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/spamc             --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/spamd             --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh               --target-directory=/etc/logcheck/ignore.d.server/
