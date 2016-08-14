@@ -8,7 +8,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot-auth: pam_ldap: error trying to bind as user \".*\" \(Invalid credentials\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (imap|pop3)-login: Login: [.[:alnum:]@-]+ \[[.:[:xdigit:]]+\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login( \([[:digit:]]+ authentication attempts\))?: (user=<[-_.@[:alnum:]]+>, method=[[:alnum:]-]+, )?rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: (Disconnected|Aborted login)(: (Inactivity|Too many bad commands))? \((no auth attempts in [[:digit:]]+ secs|auth failed, [[:digit:]]+ attempts|aborted authentication)\): user=<[-_.@[:alnum:]]*>(, method=PLAIN)?, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: (Disconnected|Aborted login)(: (Inactivity|Too many (bad|invalid) commands))? \((no auth attempts in [[:digit:]]+ secs|auth failed, [[:digit:]]+ attempts|aborted authentication)\): user=<[-_.@[:alnum:]]*>(, method=PLAIN)?, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected \(disconnected before auth was ready, waited [[:digit:]]+ secs\): user=<[-_.@[:alnum:]]*>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, TLS handshaking: Disconnected$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected: ((Too many invalid commands|Inactivity): )?(user=<[-_.@[:alnum:]]+>, )?(method=[[:alnum:]-]+, )?rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected: Logged out$
