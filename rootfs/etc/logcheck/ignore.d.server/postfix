@@ -187,7 +187,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PREGREET [[:digit:]]+ after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+: .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: BARE NEWLINE from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: COMMAND PIPELINING from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: COMMAND TIME LIMIT from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after (CONNECT|STARTTLS)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: COMMAND TIME LIMIT from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after (CONNECT|HELO|STARTTLS)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NON-SMTP COMMAND from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after CONNECT: 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.5\.1 Protocol error; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.7\.1 Service unavailable; client \[[.:[:xdigit:]]+\] blocked using [-._[:alnum:]]+; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: psc_cache_update: btree:/var/lib/postfix/postscreen_cache update average delay is [[:digit:]]+ ms$

@@ -80,3 +80,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: Kernel logging \(proc\) stopped\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel:( \[ *[[:digit:]]+\.[[:digit:]]+\])? kvm: emulating exchange as write$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel:( \[ *[[:digit:]]+\.[[:digit:]]+\])? Adding [[:digit:]]+k swap on /swapfile.  Priority:[[:digit:]-]+ extents:[[:digit:]]+ across:[[:digit:]]+k FS$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel:( \[ *[[:digit:]]+\.[[:digit:]]+\])? hrtimer: interrupt took [[:digit:]]+ ns$
