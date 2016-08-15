@@ -178,17 +178,12 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?(verify|postscreen)?\[[[:digit:]]+\]: close database /var/lib/postfix/(verify|postscreen)_cache.db: No such file or directory \(possible Berkeley DB bug\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(postscreen|tlsproxy)\[[[:digit:]]+\]: CONNECT from \[[.:[:xdigit:]]+\]:[[:digit:]]+( to \[[.:[:xdigit:]]+\]:[[:digit:]]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(postscreen|tlsproxy)\[[[:digit:]]+\]: DISCONNECT \[[.:[:xdigit:]]+\]:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PASS NEW \[[.:[:xdigit:]]+\]:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PASS OLD \[[.:[:xdigit:]]+\]:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: WHITELISTED \[[.:[:xdigit:]]+\]:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: BLACKLISTED \[[.:[:xdigit:]]+\]:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PASS (NEW|OLD) \[[.:[:xdigit:]]+\]:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: (WHITE|BLACK)LISTED \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: DNSBL rank [[:digit:]]+ for \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: HANGUP after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+ in tests (before|after) SMTP handshake$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PREGREET [[:digit:]]+ after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+: .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: BARE NEWLINE from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: COMMAND PIPELINING from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: COMMAND TIME LIMIT from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after (CONNECT|HELO|EHLO|STARTTLS)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NON-SMTP COMMAND from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after CONNECT: 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: (BARE NEWLINE|COMMAND (PIPELINING|TIME LIMIT)|NON-SMTP COMMAND) from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.5\.1 Protocol error; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.7\.1 Service unavailable; client \[[.:[:xdigit:]]+\] blocked using [-._[:alnum:]]+; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: psc_cache_update: btree:/var/lib/postfix/postscreen_cache update average delay is [[:digit:]]+ ms$
