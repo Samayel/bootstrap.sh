@@ -1,0 +1,6 @@
+ check process opendkim with pidfile /var/run/opendkim/opendkim.pid
+   group daemon
+   group opendkim
+   start program = "/usr/sbin/service opendkim start"
+   stop  program = "/usr/sbin/service opendkim stop"
+   if 5 restarts within 5 cycles then timeout
