@@ -194,3 +194,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: [[:xdigit:]]+: client=[._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\], orig_client=[._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: proxy-accept: END-OF-MESSAGE: 250 2\.0\.0 from MTA\(smtp:\[127.0.0.1\]:10025\): 250 2\.0\.0 Ok: queued as [[:xdigit:]]+; from=<[^[:space:]]*> to=<[^[:space:]]*> proto=E?SMTP helo=<[^[:space:]]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: proxy-reject: END-OF-MESSAGE: 554 5\.7\.0 Reject, id=[[:digit:]-]+ - spam; from=<[^[:space:]]*> to=<[^[:space:]]+> proto=E?SMTP helo=<[^[:space:]]+>$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: improper command pipelining after HELO from [._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]: QUIT\\r\\n$
