@@ -10,7 +10,7 @@
    if failed ping6                                              for 3 times within 15 cycles then alert  # IPv6 only
    if failed port 22 protocol ssh with timeout 15 seconds       for 3 times within 15 cycles then alert
 
- check host office.svc.fra1 with address office.svc.fra1.do.quyo.net
+ check host desert.svc.fra1 with address desert.svc.fra1.do.quyo.net
    group network
    if failed ping4                                              for 3 times within 15 cycles then alert  # IPv4 only
    if failed ping6                                              for 3 times within 15 cycles then alert  # IPv6 only
