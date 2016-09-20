@@ -13,4 +13,4 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y postfix logcheck
 apt-get install -y cron-apt
 apt-get install -y monit
 apt-get install -y ccze
-apt-get install -y logwatch libsys-cpu-perl libsys-meminfo-perl
+# apt-get install -y logwatch libsys-cpu-perl libsys-meminfo-perl
