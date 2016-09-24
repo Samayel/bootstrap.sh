@@ -14,4 +14,4 @@ apt-get install -y cron-apt
 apt-get install -y monit
 apt-get install -y ccze
 # apt-get install -y logwatch libsys-cpu-perl libsys-meminfo-perl
-apt-get install -y fail2ban
+apt-get install -y fail2ban whois python3-pyinotify
