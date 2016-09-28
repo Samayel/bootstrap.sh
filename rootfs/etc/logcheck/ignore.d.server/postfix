@@ -187,8 +187,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: HANGUP after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+ in tests (before|after) SMTP handshake$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: PREGREET [[:digit:]]+ after [.[:digit:]]+ from \[[.:[:xdigit:]]+\]:[[:digit:]]+: .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: (BARE NEWLINE|COMMAND (PIPELINING|TIME LIMIT)|NON-SMTP COMMAND) from \[[.:[:xdigit:]]+\]:[[:digit:]]+ after 
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.5\.1 Protocol error; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 5\.7\.1 Service unavailable; client \[[.:[:xdigit:]]+\] blocked using [-._[:alnum:]]+; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 [[:digit:].]+ Protocol error; from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: NOQUEUE: reject: (RCPT|VRFY) from \[[.:[:xdigit:]]+\]:[[:digit:]]+: 550 [[:digit:].]+ Service( currently)? unavailable;( client \[[.:[:xdigit:]]+\] blocked using [-._[:alnum:]]+;)? from=<[^>]*>, to=<[^>]+>, proto=E?SMTP, helo=<[^>]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: psc_cache_update: btree:/var/lib/postfix/postscreen_cache update average delay is [[:digit:]]+ ms$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: dnsblog reply timeout [[:digit:]]+s for [._[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: getpeername: Transport endpoint is not connected -- dropping this connection$
