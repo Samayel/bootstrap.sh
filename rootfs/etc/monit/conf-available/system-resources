@@ -1,15 +1,15 @@
  check system $HOST
    group system
-   if loadavg (1min)  > 5 then alert
-   if loadavg (5min)  > 3 then alert
-   if loadavg (15min) > 1 then alert
+   if loadavg (1min)     > 5   for 10 times within 15 cycles then alert
+   if loadavg (5min)     > 3   for 10 times within 15 cycles then alert
+   if loadavg (15min)    > 1   for 10 times within 15 cycles then alert
 
    # Note that  multi-core systems can generate 100%
    # per core so total CPU usage can be more than 100%
-   if cpu usage          > 75% for 5 times within 15 cycles then alert
-   if cpu usage (user)   > 75% for 5 times within 15 cycles then alert
-   if cpu usage (wait)   > 50% for 5 times within 15 cycles then alert
-   if cpu usage (system) > 25% for 5 times within 15 cycles then alert
+   if cpu usage          > 75% for 10 times within 15 cycles then alert
+   if cpu usage (user)   > 75% for 10 times within 15 cycles then alert
+   if cpu usage (wait)   > 50% for 10 times within 15 cycles then alert
+   if cpu usage (system) > 25% for 10 times within 15 cycles then alert
 
-   if memory usage       > 75% for 5 times within 15 cycles then alert
-   if swap usage         > 50% for 5 times within 15 cycles then alert
+   if memory usage       > 75% for 10 times within 15 cycles then alert
+   if swap usage         > 50% for 10 times within 15 cycles then alert
