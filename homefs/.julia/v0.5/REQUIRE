@@ -2,3 +2,5 @@ IJulia
 DataFrames
 Nemo
 Hecke
+PyCall
+Symata
