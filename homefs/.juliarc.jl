@@ -1,1 +1,1 @@
-delete!(ENV, "PYTHON")
+ENV["PYTHON"]="/bin/false"
