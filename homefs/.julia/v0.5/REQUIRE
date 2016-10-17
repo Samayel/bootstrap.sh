@@ -3,6 +3,7 @@ Cairo
 Calculus
 Clustering
 DataFrames
+DataFramesMeta
 DataStructures
 DecisionTree
 Distances
@@ -21,6 +22,7 @@ MLBase
 Mux
 Nemo
 NLopt
+NullableArrays
 ODE
 OpenStreetMap
 Optim
@@ -31,6 +33,7 @@ Polynomials
 Primes
 PyCall
 PyPlot
+Query
 RDatasets
 Requests
 Roots
@@ -39,7 +42,9 @@ SQLite
 StatsBase
 StatsFuns
 StreamStats
+StructuredQueries
 Sundials
 Symata
+SymEngine
 SymPy
 TimeSeries
