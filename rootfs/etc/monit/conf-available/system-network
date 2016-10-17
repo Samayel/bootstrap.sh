@@ -5,10 +5,10 @@
    if saturation     > 50%    for 5 times within 15 cycles then alert
    if download       > 5 MB/s for 5 times within 15 cycles then alert
    if upload         > 5 MB/s for 5 times within 15 cycles then alert
-   if total download > 1 GB   in last hour then alert
-   if total upload   > 1 GB   in last hour then alert
-   if total download > 10 GB  in last day then alert
-   if total upload   > 10 GB  in last day then alert
+   if total download > 5 GB   in last hour then alert
+   if total upload   > 5 GB   in last hour then alert
+   if total download > 20 GB  in last day then alert
+   if total upload   > 20 GB  in last day then alert
 
  check network private-network with interface eth1
    group system
@@ -17,7 +17,7 @@
    if saturation     > 50%    for 5 times within 15 cycles then alert
    if download       > 5 MB/s for 5 times within 15 cycles then alert
    if upload         > 5 MB/s for 5 times within 15 cycles then alert
-   if total download > 1 GB   in last hour then alert
-   if total upload   > 1 GB   in last hour then alert
-   if total download > 10 GB  in last day then alert
-   if total upload   > 10 GB  in last day then alert
+   if total download > 5 GB   in last hour then alert
+   if total upload   > 5 GB   in last hour then alert
+   if total download > 20 GB  in last day then alert
+   if total upload   > 20 GB  in last day then alert
