@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+#
+# link config files
+#
+
+ln -sf /bootstrap.sh/rootfs/etc/update-manager/release-upgrades --target-directory=/etc/update-manager/
