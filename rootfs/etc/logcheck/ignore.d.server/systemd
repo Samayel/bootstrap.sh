@@ -27,6 +27,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) HAProxy Load Balancer\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) Postfix Mail Transport Agent( \(instance -\))?\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: user@0\.service: Killing process [[:digit:]]+ \(kill\) with signal SIGKILL\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: (daemon|store)\.go:[[:digit:]]+: DEBUG:
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: #015#033\[K$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: No snaps are installed yet\. Try 'snap install hello-world'\.$
