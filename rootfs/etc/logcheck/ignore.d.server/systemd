@@ -27,6 +27,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to save user data /run/systemd/users/[[:digit:]]+: No space left on device$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to save session data /run/systemd/sessions/[[:digit:]]+: No space left on device$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to start user slice user-[[:digit:]]+\.slice, ignoring: Unit user-[[:digit:]]+\.slice not found\. \(org.\freedesktop\.systemd1\.NoSuchUnit\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to start user service, ignoring: Unit user-[[:digit:]]+\.slice not found\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to start session scope session-[[:digit:]]+\.scope: Unit session-[[:digit:]]+\.scope not found\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: New session [[:digit:]]+ of user [.[:alnum:]-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Removed session [[:digit:]]+\.$
