@@ -22,6 +22,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: failed to create db file '[^']+' for '[^']+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Using degraded feature set \(UDP\+EDNS0\+DO\) for DNS server [[:xdigit:].:]{3,39}\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Grace period over, resuming full feature set \(UDP\+EDNS0\+DO\+LARGE\) for DNS server [[:xdigit:].:]{3,39}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to save user data /run/systemd/users/[[:digit:]]+: No space left on device$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to save session data /run/systemd/sessions/[[:digit:]]+: No space left on device$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[[:digit:]]+\]: Failed to start user slice user-[[:digit:]]+\.slice, ignoring: Unit user-[[:digit:]]+\.slice not found\. \(org.\freedesktop\.systemd1\.NoSuchUnit\)$
