@@ -3,7 +3,7 @@
    group postfix
    start program = "/usr/sbin/service postfix start"
    stop  program = "/usr/sbin/service postfix stop"
-   if failed host localhost port 25 with protocol smtps then restart
+   if failed host localhost port 25 with protocol smtp then restart
    if 5 restarts with 5 cycles then timeout
    depend master_bin
    depend postfix_rc
