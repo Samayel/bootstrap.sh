@@ -20,5 +20,6 @@ apt-get -y install debconf-utils
 ./scripts/monit
 ./scripts/swapfile
 ./scripts/update-manager
+./scripts/unbound
 
 shutdown -r +1
