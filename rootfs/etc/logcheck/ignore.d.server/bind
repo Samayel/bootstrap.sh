@@ -15,3 +15,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: update( forwarding)? '[._[:alnum:]-]+/IN' denied$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: notify question section contains no SOA$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: message parsing failed: (unexpected end of input|bad compression pointer|bad label type|FORMERR)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR ended$
