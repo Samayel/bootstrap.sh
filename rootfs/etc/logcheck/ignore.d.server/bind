@@ -6,6 +6,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: ((network|host) (unreachable|down)|connection refused|unexpected RCODE \((FORMERR|SERVFAIL|NXDOMAIN|NOTIMP|REFUSED|YXDOMAIN|YXRRSET|NXRRSET|NOTAUTH|NOTZONE|BADVERS|<rcode [[:digit:]]+>|[[:digit:]]+)\)) resolving '[^[:space:]]+': [.:[:xdigit:]]+#[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN(/[._[:alnum:]-]+)?: Transfer started.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN: refresh: failure trying master [._[:alnum:]-]+#53: .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN: refresh: retry limit for master [.:[:xdigit:]]+#[[:digit:]]+ exceeded \(source [.:[:xdigit:]]+#[[:digit:]]+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+: received notify for zone '[-._[:alnum:]]+': TSIG '[-_[:alnum:]]+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [-._[:alnum:]]+/IN: notify from [.:[:xdigit:]]+#[[:digit:]]+: zone is up to date$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: success resolving '[^[:space:]]+' \(in '[.[:alnum:]-]+'\?\) after (disabling EDNS|reducing the advertised EDNS UDP packet size to 512 octets)$
@@ -16,3 +17,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: notify question section contains no SOA$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: message parsing failed: (unexpected end of input|bad compression pointer|bad label type|FORMERR)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR ended$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: transfer of '[._[:alnum:]-]+/IN' from [.:[:xdigit:]]+#[[:digit:]]+: connected using [.:[:xdigit:]]+#[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: transfer of '[._[:alnum:]-]+/IN' from [.:[:xdigit:]]+#[[:digit:]]+: Transfer status: up to date$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: transfer of '[._[:alnum:]-]+/IN' from [.:[:xdigit:]]+#[[:digit:]]+: Transfer completed: [[:digit:]]+ messages, [[:digit:]]+ records, [[:digit:]]+ bytes, [.[:digit:]]+ secs \([[:digit:]]+ bytes/sec\)$
