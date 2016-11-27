@@ -20,3 +20,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: transfer of '[._[:alnum:]-]+/IN' from [.:[:xdigit:]]+#[[:digit:]]+: connected using [.:[:xdigit:]]+#[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: transfer of '[._[:alnum:]-]+/IN' from [.:[:xdigit:]]+#[[:digit:]]+: Transfer status: up to date$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: transfer of '[._[:alnum:]-]+/IN' from [.:[:xdigit:]]+#[[:digit:]]+: Transfer completed: [[:digit:]]+ messages, [[:digit:]]+ records, [[:digit:]]+ bytes, [.[:digit:]]+ secs \([[:digit:]]+ bytes/sec\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: master [.:[:xdigit:]]+#[[:digit:]]+ \(source [.:[:xdigit:]]+#[[:digit:]]+\) deleted from unreachable cache$
