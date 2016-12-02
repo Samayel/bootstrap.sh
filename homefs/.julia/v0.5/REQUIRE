@@ -6,9 +6,11 @@ DataFrames
 DataFramesMeta
 DataStructures
 DecisionTree
+Digits
 Distances
 Distributions
 Evolutionary
+FunctionalCollections
 Gadfly
 GLM
 GLMNet
@@ -16,8 +18,11 @@ Hecke
 HypothesisTests
 IJulia
 Images
+IndexedArrays
 JuMP
+Lazy
 LightGraphs
+Memoize
 MLBase
 Mux
 Nemo
@@ -38,6 +43,7 @@ RDatasets
 Requests
 Roots
 SIUnits
+SortingAlgorithms
 SQLite
 StatsBase
 StatsFuns
@@ -48,3 +54,4 @@ Symata
 SymEngine
 SymPy
 TimeSeries
+ValidatedNumerics
