@@ -54,5 +54,6 @@ Sundials
 Symata
 SymEngine
 SymPy
+TaylorSeries
 TimeSeries
 ValidatedNumerics
