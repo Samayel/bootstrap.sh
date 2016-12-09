@@ -10,7 +10,9 @@ DecisionTree
 Digits
 Distances
 Distributions
+DualNumbers
 Evolutionary
+ForwardDiff
 FunctionalCollections
 Gadfly
 GLM
@@ -42,6 +44,7 @@ PyPlot
 Query
 RDatasets
 Requests
+ReverseDiff
 Roots
 SIUnits
 SortingAlgorithms
