@@ -1,0 +1,2 @@
+    #                                                                                             Let’s Encrypt Authority X1/X3                              Let’s Encrypt Authority X2/X4
+    http-response set-header Public-Key-Pins                        'max-age=5184000; pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; pin-sha256="sRHdihwgkaib1P1gxX8HFszlD+7/gTfNvuAybgLPNis="; report-uri="https://quyo.report-uri.io/r/default/hpkp/enforce"'

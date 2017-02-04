@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -e
+
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+CURRENTCFG=/etc/haproxy/haproxy.cfg
+TEMPLATEDIR=/etc/haproxy/template
+NEWCFG=/tmp/haproxy.cfg.tmp
+
+pushd $TEMPLATEDIR
+
+sh -c "$("$SCRIPTPATH/shtpl" haproxy.cfg)" > $NEWCFG
+read -p "Press a key..." -n 1 -r
+echo
+
+diff -s -U 3 $CURRENTCFG $NEWCFG | colordiff | less -R
+
+echo -e "Checking if new config is valid..."
+haproxy -c -f $NEWCFG
+
+if [ $? -eq 0 ]; then
+    echo "Check if there are some warnings in new configuration."
+    read -p "Should I copy new configuration to $CURRENTCFG and reload haproxy? [y/N]" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        echo " "
+        echo "Working..."
+        cat $NEWCFG > $CURRENTCFG
+        echo "Reloading haproxy..."
+        service haproxy reload
+    fi
+else
+    echo "There are errors in new configuration, please fix them and try again."
+    exit 1
+fi
+
+popd

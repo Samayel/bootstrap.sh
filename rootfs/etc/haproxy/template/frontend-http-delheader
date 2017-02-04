@@ -1,0 +1,7 @@
+    # BREACH (CVE-2013-3587): disable compression
+    http-request  del-header Accept-Encoding
+
+    # https://httpoxy.org
+    http-request  del-header Proxy
+
+    http-response del-header Server

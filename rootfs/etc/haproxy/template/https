@@ -1,0 +1,14 @@
+frontend ft_tcp443
+    mode tcp
+    option tcplog
+
+    bind *:443
+    bind :::443
+
+    # wait up to 5 seconds from the time the tcp socket opens
+    # until the hello packet comes in (otherwise fallthru to the default)
+    tcp-request inspect-delay 5s
+    tcp-request content accept if { req.ssl_hello_type 1 }
+
+    # no default backend - SSL/TLS is opt-in only!
+    use_backend %[req.ssl_sni,lower,map_end(/etc/haproxy/sni2backend.map)]
