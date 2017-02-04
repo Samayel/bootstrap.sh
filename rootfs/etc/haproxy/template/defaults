@@ -1,9 +1,14 @@
 defaults
     log	global
     option	dontlognull
+    # http://blog.haproxy.com/2012/11/07/websockets-load-balancing-with-haproxy/
+    option  contstats
+    option  http-server-close
+    option  redispatch
     timeout connect 10s
     timeout client  90s
     timeout server  90s
+    timeout tunnel  3600s
     errorfile 400 /etc/haproxy/errors/400.http
     errorfile 403 /etc/haproxy/errors/403.http
     errorfile 408 /etc/haproxy/errors/408.http
