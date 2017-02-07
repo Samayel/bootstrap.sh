@@ -3,7 +3,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Authorized to [^[:space:]]+, krb5 principal [^[:space:]]+ \(krb5_kuserok\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '[^']*' from ([:.[:xdigit:]]+|UNKNOWN)( port [[:digit:]]{1,5})?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Did not receive identification string from ([:[:xdigit:].]+|UNKNOWN)( port [[:digit:]]{1,5})?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Bad packet length [[:digit:]]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (Disconnecting: )?Bad packet length [[:digit:]]+\.( \[preauth\])?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Corrupted MAC on input\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Too many authentication failures( for [^[:space:]]*)? \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (message repeated [[:digit:]]+ times: \[ )?Failed (keyboard-interactive/pam|password|none) for (i(llegal|nvalid) user )?[^[:space:]]* from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+) port [[:digit:]]{1,5} ssh2?\]?$
@@ -57,6 +57,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [:[:xdigit:].]+ port [[:digit:]]{1,5}: SSH-[._ [:alnum:]-]+ vs. SSH-[._ [:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: mm_answer_moduli: bad parameters:( 2048| 1024)+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for invalid user [^[:space:]]+ from [:.[:xdigit:]]+ port [[:digit:]]{1,5} ssh2 \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?ssh_dispatch_run_fatal: Connection from ([:.[:xdigit:]]+|UNKNOWN) port [[:digit:]]{1,5}: (DH GEX group out of range|incomplete message|Broken pipe) \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?ssh_dispatch_run_fatal: Connection from ([:.[:xdigit:]]+|UNKNOWN) port [[:digit:]]{1,5}: (DH GEX group out of range|message authentication code incorrect|incomplete message|Broken pipe) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: invalid public DH value: <= 1 \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: pam_systemd\(sshd:session\): Failed to create session: No such file or directory$
