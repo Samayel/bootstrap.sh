@@ -59,12 +59,14 @@ Gallium
 GLM
 GLMNet
 Graphics
+GraphPlot
 GZip
 HDF5
 Hecke
 Hexagons
 Hiccup
 @osx Homebrew
+HTTP
 @unix HTTPClient
 HttpCommon
 HttpParser
