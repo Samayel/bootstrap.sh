@@ -16,6 +16,7 @@ BusinessDays
 Cairo
 Calculus
 CategoricalArrays
+ClassicalCiphers
 Clustering
 Codecs
 CodeTools
@@ -39,6 +40,7 @@ DataStructures
 DBAPI
 @unix DecFP
 DecisionTree
+DeepDiffs
 DiffBase
 Digits
 Distances
@@ -154,6 +156,7 @@ SHA
 Showoff
 SIUnits
 SortingAlgorithms
+SpecialFunctions
 SQLite
 StaticArrays
 StatsBase
