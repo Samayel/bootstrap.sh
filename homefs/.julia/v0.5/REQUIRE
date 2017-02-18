@@ -80,6 +80,7 @@ Images
 IndexedArrays
 Interact
 Interpolations
+IntervalConstraintProgramming
 Iterators
 JavaCall
 JDBC
@@ -172,6 +173,7 @@ Symata
 SymEngine
 SymPy
 TaylorSeries
+TensorOperations
 TerminalUI
 TexExtensions
 TextWrap

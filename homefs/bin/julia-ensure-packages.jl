@@ -19,9 +19,7 @@ cd(Pkg.dir())
     end
 end
 
-withenv("JULIA_PKGRESOLVE_ACCURACY" => "10") do
-    Pkg.update()
-end
+PkgQ.update()
 
 withenv("PYTHON" => "") do
     Pkg.build("PyCall")
@@ -63,6 +61,11 @@ isdir(joinpath(Pkg.dir(), "ArbDecimals")) || begin
     Pkg.build("ArbDecimals")
 end
 
+isdir(joinpath(Pkg.dir(), "Astrodynamics")) || begin
+    Pkg.clone("https://github.com/JuliaAstrodynamics/Astrodynamics.jl.git")
+    Pkg.build("Astrodynamics")
+end
+
 isdir(joinpath(Pkg.dir(), "OhMyREPL")) || begin
     Pkg.clone("https://github.com/KristofferC/OhMyREPL.jl.git")
     Pkg.build("OhMyREPL")
@@ -73,15 +76,15 @@ isdir(joinpath(Pkg.dir(), "RiemannComplexNumbers")) || begin
     Pkg.build("RiemannComplexNumbers")
 end
 
-isdir(joinpath(Pkg.dir(), "StateMachineIterator")) || begin
-    Pkg.clone("https://github.com/BenLauwens/StateMachineIterator.jl.git")
-    Pkg.build("StateMachineIterator")
+isdir(joinpath(Pkg.dir(), "StatefulFunctions")) || begin
+    Pkg.clone("https://github.com/BenLauwens/StatefulFunctions.jl.git")
+    Pkg.build("StatefulFunctions")
 end
 
-isdir(joinpath(Pkg.dir(), "unumjl")) || begin
-    Pkg.clone("https://github.com/REX-Computing/unumjl.git")
-    Pkg.build("unumjl")
-end
+# isdir(joinpath(Pkg.dir(), "unumjl")) || begin
+#     Pkg.clone("https://github.com/REX-computing/unumjl.git", "Unums")
+#     Pkg.build("unumjl")
+# end
 
 isdir(joinpath(Pkg.dir(), "XDiff")) || begin
     Pkg.clone("https://github.com/dfdx/XDiff.jl.git")
