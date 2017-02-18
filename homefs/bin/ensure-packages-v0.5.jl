@@ -51,6 +51,11 @@ isdir(joinpath(Pkg.dir(), "ProjectEuler")) || begin
     Pkg.build("ProjectEuler")
 end
 
+isdir(joinpath(Pkg.dir(), "AlgebraicNumbers")) || begin
+    Pkg.clone("https://github.com/anj1/AlgebraicNumbers.jl.git")
+    Pkg.build("AlgebraicNumbers")
+end
+
 isdir(joinpath(Pkg.dir(), "ArbDecimals")) || begin
     Pkg.clone("https://github.com/JuliaArbTypes/ArbDecimals.jl.git")
     Pkg.build("ArbDecimals")
@@ -61,7 +66,22 @@ isdir(joinpath(Pkg.dir(), "OhMyREPL")) || begin
     Pkg.build("OhMyREPL")
 end
 
+isdir(joinpath(Pkg.dir(), "RiemannComplexNumbers")) || begin
+    Pkg.clone("https://github.com/scheinerman/RiemannComplexNumbers.jl.git")
+    Pkg.build("RiemannComplexNumbers")
+end
+
 isdir(joinpath(Pkg.dir(), "StateMachineIterator")) || begin
     Pkg.clone("https://github.com/BenLauwens/StateMachineIterator.jl.git")
     Pkg.build("StateMachineIterator")
+end
+
+isdir(joinpath(Pkg.dir(), "unumjl")) || begin
+    Pkg.clone("https://github.com/REX-Computing/unumjl.git")
+    Pkg.build("unumjl")
+end
+
+isdir(joinpath(Pkg.dir(), "XDiff")) || begin
+    Pkg.clone("https://github.com/dfdx/XDiff.jl.git")
+    Pkg.build("XDiff")
 end

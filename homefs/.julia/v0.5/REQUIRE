@@ -42,6 +42,7 @@ DBAPI
 DecisionTree
 DeepDiffs
 DiffBase
+DifferentialEquations
 Digits
 Distances
 Distributions
@@ -126,6 +127,7 @@ ODBC
 ODE
 OpenStreetMap
 Optim
+OrdinaryDiffEq
 Parameters
 ParserCombinator
 PDMats
@@ -141,6 +143,7 @@ PyCall
 PyPlot
 QuantEcon
 Query
+RandomNumbers
 Ratios
 RCall
 RDatasets
@@ -174,6 +177,7 @@ TexExtensions
 TextWrap
 TimeSeries
 Tokenize
+Unums
 URIParser
 ValidatedNumerics
 VT100
