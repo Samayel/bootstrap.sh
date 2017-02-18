@@ -45,13 +45,15 @@ run(func, accuracy) = begin
             end
             failed = false
         catch err
-            if !isa(err, Pkg.PkgError) || !contains(err.msg, "JULIA_PKGRESOLVE_ACCURACY")
-                rethrow()
-            end
+            contains(err, "JULIA_PKGRESOLVE_ACCURACY") || rethrow()
         end
 
         acc *= 2
     end
 end
+
+contains(err::Pkg.PkgError, msg) = Base.contains(err.msg, msg)
+contains(err::CapturedException, msg) = contains(err.ex, msg)
+contains(err::CompositeException, msg) = any(x -> contains(x, msg), err.exceptions)
 
 end
