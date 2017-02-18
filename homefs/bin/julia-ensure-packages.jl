@@ -5,21 +5,23 @@ isinitialized = isdir(Pkg.dir())
 isinitialized || Pkg.init()
 cd(Pkg.dir())
 
-homedir=ENV["HOME"]
-islink("REQUIRE") || begin
-    rm("REQUIRE")
-    symlink("$homedir/repository/github.com/Samayel/bootstrap.sh/homefs/.julia/v0.5/REQUIRE", "REQUIRE")
-    isinitialized = false
-end
-
 @static if is_unix()
+    homedir=ENV["HOME"]
+    islink("REQUIRE") || begin
+        rm("REQUIRE")
+        symlink("$homedir/repository/github.com/Samayel/bootstrap.sh/homefs/.julia/v0.5/REQUIRE", "REQUIRE")
+        isinitialized = false
+    end
+
     isinitialized || begin
         include(joinpath(dirname(JULIA_HOME), "share", "julia", "build_sysimg.jl"))
         build_sysimg(force=true)
     end
 end
 
-Pkg.update()
+withenv("JULIA_PKGRESOLVE_ACCURACY" => "10") do
+    Pkg.update()
+end
 
 withenv("PYTHON" => "") do
     Pkg.build("PyCall")
