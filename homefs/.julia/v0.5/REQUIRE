@@ -8,6 +8,7 @@ AutoHashEquals
 AxisAlgorithms
 BenchmarkTools
 BinDeps
+BlackBoxOptim
 Blink
 Blosc
 Bokeh
@@ -81,6 +82,7 @@ IndexedArrays
 Interact
 Interpolations
 IntervalConstraintProgramming
+IterativeSolvers
 Iterators
 JavaCall
 JDBC
@@ -127,12 +129,16 @@ NullableArrays
 ObjFileBase
 ODBC
 ODE
+ODEInterface
+ODEInterfaceDiffEq
 OpenStreetMap
 Optim
 OrdinaryDiffEq
+ParallelAccelerator
 Parameters
 ParserCombinator
 PDMats
+PGFPlots
 Plotly
 Plots
 PolynomialFactors
@@ -180,6 +186,7 @@ TexExtensions
 TextWrap
 TimeSeries
 Tokenize
+Unitful
 Unums
 URIParser
 ValidatedNumerics
