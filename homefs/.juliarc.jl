@@ -1,1 +1,1 @@
-# ENV["PYTHON"]="/bin/false"
+ENV["JULIA_PKGRESOLVE_ACCURACY"] = "10"
