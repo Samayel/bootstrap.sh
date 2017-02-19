@@ -22,71 +22,76 @@ end
 PkgQ.update()
 
 withenv("PYTHON" => "") do
-    Pkg.build("PyCall")
+    PkgQ.build("PyCall")
 end
 
 isinitialized || begin
-    Pkg.checkout("Nemo")
-    Pkg.build("Nemo")
+    PkgQ.checkout("Nemo")
+    PkgQ.build("Nemo")
 
-    Pkg.checkout("Hecke")
-    Pkg.build("Hecke")
+    PkgQ.checkout("Hecke")
+    PkgQ.build("Hecke")
 
-    Pkg.checkout("Symata")
-    Pkg.build("Symata")
+    PkgQ.checkout("Symata")
+    PkgQ.build("Symata")
 end
 
 isdir(joinpath(Pkg.dir(), "PrimeSieve")) || begin
-    Pkg.clone("git@github.com:Samayel/PrimeSieve.jl.git")
-    Pkg.build("PrimeSieve")
+    PkgQ.clone("git@github.com:Samayel/PrimeSieve.jl.git")
+    PkgQ.build("PrimeSieve")
 end
 
 isdir(joinpath(Pkg.dir(), "Brainstorm")) || begin
-    Pkg.clone("git@github.com:Samayel/Brainstorm.jl.git")
-    Pkg.build("Brainstorm")
+    PkgQ.clone("git@github.com:Samayel/Brainstorm.jl.git")
+    PkgQ.build("Brainstorm")
 end
 
 isdir(joinpath(Pkg.dir(), "ProjectEuler")) || begin
-    Pkg.clone("git@github.com:Samayel/ProjectEuler.jl.git")
-    Pkg.build("ProjectEuler")
+    PkgQ.clone("git@github.com:Samayel/ProjectEuler.jl.git")
+    PkgQ.build("ProjectEuler")
 end
 
 isdir(joinpath(Pkg.dir(), "AlgebraicNumbers")) || begin
-    Pkg.clone("https://github.com/anj1/AlgebraicNumbers.jl.git")
-    Pkg.build("AlgebraicNumbers")
+    PkgQ.clone("https://github.com/anj1/AlgebraicNumbers.jl.git")
+    PkgQ.build("AlgebraicNumbers")
 end
 
 isdir(joinpath(Pkg.dir(), "ArbDecimals")) || begin
-    Pkg.clone("https://github.com/JuliaArbTypes/ArbDecimals.jl.git")
-    Pkg.build("ArbDecimals")
+    PkgQ.clone("https://github.com/JuliaArbTypes/ArbDecimals.jl.git")
+    PkgQ.build("ArbDecimals")
 end
 
 isdir(joinpath(Pkg.dir(), "Astrodynamics")) || begin
-    Pkg.clone("https://github.com/JuliaAstrodynamics/Astrodynamics.jl.git")
-    Pkg.build("Astrodynamics")
+    PkgQ.clone("https://github.com/JuliaAstrodynamics/Astrodynamics.jl.git")
+    PkgQ.build("Astrodynamics")
+end
+
+isdir(joinpath(Pkg.dir(), "Dagger")) || begin
+    PkgQ.clone("https://github.com/JuliaParallel/Dagger.jl.git")
+    PkgQ.build("Dagger")
 end
 
 isdir(joinpath(Pkg.dir(), "OhMyREPL")) || begin
-    Pkg.clone("https://github.com/KristofferC/OhMyREPL.jl.git")
-    Pkg.build("OhMyREPL")
+    PkgQ.clone("https://github.com/KristofferC/OhMyREPL.jl.git")
+    PkgQ.build("OhMyREPL")
 end
 
 isdir(joinpath(Pkg.dir(), "RiemannComplexNumbers")) || begin
-    Pkg.clone("https://github.com/scheinerman/RiemannComplexNumbers.jl.git")
-    Pkg.build("RiemannComplexNumbers")
+    PkgQ.clone("https://github.com/scheinerman/RiemannComplexNumbers.jl.git")
+    PkgQ.build("RiemannComplexNumbers")
 end
 
 isdir(joinpath(Pkg.dir(), "StatefulFunctions")) || begin
-    Pkg.clone("https://github.com/BenLauwens/StatefulFunctions.jl.git")
-    Pkg.build("StatefulFunctions")
+    PkgQ.clone("https://github.com/BenLauwens/StatefulFunctions.jl.git")
+    PkgQ.build("StatefulFunctions")
 end
 
 # isdir(joinpath(Pkg.dir(), "unumjl")) || begin
-#     Pkg.clone("https://github.com/REX-computing/unumjl.git", "Unums")
-#     Pkg.build("unumjl")
+#     PkgQ.clone("https://github.com/REX-computing/unumjl.git", "Unums")
+#     PkgQ.build("unumjl")
 # end
 
 isdir(joinpath(Pkg.dir(), "XDiff")) || begin
-    Pkg.clone("https://github.com/dfdx/XDiff.jl.git")
-    Pkg.build("XDiff")
+    PkgQ.clone("https://github.com/dfdx/XDiff.jl.git")
+    PkgQ.build("XDiff")
 end

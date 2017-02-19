@@ -16,6 +16,28 @@ add(pkgname, accuracy = _DEFAULT_ACCURACY) = begin
     end
 end
 
+clone(pkgurl, accuracy = _DEFAULT_ACCURACY) = begin
+    run(accuracy) do firstrun
+        if firstrun
+            Pkg.clone(pkgurl)
+        else
+            Pkg.resolve()
+        end
+    end
+end
+
+checkout(pkgname, accuracy = _DEFAULT_ACCURACY) = begin
+    run(accuracy) do _
+        Pkg.checkout(pkgname)
+    end
+end
+
+build(pkgname, accuracy = _DEFAULT_ACCURACY) = begin
+    run(accuracy) do _
+        Pkg.build(pkgname)
+    end
+end
+
 resolve(accuracy = _DEFAULT_ACCURACY) = begin
     run(accuracy) do _
         Pkg.resolve()
