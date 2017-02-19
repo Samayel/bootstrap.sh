@@ -31,8 +31,10 @@ Compose
 Conda
 Contour
 CRC
+CRlibm
 CSV
 @unix Cxx
+CxxWrap
 DataArrays
 DataFrames
 DataFramesMeta
@@ -110,6 +112,7 @@ Logging
 MachO
 MacroTools
 MathProgBase
+MatrixNetworks
 MbedTLS
 Measures
 Media
@@ -166,6 +169,7 @@ Rmath
 Roots
 SHA
 Showoff
+SimJulia
 SIUnits
 SortingAlgorithms
 SpecialFunctions
@@ -187,6 +191,7 @@ TexExtensions
 TextWrap
 TimeSeries
 Tokenize
+TypedTables
 Unitful
 Unums
 URIParser
