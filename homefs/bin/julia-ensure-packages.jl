@@ -56,6 +56,11 @@ isdir(joinpath(Pkg.dir(), "AlgebraicNumbers")) || begin
     PkgQ.build("AlgebraicNumbers")
 end
 
+isdir(joinpath(Pkg.dir(), "APL")) || begin
+    PkgQ.clone("https://github.com/shashi/APL.jl.git")
+    PkgQ.build("APL")
+end
+
 isdir(joinpath(Pkg.dir(), "ArbDecimals")) || begin
     PkgQ.clone("https://github.com/JuliaArbTypes/ArbDecimals.jl.git")
     PkgQ.build("ArbDecimals")

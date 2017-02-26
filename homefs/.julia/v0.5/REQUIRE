@@ -17,6 +17,7 @@ BusinessDays
 Cairo
 Calculus
 CategoricalArrays
+Cbc
 ClassicalCiphers
 Clustering
 Codecs
@@ -40,6 +41,7 @@ DataFrames
 DataFramesMeta
 DataStreams
 DataStructures
+DataTables
 DBAPI
 @unix DecFP
 DecisionTree
@@ -64,6 +66,8 @@ Gadfly
 Gallium
 GLM
 GLMNet
+GLPlot
+GLVisualize
 Graphics
 GraphPlot
 GZip
@@ -84,6 +88,7 @@ IndexedArrays
 Interact
 Interpolations
 IntervalConstraintProgramming
+Ipopt
 IterativeSolvers
 Iterators
 JavaCall
@@ -97,6 +102,7 @@ Juno
 KernelDensity
 Klara
 Knet
+KrylovMethods
 LaTeXStrings
 Lazy
 LegacyStrings
@@ -144,6 +150,7 @@ ParserCombinator
 PDMats
 PGFPlots
 Plotly
+PlotRecipes
 Plots
 PolynomialFactors
 PolynomialRoots
