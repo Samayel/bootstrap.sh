@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove -n scilab -y --all
+conda create -n scilab -y python=3 ipykernel notebook
+
+source activate scilab
+pip install scilab_kernel
+source deactivate scilab

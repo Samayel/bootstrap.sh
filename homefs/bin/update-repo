@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -e
+
+find -L ~/repository -maxdepth 4 -type d -name .git -exec sh -c 'echo "\n{}" && cd "{}/.." && git fetch --all --prune --tags --recurse-submodules=yes && git submodule update --init --recursive' ';'

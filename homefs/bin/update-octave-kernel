@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove -n octave -y --all
+conda create -n octave -y python=3 ipykernel notebook
+
+source activate octave
+pip install octave_kernel
+source deactivate octave

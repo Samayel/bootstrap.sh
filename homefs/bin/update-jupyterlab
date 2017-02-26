@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove  -n jupyterlab -y --all
+conda create  -n jupyterlab -y -c conda-forge jupyter jupyterlab widgetsnbextension
+conda install -n jupyterlab -y -c conda-forge jupyter_contrib_nbextensions
+conda install -n jupyterlab -y -c damianavila82 rise
+
+source activate jupyterlab
+pip install hide_code
+source deactivate jupyterlab

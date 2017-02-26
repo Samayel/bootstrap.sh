@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove -n gnuplot -y --all
+conda create -n gnuplot -y python=3 ipykernel notebook
+
+source activate gnuplot
+pip install gnuplot_kernel
+source deactivate gnuplot

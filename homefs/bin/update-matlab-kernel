@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove -n matlab -y --all
+conda create -n matlab -y python=3 ipykernel notebook pyzmq numpy
+
+source activate matlab
+pip install matlab_kernel
+source deactivate matlab
+
+
+# conda remove -n matlab -y --all
+# conda create -n matlab -y python=3.5 notebook
+#
+# source activate matlab
+#
+# pushd ~/opt/MATLAB/R2016b/extern/engines/python
+# python setup.py install
+# popd
+#
+# pip install imatlab
+#
+# source deactivate matlab

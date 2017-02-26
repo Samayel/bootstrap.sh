@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove  -n jupyter -y --all
+conda create  -n jupyter -y python=3.5 jupyter
+conda install -n jupyter -y -c damianavila82 rise
+conda install -n jupyter -y -c conda-forge jupyter_contrib_nbextensions
+
+source activate jupyter
+pip install hide_code
+source deactivate jupyter
