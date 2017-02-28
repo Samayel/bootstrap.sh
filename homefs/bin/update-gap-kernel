@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+conda remove -n gap -y --all
+conda create -n gap -y python=3 ipykernel notebook
+
+source activate gap
+
+pushd ~/repository/github.com/gap-packages/jupyter-kernel-gap
+python setup.py install
+popd
+
+source deactivate gap
