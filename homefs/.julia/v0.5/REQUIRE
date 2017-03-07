@@ -1,5 +1,6 @@
 AbstractTrees
 ArbFloats
+ArgCheck
 ArgParse
 ASTInterpreter
 Atom
@@ -37,6 +38,7 @@ CSV
 @unix Cxx
 CxxWrap
 DataArrays
+DataFlow
 DataFrames
 DataFramesMeta
 DataStreams
@@ -55,6 +57,7 @@ DSP
 DualNumbers
 DWARF
 ELF
+Erdos
 Evolutionary
 FileIO
 FixedPointNumbers
@@ -66,6 +69,7 @@ Gadfly
 Gallium
 GLM
 GLMNet
+GLPKMathProgInterface
 GLPlot
 GLVisualize
 Graphics
@@ -105,6 +109,7 @@ Knet
 KrylovMethods
 LaTeXStrings
 Lazy
+LearningStrategies
 LegacyStrings
 @unix LibCURL
 @windows LibExpat
@@ -124,6 +129,8 @@ Measures
 Media
 Memoize
 MLBase
+MLDataUtils
+MLLabelUtils
 MNIST
 Mocha
 Mustache
@@ -157,6 +164,7 @@ PolynomialRoots
 Polynomials
 PositiveFactorizations
 Primes
+ProgressMeter
 ProtoBuf
 PyCall
 PyPlot
@@ -168,6 +176,7 @@ RCall
 RDatasets
 Reactive
 Reexport
+Reinforce
 Requests
 Requires
 ReverseDiff
@@ -192,7 +201,9 @@ Symata
 SymEngine
 SymPy
 TaylorSeries
+TensorFlow
 TensorOperations
+Tensors
 TerminalUI
 TexExtensions
 TextWrap
@@ -200,6 +211,7 @@ TimeSeries
 Tokenize
 TypedTables
 Unitful
+UnitfulUS
 Unums
 URIParser
 ValidatedNumerics
