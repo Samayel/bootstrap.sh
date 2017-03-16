@@ -34,6 +34,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session opened for user [.[:alnum:]-]+ by (root|LOGIN)?\(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [.[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: (daemon|store)\.go:[[:digit:]]+: DEBUG:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (snapd\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+|/usr/lib/snapd/snapd\[[[:digit:]]+\]:) snapmgr\.go:508: No snaps to auto-refresh found$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: #015#033\[K$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: No snaps are installed yet\. Try 'snap install hello-world'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: All snaps up(-| )to(-| )date\.$
