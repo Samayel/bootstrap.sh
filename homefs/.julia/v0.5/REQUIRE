@@ -188,6 +188,7 @@ ReverseDiff
 ReverseDiffSparse
 Rmath
 Roots
+SCS
 SHA
 Showoff
 SimJulia
@@ -202,6 +203,7 @@ StreamStats
 StructIO
 StructuredQueries
 SugarBLAS
+SumOfSquares
 Sundials
 Symata
 SymEngine
