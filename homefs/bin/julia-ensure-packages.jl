@@ -14,7 +14,7 @@ cd(Pkg.dir())
     end
 
     isinitialized || begin
-        include(joinpath(dirname(JULIA_HOME), "share", "julia", "build_sysimg.jl"))
+        include(joinpath(JULIA_HOME, Base.DATAROOTDIR, "julia", "build_sysimg.jl"))
         build_sysimg(force=true)
     end
 end
@@ -66,10 +66,45 @@ isdir(joinpath(Pkg.dir(), "ArbDecimals")) || begin
     PkgQ.build("ArbDecimals")
 end
 
-isdir(joinpath(Pkg.dir(), "Astrodynamics")) || begin
-    PkgQ.clone("https://github.com/JuliaAstrodynamics/Astrodynamics.jl.git")
-    PkgQ.build("Astrodynamics")
-end
+# isdir(joinpath(Pkg.dir(), "RemoteFiles")) || begin
+#     PkgQ.clone("https://github.com/helgee/RemoteFiles.jl.git")
+#     PkgQ.build("RemoteFiles")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "EarthOrientation")) || begin
+#     PkgQ.clone("https://github.com/helgee/EarthOrientation.jl.git")
+#     PkgQ.build("EarthOrientation")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "AstronomicalTime")) || begin
+#     PkgQ.clone("https://github.com/JuliaAstrodynamics/AstronomicalTime.jl.git")
+#     PkgQ.build("AstronomicalTime")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "AstroDynBase")) || begin
+#     PkgQ.clone("https://github.com/JuliaAstrodynamics/AstroDynBase.jl.git")
+#     PkgQ.build("AstroDynBase")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "AstroDynModels")) || begin
+#     PkgQ.clone("https://github.com/JuliaAstrodynamics/AstroDynModels.jl.git")
+#     PkgQ.build("AstroDynModels")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "AstroDynIO")) || begin
+#     PkgQ.clone("https://github.com/JuliaAstrodynamics/AstroDynIO.jl.git")
+#     PkgQ.build("AstroDynIO")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "AstroDynPlots")) || begin
+#     PkgQ.clone("https://github.com/JuliaAstrodynamics/AstroDynPlots.jl.git")
+#     PkgQ.build("AstroDynPlots")
+# end
+#
+# isdir(joinpath(Pkg.dir(), "Astrodynamics")) || begin
+#     PkgQ.clone("https://github.com/JuliaAstrodynamics/Astrodynamics.jl.git")
+#     PkgQ.build("Astrodynamics")
+# end
 
 isdir(joinpath(Pkg.dir(), "Dagger")) || begin
     PkgQ.clone("https://github.com/JuliaParallel/Dagger.jl.git")

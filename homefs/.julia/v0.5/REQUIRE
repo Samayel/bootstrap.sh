@@ -48,6 +48,7 @@ DBAPI
 @unix DecFP
 DecisionTree
 DeepDiffs
+Defer
 DiffBase
 DifferentialEquations
 Digits
@@ -62,6 +63,7 @@ Evolutionary
 FileIO
 FixedPointNumbers
 FixedSizeArrays
+Flux
 Formatting
 ForwardDiff
 FunctionalCollections
@@ -87,6 +89,7 @@ HttpParser
 HttpServer
 HypothesisTests
 IJulia
+ImageInTerminal
 Images
 IndexedArrays
 Interact
@@ -133,6 +136,7 @@ MLDataUtils
 MLLabelUtils
 MNIST
 Mocha
+MultivariatePolynomials
 Mustache
 Mux
 MXNet
@@ -159,6 +163,7 @@ PGFPlots
 Plotly
 PlotRecipes
 Plots
+PolyJuMP
 PolynomialFactors
 PolynomialRoots
 Polynomials
@@ -196,6 +201,7 @@ StatsFuns
 StreamStats
 StructIO
 StructuredQueries
+SugarBLAS
 Sundials
 Symata
 SymEngine
@@ -205,8 +211,10 @@ TensorFlow
 TensorOperations
 Tensors
 TerminalUI
+TestImages
 TexExtensions
 TextWrap
+TimerOutputs
 TimeSeries
 Tokenize
 TypedTables
