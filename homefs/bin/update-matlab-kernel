@@ -3,10 +3,16 @@
 set -e
 
 conda remove -n matlab -y --all
-conda create -n matlab -y python=3 ipykernel notebook pyzmq numpy
+conda create -n matlab -y python=3.5 ipykernel notebook pyzmq numpy
 
 source activate matlab
+
 pip install matlab_kernel
+
+pushd ~/opt/MATLAB/R2016b/extern/engines/python
+python setup.py install
+popd
+
 source deactivate matlab
 
 
