@@ -8,5 +8,11 @@ conda install -n jupyterlab -y -c conda-forge       jupyter_contrib_nbextensions
 conda install -n jupyterlab -y -c damianavila82     rise
 
 source activate jupyterlab
+
 pip install hide_code
+
+pip install jupyterlab_widgets
+jupyter labextension install --sys-prefix --py jupyterlab_widgets
+jupyter labextension enable --sys-prefix --py jupyterlab_widgets
+
 source deactivate jupyterlab
