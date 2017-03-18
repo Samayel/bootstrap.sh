@@ -1,9 +1,20 @@
 
-# ENV["JULIA_PKGRESOLVE_ACCURACY"] = "10"
-
 @static if is_unix()
     ENV["R_HOME"] = "/usr/lib/R"
 end
+
+rebuild_sysimg() = begin
+    @static if is_windows()
+        Pkg.add("WinRPM")
+        eval(Expr(:using,:WinRPM))
+        WinRPM.install("gcc")
+        WinRPM.install("winpthreads-devel", yes=true)
+    end
+
+    include(joinpath(JULIA_HOME, Base.DATAROOTDIR, "julia", "build_sysimg.jl"))
+    build_sysimg(force=true)
+end
+
 
 module PkgQ
 

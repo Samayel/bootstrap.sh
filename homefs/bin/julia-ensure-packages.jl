@@ -1,21 +1,18 @@
 #!/usr/bin/env julia
 
 isinitialized = isdir(Pkg.dir())
-
-isinitialized || Pkg.init()
-cd(Pkg.dir())
+isinitialized || begin
+    Pkg.init()
+    rebuild_sysimg()
+end
 
 @static if is_unix()
+    cd(Pkg.dir())
     homedir=ENV["HOME"]
     islink("REQUIRE") || begin
         rm("REQUIRE")
         symlink("$homedir/repository/github.com/Samayel/bootstrap.sh/homefs/.julia/v0.5/REQUIRE", "REQUIRE")
         isinitialized = false
-    end
-
-    isinitialized || begin
-        include(joinpath(JULIA_HOME, Base.DATAROOTDIR, "julia", "build_sysimg.jl"))
-        build_sysimg(force=true)
     end
 end
 
