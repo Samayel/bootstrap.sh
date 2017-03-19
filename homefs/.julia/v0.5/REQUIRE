@@ -123,6 +123,7 @@ LineSearches
 LNR
 Loess
 Logging
+LSODA
 MachO
 MacroTools
 MathProgBase
@@ -175,6 +176,7 @@ PyCall
 PyPlot
 QuantEcon
 Query
+QuickTypes
 RandomNumbers
 Ratios
 RCall
@@ -220,6 +222,7 @@ TimerOutputs
 TimeSeries
 Tokenize
 TypedTables
+UnicodePlots
 Unitful
 UnitfulUS
 Unums
