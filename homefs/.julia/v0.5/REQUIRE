@@ -31,6 +31,7 @@ Combinatorics
 Compat
 Compose
 Conda
+ConicIP
 Contour
 CRC
 CRlibm
@@ -74,8 +75,10 @@ GLMNet
 GLPKMathProgInterface
 GLPlot
 GLVisualize
+GR
 Graphics
 GraphPlot
+GtkReactive
 GZip
 HDF5
 Hecke
@@ -128,6 +131,7 @@ MachO
 MacroTools
 MathProgBase
 MatrixNetworks
+Maxima
 MbedTLS
 Measures
 Media
@@ -147,6 +151,7 @@ Nemo
 Nettle
 NLopt
 NLsolve
+NLSolversBase
 NullableArrays
 ObjFileBase
 ODBC
@@ -155,12 +160,14 @@ ODEInterface
 ODEInterfaceDiffEq
 OpenStreetMap
 Optim
+OptionalData
 OrdinaryDiffEq
 ParallelAccelerator
 Parameters
 ParserCombinator
 PDMats
 PGFPlots
+PhantomJS
 Plotly
 PlotRecipes
 Plots
@@ -190,6 +197,7 @@ ReverseDiff
 ReverseDiffSparse
 Rmath
 Roots
+RoundingIntegers
 SCS
 SHA
 Showoff
@@ -199,6 +207,7 @@ SortingAlgorithms
 SpecialFunctions
 SQLite
 StaticArrays
+StatPlots
 StatsBase
 StatsFuns
 StreamStats
