@@ -16,6 +16,9 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Automatically refresh installed snaps\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Automatically refresh installed snaps\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: snapd\.refresh\.timer: Adding ([[:digit:].]+(h|min|s|ms|us) )+random time\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Message of the Day\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Message of the Day\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: motd-news\.timer: Adding ([[:digit:].]+(h|min|s|ms|us) )+random time\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Perl-based spam filter using text analysis\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) Perl-based spam filter using text analysis\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) HAProxy Load Balancer\.$
@@ -42,3 +45,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: All snaps up(-| )to(-| )date\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ runuser: pam_unix\(runuser:session\): session opened for user [[:alnum:]-]+ by \(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ runuser: pam_unix\(runuser:session\): session closed for user [[:alnum:]-]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ 50-motd-news\[[[:digit:]]+\]:
