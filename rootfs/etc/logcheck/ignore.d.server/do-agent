@@ -1,2 +1,2 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ do-agent\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+ Checking for newer version of do-agent$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ do-agent\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+ No update available$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ do-agent\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+ No( repository)? update available$
