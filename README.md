@@ -17,4 +17,4 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 * Samayel/bootstrap.sh/rootfs/etc/monit/conf-available/quyo-hosts
 * https://discovery.cryptosense.com
 * johm@shell:~/.ssh/config
-* root@bup:/etc/cron.hourly/20-bup-$HOST
+* bup@shell:~/bin/bup/20-bup-$HOST
