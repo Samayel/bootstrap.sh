@@ -6,8 +6,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Clean php session files\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Clean php session files\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Reached|Stopped) target [ [:alnum:]]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Stopping) User Manager for UID 0\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopped) User Manager for UID 0\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Stopping) User Manager for UID [0-9]+\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopped) User Manager for UID [0-9]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Session [[:digit:]]+ of user [.[:alnum:]-]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Created|Removed) slice (User Slice of [.[:alnum:]-]+|user-[[:digit:]]+\.slice)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Startup finished in [.[:digit:]]+m?s\.$
@@ -39,7 +39,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session opened for user [.[:alnum:]-]+ by (root|LOGIN)?\(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [.[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[[:digit:]]+\]: (daemon|store)\.go:[[:digit:]]+: DEBUG:
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (snapd\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+|/usr/lib/snapd/snapd\[[[:digit:]]+\]:) snapmgr\.go:508: No snaps to auto-refresh found$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (snapd\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+|/usr/lib/snapd/snapd\[[[:digit:]]+\]:) snapmgr\.go:[[:digit:]]+: No snaps to auto-refresh found$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: #015#033\[K$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: No snaps are installed yet\. Try 'snap install hello-world'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: All snaps up(-| )to(-| )date\.$
