@@ -33,6 +33,7 @@ Compose
 Conda
 ConicIP
 Contour
+CpuId
 CRC
 CRlibm
 CSV
@@ -53,13 +54,17 @@ Defer
 DiffBase
 DifferentialEquations
 Digits
+DimensionalPlotRecipes
+Dispatcher
 Distances
 Distributions
 DSP
 DualNumbers
 DWARF
+DynamicalBilliardsPlotting
 ELF
 Erdos
+ErrorfreeArithmetic
 Evolutionary
 FileIO
 FixedPointNumbers
@@ -91,13 +96,16 @@ HttpCommon
 HttpParser
 HttpServer
 HypothesisTests
+IdentityRanges
 IJulia
 ImageInTerminal
 Images
 IndexedArrays
 Interact
 Interpolations
+IntervalArithmetic
 IntervalConstraintProgramming
+IntervalRootFinding
 Ipopt
 IterativeSolvers
 Iterators
@@ -136,7 +144,9 @@ MbedTLS
 Measures
 Media
 Memoize
+MKLSparse
 MLBase
+MLDataPattern
 MLDataUtils
 MLLabelUtils
 MNIST
@@ -146,6 +156,7 @@ Mustache
 Mux
 MXNet
 NaNMath
+Napier
 NearestNeighbors
 Nemo
 Nettle
@@ -162,6 +173,8 @@ OpenStreetMap
 Optim
 OptionalData
 OrdinaryDiffEq
+PackageGenerator
+PaddedViews
 ParallelAccelerator
 Parameters
 ParserCombinator
@@ -189,6 +202,7 @@ Ratios
 RCall
 RDatasets
 Reactive
+ReadWriteDlm2
 Reexport
 Reinforce
 Requests
@@ -226,6 +240,7 @@ Tensors
 TerminalUI
 TestImages
 TexExtensions
+TextParse
 TextWrap
 TimerOutputs
 TimeSeries

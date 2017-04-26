@@ -103,6 +103,11 @@ end
 #     PkgQ.build("Astrodynamics")
 # end
 
+isdir(joinpath(Pkg.dir(), "Chrono")) || begin
+    PkgQ.clone("https://github.com/FugroRoames/Chrono.jl.git")
+    PkgQ.build("Chrono")
+end
+
 isdir(joinpath(Pkg.dir(), "Dagger")) || begin
     PkgQ.clone("https://github.com/JuliaParallel/Dagger.jl.git")
     PkgQ.build("Dagger")
