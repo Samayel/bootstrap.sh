@@ -12,7 +12,9 @@ source activate jupyterlab
 pip install hide_code
 
 pip install jupyterlab_widgets
-jupyter labextension install --sys-prefix --py jupyterlab_widgets
-jupyter labextension enable --sys-prefix --py jupyterlab_widgets
+# jupyter labextension install --py jupyterlab_widgets
+# jupyter labextension enable  --py jupyterlab_widgets
 
 source deactivate jupyterlab
+
+ssh shell 'service jupyterlab restart; service jupyterlab status'

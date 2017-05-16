@@ -108,16 +108,6 @@ isdir(joinpath(Pkg.dir(), "Chrono")) || begin
     PkgQ.build("Chrono")
 end
 
-isdir(joinpath(Pkg.dir(), "Dagger")) || begin
-    PkgQ.clone("https://github.com/JuliaParallel/Dagger.jl.git")
-    PkgQ.build("Dagger")
-end
-
-isdir(joinpath(Pkg.dir(), "OhMyREPL")) || begin
-    PkgQ.clone("https://github.com/KristofferC/OhMyREPL.jl.git")
-    PkgQ.build("OhMyREPL")
-end
-
 isdir(joinpath(Pkg.dir(), "RiemannComplexNumbers")) || begin
     PkgQ.clone("https://github.com/scheinerman/RiemannComplexNumbers.jl.git")
     PkgQ.build("RiemannComplexNumbers")

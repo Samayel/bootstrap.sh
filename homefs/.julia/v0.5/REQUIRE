@@ -39,6 +39,7 @@ CRlibm
 CSV
 @unix Cxx
 CxxWrap
+Dagger
 DataArrays
 DataFlow
 DataFrames
@@ -66,6 +67,7 @@ ELF
 Erdos
 ErrorfreeArithmetic
 Evolutionary
+Fatou
 FileIO
 FixedPointNumbers
 FixedSizeArrays
@@ -99,14 +101,18 @@ HypothesisTests
 IdentityRanges
 IJulia
 ImageInTerminal
+ImageMagick
 Images
 IndexedArrays
+IndexedTables
 Interact
 Interpolations
 IntervalArithmetic
 IntervalConstraintProgramming
+IntervalContractors
 IntervalRootFinding
 Ipopt
+IterableTables
 IterativeSolvers
 Iterators
 JavaCall
@@ -169,6 +175,7 @@ ODBC
 ODE
 ODEInterface
 ODEInterfaceDiffEq
+OhMyREPL
 OpenStreetMap
 Optim
 OptionalData
@@ -193,6 +200,7 @@ Primes
 ProgressMeter
 ProtoBuf
 PyCall
+PyCallJLD
 PyPlot
 QuantEcon
 Query
@@ -203,6 +211,7 @@ RCall
 RDatasets
 Reactive
 ReadWriteDlm2
+Reduce
 Reexport
 Reinforce
 Requests
