@@ -1,5 +1,6 @@
 AbstractFFTs
 AbstractTrees
+AmplNLWriter
 ArbFloats
 ArgCheck
 ArgParse
@@ -31,10 +32,12 @@ CodecZlib
 CodecZstd
 CodeTools
 COFF
+CoinOptServices
 Colors
 ColorTypes
 ColorVectorSpace
 Combinatorics
+CommunityDetection
 Compat
 Compose
 Conda
@@ -64,6 +67,7 @@ DBAPI
 DecisionTree
 DeepDiffs
 Defer
+DelayDiffEq
 DiffBase
 DifferentialEquations
 Digits
@@ -72,6 +76,7 @@ Dispatcher
 Distances
 Distributions
 Dolang
+Dolo
 DSP
 DualNumbers
 DWARF
@@ -91,6 +96,7 @@ FixedSizeArrays
 Flux
 Formatting
 ForwardDiff
+Fuji
 FunctionalCollections
 Gadfly
 Gallium
@@ -166,6 +172,7 @@ LNR
 Loess
 Logging
 LSODA
+LsqFit
 MachO
 MacroTools
 MathProgBase
@@ -183,16 +190,19 @@ MLDataUtils
 MLLabelUtils
 MNIST
 Mocha
+MultiScaleArrays
 MultivariatePolynomials
 Mustache
 Mux
 MXNet
 NaNMath
 Napier
+NBInclude
 NearestNeighbors
 Nemo
 Nettle
 NLopt
+NLOptControl
 NLsolve
 NLSolversBase
 NodeJS
@@ -205,6 +215,7 @@ ODE
 ODEInterface
 ODEInterfaceDiffEq
 OhMyREPL
+OnlineStatsBase
 OpenStreetMap
 Optim
 OptimBase
@@ -213,6 +224,7 @@ OrdinaryDiffEq
 PackageGenerator
 PaddedViews
 ParallelAccelerator
+ParameterizedFunctions
 Parameters
 ParserCombinator
 PDMats
@@ -244,6 +256,7 @@ RCall
 RDatasets
 Reactive
 ReadWriteDlm2
+RecursiveArrayTools
 Reduce
 Reexport
 Reinforce
@@ -251,6 +264,7 @@ Requests
 Requires
 ReverseDiff
 ReverseDiffSparse
+Revise
 Rmath
 Roots
 RoundingIntegers
@@ -269,7 +283,10 @@ StaticArrays
 StatPlots
 StatsBase
 StatsFuns
+StochasticDiffEq
 StreamStats
+StringEncodings
+StructDualDynProg
 StructIO
 StructJuMP
 StructuredQueries
@@ -293,6 +310,8 @@ TextParse
 TextWrap
 TimerOutputs
 TimeSeries
+TinyInt
+TinySparse
 Tokenize
 TranscodingStreams
 TypedTables
@@ -310,5 +329,6 @@ WebSockets
 @windows WinRPM
 WoodburyMatrices
 Xtensor
+ZChop
 Zlib
 ZMQ
