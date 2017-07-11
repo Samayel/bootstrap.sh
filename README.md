@@ -18,5 +18,5 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 * https://discovery.cryptosense.com
 * johm@shell:~/.ssh/config
 * bup@shell:~/bin/bup/20-bup-$HOST
-** ~bup/.ssh/config
-** ssh $HOST 'bup init' (validate hostkey + initialize bup)
+    * ~bup/.ssh/config
+    * ssh $HOST 'bup init' (validate hostkey + initialize bup)
