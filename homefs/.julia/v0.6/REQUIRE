@@ -11,6 +11,7 @@ AutoGrad
 AutoHashEquals
 AxisAlgorithms
 BasisFunctionExpansions
+BayesNets
 BenchmarkTools
 BinDeps
 BlackBoxOptim
@@ -21,8 +22,11 @@ Bokeh
 BusinessDays
 Cairo
 Calculus
+CardinalDicts
 CategoricalArrays
 Cbc
+Checkers
+Circuitscape
 ClassicalCiphers
 Clustering
 CodecBzip2
@@ -43,6 +47,7 @@ Compose
 Conda
 ConicIP
 Contour
+Convex
 CoordinateDescent
 CpuId
 CRC
@@ -72,6 +77,7 @@ DiffBase
 DifferentialEquations
 Digits
 DimensionalPlotRecipes
+Discretizers
 Dispatcher
 Distances
 Distributions
@@ -80,16 +86,20 @@ Dolo
 DSP
 DualNumbers
 DWARF
+EarthOrientation
 ELF
 Erdos
 ErrorfreeArithmetic
 Evolutionary
 ExcelFiles
+FastClosures
 Fatou
 FeatherFiles
+FEMQuad
 FFTW
 FileIO
 Fire
+FirstOrderSolvers
 FixedPointDecimals
 FixedPointNumbers
 FixedSizeArrays
@@ -106,6 +116,7 @@ GLPKMathProgInterface
 GLPlot
 GLVisualize
 GR
+GradDescent
 Graphics
 GraphIO
 GraphPlot
@@ -132,6 +143,7 @@ ImputeNaNs
 IndexedArrays
 IndexedTables
 Interact
+InterestRates
 Interpolations
 IntervalArithmetic
 IntervalConstraintProgramming
@@ -147,6 +159,7 @@ IterTools
 JavaCall
 JDBC
 JLD
+JLD2
 JPLEphemeris
 JSON
 JuliaDB
@@ -154,6 +167,7 @@ JuliaParser
 JuliaWebAPI
 JuMP
 Juno
+Jute
 KernelDensity
 Klara
 Knet
@@ -168,6 +182,8 @@ LegacyStrings
 LightGraphs
 LightXML
 LineSearches
+LinkedLists
+LLVM
 LNR
 Loess
 Logging
@@ -175,6 +191,7 @@ LSODA
 LsqFit
 MachO
 MacroTools
+MarketData
 MathProgBase
 MatrixChainMultiply
 MatrixNetworks
@@ -183,6 +200,7 @@ MbedTLS
 Measures
 Media
 Memoize
+MetaGraphs
 MKLSparse
 MLBase
 MLDataPattern
@@ -190,6 +208,7 @@ MLDataUtils
 MLLabelUtils
 MNIST
 Mocha
+MuladdMacro
 MultiScaleArrays
 MultivariatePolynomials
 Mustache
@@ -231,7 +250,9 @@ PDMats
 PGFPlots
 PGFPlotsX
 PhantomJS
+PicoSAT
 Plotly
+PlotlyJS
 PlotRecipes
 Plots
 PolyJuMP
@@ -246,6 +267,7 @@ ProximalBase
 PyCall
 PyCallJLD
 PyPlot
+QML
 QuantEcon
 Query
 QuickTypes
@@ -260,6 +282,7 @@ RecursiveArrayTools
 Reduce
 Reexport
 Reinforce
+RemoteFiles
 Requests
 Requires
 ReverseDiff
@@ -273,6 +296,7 @@ SHA
 Showoff
 SimilaritySearch
 SimJulia
+SimpleWeightedGraphs
 SIUnits
 SortingAlgorithms
 SpatialEcology
@@ -297,6 +321,7 @@ Symata
 SymEngine
 SymmetricTensors
 SymPy
+TaylorIntegration
 TaylorSeries
 TensorFlow
 TensorOperations
@@ -308,16 +333,20 @@ TestImages
 TexExtensions
 TextParse
 TextWrap
+TikzGraphs
+TikzPictures
 TimerOutputs
 TimeSeries
 TinyInt
 TinySparse
 Tokenize
+TraceCalls
 TranscodingStreams
 TypedTables
 UnicodePlots
 UniqueVectors
 Unitful
+UnitfulAngles
 UnitfulUS
 Unums
 URIParser

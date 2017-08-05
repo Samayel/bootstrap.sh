@@ -63,16 +63,6 @@ isdir(joinpath(Pkg.dir(), "ArbDecimals")) || begin
     PkgQ.build("ArbDecimals")
 end
 
-isdir(joinpath(Pkg.dir(), "RemoteFiles")) || begin
-    PkgQ.clone("https://github.com/helgee/RemoteFiles.jl.git")
-    PkgQ.build("RemoteFiles")
-end
-
-isdir(joinpath(Pkg.dir(), "EarthOrientation")) || begin
-    PkgQ.clone("https://github.com/helgee/EarthOrientation.jl.git")
-    PkgQ.build("EarthOrientation")
-end
-
 isdir(joinpath(Pkg.dir(), "AstronomicalTime")) || begin
     PkgQ.clone("https://github.com/JuliaAstrodynamics/AstronomicalTime.jl.git")
     PkgQ.build("AstronomicalTime")
