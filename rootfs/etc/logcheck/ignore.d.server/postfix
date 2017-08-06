@@ -129,7 +129,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: unable to open Berkeley db /etc/sasldb: No such file or directory$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: ([-._[:alnum:]]+): RBL lookup error: Host or domain name not found\. Name service error for name=\1 type=A: Host not found, try again$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: ([[:xdigit:].:]{3,39})+: address not listed for hostname [^[:space:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: Connection concurrency limit exceeded: [[:digit:]]+ from [-._[:alnum:]]+\[[[:xdigit:].:]{3,39}\] for service (smtp|submission)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: Connection concurrency limit exceeded: [[:digit:]]+ from [-._[:alnum:]]+\[[[:xdigit:].:]{3,39}\] for service (smtpd?|submission)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: Illegal address syntax from [._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\] in MAIL command: .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: Illegal address syntax from [^[:space:]]+ in (MAIL|RCPT) command: .*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/(submission/)?smtpd\[[[:digit:]]+\]: warning: Read failed in network_biopair_interop with errno=[[:digit:]]+: num_read=[-[:digit:]]+, want_read=[[:digit:]]+$
