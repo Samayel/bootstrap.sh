@@ -7,8 +7,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot-auth: pam_unix\(dovecot:[[:alnum:]]+\): check pass; user unknown$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot-auth: pam_ldap: error trying to bind as user \".*\" \(Invalid credentials\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (imap|pop3)-login: Login: [.[:alnum:]@-]+ \[[.:[:xdigit:]]+\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Login: user=<[-_.@[:alnum:]]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, mpid=[[:digit:]]+)?, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)(, (TLS( handshake)?|secured))?(: Disconnected)?(, session=<[+/[:alnum:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login( \([[:digit:]]+ authentication attempts\))?: (user=<[-_.@[:alnum:]]+>, method=[[:alnum:]-]+, )?rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: (Disconnected|Aborted login)(: (Inactivity|Too many (bad|invalid) commands))? \((no auth attempts in [[:digit:]]+ secs|auth failed, [[:digit:]]+ attempts|aborted authentication)\): user=<[-_.@[:alnum:]]*>(, method=PLAIN)?, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts in [[:digit:]]+ secs\): user=<>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\), TLS(, session=<[+/[:alnum:]]+>)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: (Disconnected|Aborted login)(: (Inactivity|Too many (bad|invalid) commands))? \((no auth attempts in [[:digit:]]+ secs|auth failed, [[:digit:]]+ attempts in [[:digit:]]+ secs|aborted authentication)\): user=<[-_.@[:alnum:]]*>(, method=PLAIN)?, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected \(disconnected before auth was ready, waited [[:digit:]]+ secs\): user=<[-_.@[:alnum:]]*>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, TLS handshaking: Disconnected$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected: ((Too many invalid commands|Inactivity): )?(user=<[-_.@[:alnum:]]+>, )?(method=[[:alnum:]-]+, )?rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Disconnected: Logged out$
@@ -18,7 +20,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Error: SSL: Stacked error: error:[[:xdigit:]]+:SSL routines:ssl3_get_client_hello:(wrong version number|no shared cipher)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Error: SSL: Stacked error: error:[[:xdigit:]]+:SSL routines:ssl3_read_bytes:(sslv3 alert bad certificate: SSL alert number 42|ssl handshake failure)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Error: SSL: Stacked error: error:[[:xdigit:]]+:SSL routines:ssl_bytes_to_cipher_list:inappropriate fallback$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Login: user=<[-_.@[:alnum:]]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, mpid=[[:digit:]]+)?, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\)(, (TLS( handshake)?|secured))?(: Disconnected)?(, session=<[+/[:alnum:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Maximum number of connections from user\+IP exceeded \(mail_max_userip_connections=[[:digit:]]+\): user=<[-_.@[:alnum:]]*>(, method=PLAIN)?, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\))?, TLS$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Connection closed(: Connection reset by peer)?( bytes=[[:digit:]]+/[[:digit:]]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (imap|IMAP)\([-_.@[:alnum:]]+\): Disconnected(: Logged out| for inactivity|: Disconnected| in [[:upper:]]+|: Too many invalid IMAP commands\.)?( bytes=[[:digit:]]+/[[:digit:]]+| in=[[:digit:]]+ out=[[:digit:]]+)?$
@@ -32,7 +33,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: ssl-build-param: SSL parameters regeneration completed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: managesieve-login: Login: user=<[._[:alnum:]-]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, (TLS( handshake)?|secured)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: MANAGESIEVE\([._[:alnum:]-]+\): (Connection closed|Disconnected: Logged out)( bytes=[[:digit:]]+/[[:digit:]]+)?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts in [[:digit:]]+ secs\): user=<>, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, cipher=TLSv[.[:digit:]]+ with cipher [^[:space:]]+ \([/[:digit:]]+ bits\), TLS(, session=<[+/[:alnum:]]+>)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Connect from local$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: (Successful quit|Connection closed \(in (DATA finished|RSET)\))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)\([-_.@[:alnum:]]+\): (Logged out|Connection closed)( \([ [:upper:]]+ running for [.[:digit:]]+ \+ waiting input for [.[:digit:]]+ secs, [[:digit:]]+ B in \+ [+[:digit:]]+ B out, state=wait-input\))? in=[[:digit:]]+ out=[[:digit:]]+$
