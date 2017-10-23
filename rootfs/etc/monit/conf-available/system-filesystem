@@ -2,7 +2,6 @@
    group system
    if failed permission 660 then unmonitor
    if failed uid root then unmonitor
-   if failed gid disk then unmonitor
    if space usage > 75% for 5 times within 15 cycles then alert
    if inode usage > 75% for 5 times within 15 cycles then alert
 
