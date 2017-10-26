@@ -54,7 +54,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:13: User request \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:14: (Unable to connect using the available authentication methods|No more user authentication methods available\.) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:0:$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from [:.[:xdigit:]]+ port [[:digit:]]{1,5}( \[preauth\])?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from( user root)? [:.[:xdigit:]]+ port [[:digit:]]{1,5}( \[preauth\])?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]{1,5}: no matching (key exchange method|cipher|MAC|host key type) found. Their offer:
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Change of username or service not allowed: \([-_.[:alnum:]]*,ssh-connection\) -> \([-_.[:alnum:]]*,ssh-connection\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [:[:xdigit:].]+ port [[:digit:]]{1,5}: SSH-[._ [:alnum:]-]+ vs. SSH-[._ [:alnum:]-]+$
