@@ -6,14 +6,6 @@ cd /opt/certbot
 wget https://dl.eff.org/certbot-auto
 chmod a+x ./certbot-auto
 
-echo '#!/usr/bin/env sh' > ./pre-hook
-echo '#!/usr/bin/env sh' > ./post-hook
-echo '#!/usr/bin/env sh' > ./deploy-hook
-
-chmod a+x ./pre-hook
-chmod a+x ./post-hook
-chmod a+x ./deploy-hook
-
 mkdir /etc/letsencrypt
 ln -sf /bootstrap.sh/rootfs/etc/letsencrypt/cli.ini --target-directory=/etc/letsencrypt/
 ln -sf /bootstrap.sh/rootfs/etc/cron.daily/certbot  --target-directory=/etc/cron.daily/
