@@ -3,10 +3,9 @@
 set -e
 
 conda remove  -n jupyter -y --all
-conda create  -n jupyter -y python=3.5 jupyter
-conda update  -n jupyter -y notebook
-conda install -n jupyter -y -c damianavila82 rise
-conda install -n jupyter -y -c conda-forge jupyter_contrib_nbextensions
+conda create  -n jupyter -y -c conda-forge       python=3 jupyter widgetsnbextension
+conda install -n jupyter -y -c conda-forge       jupyter_contrib_nbextensions
+conda install -n jupyter -y -c damianavila82     rise
 
 source activate jupyter
 pip install hide_code
