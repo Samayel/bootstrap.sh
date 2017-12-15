@@ -1,4 +1,5 @@
 AbstractFFTs
+AbstractNumbers
 AbstractOperators
 AbstractTrees
 AMG
@@ -22,6 +23,7 @@ BigArrays
 BinaryProvider
 BinDeps
 BlackBoxOptim
+BlackBoxOptimizationBenchmarking
 Blink
 Blosc
 Bokeh
@@ -59,10 +61,12 @@ Conda
 ConditionalJuMP
 ConicIP
 Contour
+ControlToolbox
 Convex
 CoordinateDescent
 Counters
 CpuId
+CQLdriver
 CRC
 CRlibm
 CSV
@@ -75,6 +79,7 @@ CxxWrap
 D3Trees
 Dagger
 DataArrays
+DataDeps
 DataFlow
 DataFrames
 DataFramesMeta
@@ -99,6 +104,7 @@ DiffRules
 DiffTests
 Digits
 DimensionalPlotRecipes
+DiscretePredictors
 Discretizers
 Dispatcher
 Distances
@@ -113,6 +119,7 @@ DSP
 DualNumbers
 DWARF
 DynamicPolynomials
+EarCut
 EarthOrientation
 Eglob
 ElasticArrays
@@ -122,12 +129,17 @@ ErrorfreeArithmetic
 EventSimulation
 Evolutionary
 ExcelFiles
+ExpectationStubs
+Expr2LaTeX
+ExprOptimization
+ExprRules
 FastClosures
 Fatou
 FeatherFiles
 FEMQuad
 FFTW
 FileIO
+FillArrays
 FinancialToolbox
 Fire
 FirstOrderSolvers
@@ -143,7 +155,6 @@ Fuji
 FunctionalCollections
 Gadfly
 GAFramework
-Gallium
 GeoStatsBase
 GeoStatsDevTools
 GLM
@@ -154,6 +165,7 @@ GLVisualize
 Gnuplot
 GR
 GradDescent
+Granular
 Graphics
 GraphIO
 GraphPlot
@@ -161,11 +173,15 @@ GroupedErrors
 GtkReactive
 GZip
 HDF5
+HeadlessChromium
 Hecke
 Hermetic
 Hexagons
 Hiccup
+HigherPrecision
 @osx Homebrew
+Homotopies
+HomotopyContinuation
 Hop
 HTTP
 @unix HTTPClient
@@ -187,6 +203,7 @@ IndexedArrays
 IndexedTables
 Interact
 InterestRates
+InternedStrings
 Interpolations
 IntervalArithmetic
 IntervalConstraintProgramming
@@ -198,6 +215,7 @@ IOIndents
 Ipopt
 IterableTables
 IterativeSolvers
+IteratorInterfaceExtensions
 Iterators
 IterTools
 JavaCall
@@ -212,8 +230,10 @@ JuliaParser
 JuliaWebAPI
 JuliennedArrays
 JuMP
+Juniper
 Juno
 Jute
+KahanSummation
 KernelDensity
 Keys
 Klara
@@ -222,6 +242,7 @@ Kriging
 KrylovMethods
 LabelNumerals
 LaTeXStrings
+LayerDicts
 Lazy
 LCA
 LearningStrategies
@@ -236,20 +257,24 @@ LineSearches
 LinkedLists
 LLVM
 LNR
+LocalFilters
 Loess
 Logging
 LoopThrottle
+LowLevelFloatFunctions
 LSODA
 LsqFit
 LTISystems
 MachO
 MacroTools
+Maracas
 MarketData
 MathProgBase
 MatrixChainMultiply
 MatrixNetworks
 Maxima
 MbedTLS
+MCMCDiagnostics
 Measures
 Media
 Memoize
@@ -258,6 +283,7 @@ Merlin
 MetaGraphs
 MicroLogging
 MINPACK
+Missings
 MKLSparse
 MLBase
 MLDataPattern
@@ -267,6 +293,7 @@ MNIST
 Mocha
 MuladdMacro
 MultiDimEquations
+MultiJuMP
 MultiScaleArrays
 Multisets
 MultivariateAnomalies
@@ -282,12 +309,15 @@ NaturalSelection
 NBInclude
 NearestNeighbors
 Nemo
+NEOS
 Nettle
+NetworkLearning
 NLopt
 NLOptControl
 NLsolve
 NLSolversBase
 NodeJS
+NOMAD
 NullableArrays
 Nulls
 NumericIO
@@ -305,6 +335,7 @@ OptimBase
 OptimTestProblems
 OptionalData
 OrdinaryDiffEq
+PackageCompiler
 PackageGenerator
 PaddedViews
 ParallelAccelerator
@@ -312,7 +343,10 @@ ParameterizedFunctions
 Parameters
 ParserCombinator
 Parts
+PDFExtract
 PDMats
+Perceptrons
+Persa
 PGFPlots
 PGFPlotsX
 PhantomJS
@@ -322,6 +356,7 @@ Plotly
 PlotlyJS
 PlotRecipes
 Plots
+PLSRegressor
 PolyJuMP
 PolynomialBases
 PolynomialFactors
@@ -346,6 +381,7 @@ QuantEcon
 Query
 QuickTypes
 QuTiP
+RandomizedLinAlg
 RandomNumbers
 Ratios
 RCall
@@ -357,6 +393,7 @@ RecurUnroll
 Reduce
 Reexport
 ReferenceTests
+RegressionTables
 Reinforce
 RemoteFiles
 Requests
@@ -371,11 +408,16 @@ Rmath
 Roots
 RoundingIntegers
 SaferIntegers
+Sched
+SchroedingersSmoke
 SCS
 SemialgebraicSets
+SequentialMonteCarlo
 SHA
 Showoff
+Signals
 SimilaritySearch
+SimilarReferences
 SimJulia
 SimpleWeightedGraphs
 SIUnits
@@ -393,6 +435,7 @@ StatsBase
 StatsFuns
 StochasticDiffEq
 StreamStats
+StringCases
 StringEncodings
 StructDualDynProg
 StructIO
@@ -402,6 +445,7 @@ SubsetSelection
 SugarBLAS
 SumOfSquares
 Sundials
+Surprise
 Symata
 SymEngine
 SymmetricTensors
@@ -420,6 +464,7 @@ TestImages
 TexExtensions
 TextParse
 TextWrap
+TickTock
 TikzGraphs
 TikzPictures
 TimerOutputs
@@ -436,6 +481,7 @@ TypedBools
 TypedTables
 TypeSortedCollections
 uCSV
+UDUnits
 UnicodePlots
 UniqueVectors
 Unitful
