@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-service haproxy start
-
 while IFS= read -r -d '' certdir; do
     cat "/etc/letsencrypt/live/${certdir}/fullchain.pem" "/etc/letsencrypt/live/${certdir}/privkey.pem" | tee "/etc/haproxy/ssl/${certdir}.pem" > /dev/null
     rm -f "/etc/haproxy/ssl/${certdir}.pem.issuer"
