@@ -98,6 +98,7 @@ Defer
 DelayDiffEq
 DiffBase
 DiffEqDiffTools
+DiffEqPhysics
 DifferentialEquations
 DiffResults
 DiffRules
@@ -118,6 +119,7 @@ DotOverloading
 DSP
 DualNumbers
 DWARF
+DynamicalSystems
 DynamicPolynomials
 EarCut
 EarthOrientation
@@ -133,7 +135,9 @@ ExpectationStubs
 Expr2LaTeX
 ExprOptimization
 ExprRules
+ExtensibleScheduler
 FastClosures
+FastGroupBy
 Fatou
 FeatherFiles
 FEMQuad
@@ -191,6 +195,7 @@ HttpServer
 HypothesisTests
 IdentityRanges
 IJulia
+ImageDistances
 ImageDraw
 ImageFeatures
 ImageInTerminal
@@ -236,7 +241,6 @@ Jute
 KahanSummation
 KernelDensity
 Keys
-Klara
 Knet
 Kriging
 KrylovMethods
@@ -252,6 +256,7 @@ LempelZiv
 @windows LibExpat
 @windows Libz
 LightGraphs
+LightGraphsFlows
 LightXML
 LineSearches
 LinkedLists
@@ -291,6 +296,7 @@ MLDataUtils
 MLLabelUtils
 MNIST
 Mocha
+MosaicViews
 MuladdMacro
 MultiDimEquations
 MultiJuMP
@@ -360,6 +366,7 @@ PLSRegressor
 PolyJuMP
 PolynomialBases
 PolynomialFactors
+PolynomialRings
 PolynomialRoots
 Polynomials
 PolynomialZeros
@@ -369,6 +376,7 @@ Primes
 ProgressMeter
 Promisables
 ProtoBuf
+ProximalAlgorithms
 ProximalBase
 PyCall
 PyCallJLD
@@ -433,6 +441,7 @@ StaticArrays
 StatPlots
 StatsBase
 StatsFuns
+Steganography
 StochasticDiffEq
 StreamStats
 StringCases
@@ -461,6 +470,7 @@ TensorToolbox
 TerminalMenus
 TerminalUI
 TestImages
+TestReports
 TexExtensions
 TextParse
 TextWrap
@@ -497,11 +507,13 @@ ValuedTuples
 vOptSpecific
 VT100
 WeakRefStrings
+WebFuncs
 WebSockets
 @windows WinReg
 @windows WinRPM
 WoodburyMatrices
 XDiff
+XGrad
 Xtensor
 ZChop
 ZippedArrays
