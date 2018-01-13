@@ -1,5 +1,12 @@
+backend bk_http_letsencrypt
+    mode http
+    option httplog
+    option forwardfor
+
+    server srv_letsencrypt_http 127.0.0.1:40
+
 backend bk_tcp443_letsencrypt
     mode tcp
     option tcplog
 
-    server srv_letsencrypt 127.0.0.1:40
+    server srv_letsencrypt_tls_sni 127.0.0.1:40
