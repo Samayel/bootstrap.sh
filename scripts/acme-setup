@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+apt install socat
+
+pushd /bootstrap.sh/externals/acme.sh
+
+./acme.sh \
+    --install \
+    --home ~/.acme.sh/script \
+    --config-home ~/.acme.sh/config \
+    --certhome ~/.acme.sh/certs \
+    --accountemail "johm@quyo.de" \
+    --accountkeylength 4096
+
+popd
+
+echo 'Close the current terminal, reopen it and run acme.sh --upgrade --auto-upgrade'
