@@ -1,3 +1,6 @@
 [submodule "externals/haproxy-ocsp-stapling-updater"]
 	path = externals/haproxy-ocsp-stapling-updater
 	url = https://github.com/pierky/haproxy-ocsp-stapling-updater.git
+[submodule "externals/acme.sh"]
+	path = externals/acme.sh
+	url = https://github.com/Neilpang/acme.sh.git
