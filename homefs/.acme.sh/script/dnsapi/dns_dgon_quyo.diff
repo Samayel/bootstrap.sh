@@ -1,0 +1,51 @@
+--- dns_dgon.sh	2018-01-20 13:37:58.709483622 +0000
++++ dns_dgon_quyo.sh	2018-01-20 14:51:09.645477706 +0000
+@@ -17,8 +17,8 @@
+ ## Create the text record for validation.
+ ## Usage: fulldomain txtvalue
+ ## EG: "_acme-challenge.www.other.domain.com" "XKrxpRBosdq0HG9i01zxXp5CPBs"
+-dns_dgon_add() {
+-  fulldomain="$(echo "$1" | _lower_case)"
++dns_dgon_quyo_add() {
++  fulldomain="$(echo "$1" | _lower_case).acme.dns.do.quyo.net"
+   txtvalue=$2
+   _info "Using digitalocean dns validation - add record"
+   _debug fulldomain "$fulldomain"
+@@ -62,8 +62,8 @@
+ ## Remove the txt record after validation.
+ ## Usage: fulldomain txtvalue
+ ## EG: "_acme-challenge.www.other.domain.com" "XKrxpRBosdq0HG9i01zxXp5CPBs"
+-dns_dgon_rm() {
+-  fulldomain="$(echo "$1" | _lower_case)"
++dns_dgon_quyo_rm() {
++  fulldomain="$(echo "$1" | _lower_case).acme.dns.do.quyo.net"
+   txtvalue=$2
+   _info "Using digitalocean dns validation - remove record"
+   _debug fulldomain "$fulldomain"
+@@ -90,13 +90,15 @@
+     ## the create request - get
+     ## args: URL, [onlyheader, timeout]
+     domain_list="$(_get "$GURL")"
++    _debug domain_list "$domain_list"
+     ## 2) find record
+     ## check for what we are looing for: "type":"A","name":"$_sub_domain"
+-    record="$(echo "$domain_list" | _egrep_o "\"id\"\s*\:\s*\"*\d+\"*[^}]*\"name\"\s*\:\s*\"$_sub_domain\"[^}]*\"data\"\s*\:\s*\"$txtvalue\"")"
++    record="$(echo "$domain_list" | _egrep_o "\"id\"\s*\:\s*\"*[[:digit:]]+\"*[^}]*\"name\"\s*\:\s*\"$_sub_domain\"[^}]*\"data\"\s*\:\s*\"$txtvalue\"")"
++    _debug record "$record"
+     ## 3) check record and get next page
+     if [ -z "$record" ]; then
+       ## find the next page if we dont have a match
+-      nextpage="$(echo "$domain_list" | _egrep_o "\"links\".*" | _egrep_o "\"next\".*" | _egrep_o "http.*page\=\d+")"
++      nextpage="$(echo "$domain_list" | _egrep_o "\"links\".*" | _egrep_o "\"next\".*" | _egrep_o "http.*page\=[[:digit:]]+")"
+       if [ -z "$nextpage" ]; then
+         _err "no record and no nextpage in digital ocean DNS removal"
+         return 1
+@@ -108,7 +110,7 @@
+   done
+ 
+   ## we found the record
+-  rec_id="$(echo "$record" | _egrep_o "id\"\s*\:\s*\"*\d+" | _egrep_o "\d+")"
++  rec_id="$(echo "$record" | _egrep_o "id\"\s*\:\s*\"*[[:digit:]]+" | _egrep_o "[[:digit:]]+")"
+   _debug rec_id "$rec_id"
+ 
+   ## delete the record
