@@ -2,6 +2,7 @@ AbstractFFTs
 AbstractNumbers
 AbstractOperators
 AbstractTrees
+AccurateArithmetic
 AMG
 AmplNLReader
 AmplNLWriter
@@ -38,9 +39,11 @@ CausalInference
 Cbc
 ChangePrecision
 Checkers
+CholmodSolve2
 Circuitscape
 ClassicalCiphers
 Clustering
+CMPFit
 CodecBase
 CodecBzip2
 Codecs
@@ -53,6 +56,7 @@ CoinOptServices
 Colors
 ColorTypes
 ColorVectorSpace
+CombinatorialBandits
 Combinatorics
 CommunityDetection
 Compat
@@ -60,6 +64,7 @@ Compose
 Conda
 ConditionalJuMP
 ConicIP
+ContinuousTransformations
 Contour
 ControlToolbox
 Convex
@@ -80,6 +85,7 @@ D3Trees
 Dagger
 DataArrays
 DataDeps
+DataDepsGenerators
 DataFlow
 DataFrames
 DataFramesMeta
@@ -97,9 +103,12 @@ DeepDiffs
 Defer
 DelayDiffEq
 DiffBase
+DiffEqApproxFun
+DiffEqBayes
 DiffEqDiffTools
 DiffEqPhysics
 DifferentialEquations
+DiffLinearAlgebra
 DiffResults
 DiffRules
 DiffTests
@@ -121,6 +130,7 @@ DualNumbers
 DWARF
 DynamicalSystems
 DynamicPolynomials
+DynaWAVE
 EarCut
 EarthOrientation
 Eglob
@@ -139,6 +149,7 @@ ExtensibleScheduler
 FastClosures
 FastGroupBy
 Fatou
+FDM
 FeatherFiles
 FEMQuad
 FFTW
@@ -206,6 +217,7 @@ ImageSegmentation
 ImputeNaNs
 IndexedArrays
 IndexedTables
+Indexing
 Interact
 InterestRates
 InternedStrings
@@ -218,6 +230,7 @@ IntervalRootFinding
 InverseDistanceWeighting
 IOIndents
 Ipopt
+IsoRank
 IterableTables
 IterativeSolvers
 IteratorInterfaceExtensions
@@ -245,6 +258,7 @@ Knet
 Kriging
 KrylovMethods
 LabelNumerals
+Latexify
 LaTeXStrings
 LayerDicts
 Lazy
@@ -265,6 +279,7 @@ LNR
 LocalFilters
 Loess
 Logging
+LogProbs
 LoopThrottle
 LowLevelFloatFunctions
 LSODA
@@ -280,10 +295,12 @@ MatrixNetworks
 Maxima
 MbedTLS
 MCMCDiagnostics
+MD5
 Measures
 Media
 Memoize
 MemPool
+MergeSorted
 Merlin
 MetaGraphs
 MicroLogging
@@ -316,6 +333,8 @@ NBInclude
 NearestNeighbors
 Nemo
 NEOS
+NetalignMeasures
+NetalignUtils
 Nettle
 NetworkLearning
 NLopt
@@ -334,6 +353,7 @@ ODE
 ODEInterface
 ODEInterfaceDiffEq
 OhMyREPL
+OnlinePackage
 OnlineStatsBase
 OpenStreetMap
 Optim
@@ -396,6 +416,7 @@ RCall
 RDatasets
 Reactive
 ReadWriteDlm2
+Rectangle
 RecursiveArrayTools
 RecurUnroll
 Reduce
@@ -412,6 +433,7 @@ ReverseDiff
 ReverseDiffSparse
 Revise
 RiemannComplexNumbers
+RiemannTheta
 Rmath
 Roots
 RoundingIntegers
@@ -422,6 +444,7 @@ SCS
 SemialgebraicSets
 SequentialMonteCarlo
 SHA
+ShiftedArrays
 Showoff
 Signals
 SimilaritySearch
@@ -431,7 +454,11 @@ SimpleWeightedGraphs
 SIUnits
 SLEEF
 SnowballStemmer
+Somoclu
 SortingAlgorithms
+SortingLab
+SparseInterp
+SparseMatrixLILs
 SparseRegression
 SpatialEcology
 SpecialFunctions
@@ -450,6 +477,7 @@ StructDualDynProg
 StructIO
 StructJuMP
 StructuredQueries
+SubpixelRegistration
 SubsetSelection
 SugarBLAS
 SumOfSquares
