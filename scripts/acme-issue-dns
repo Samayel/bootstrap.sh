@@ -6,7 +6,8 @@ export DO_API_KEY="..."
 
 acme.sh \
     --issue \
-    --dns dns_dgon_quyo \
+    --dns dns_dgon \
+    --domain-alias acme.dns.do.quyo.net \
     \
     -d mx.quyo.net \
     -d mx.fra1.do.quyo.net \
@@ -24,7 +25,8 @@ acme.sh \
 
 acme.sh \
     --issue \
-    --dns dns_dgon_quyo \
+    --dns dns_dgon \
+    --domain-alias acme.dns.do.quyo.net \
     \
     -d mx.quyo.net \
     -d mx.fra1.do.quyo.net \
