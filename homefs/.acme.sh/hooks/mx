@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+service postfix reload
+service dovecot reload

@@ -14,4 +14,6 @@ pushd /bootstrap.sh/externals/acme.sh
 
 popd
 
+ln -sf /bootstrap.sh/homefs/.acme.sh/hooks/ --target-directory=$HOME/.acme.sh
+
 echo 'Close the current terminal, reopen it and run acme.sh --upgrade --auto-upgrade'
