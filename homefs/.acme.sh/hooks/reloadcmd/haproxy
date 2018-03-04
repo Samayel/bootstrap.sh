@@ -3,11 +3,13 @@
 while IFS= read -r -d '' certdir; do
 
     cat "/etc/ssl/letsencrypt/${certdir}/rsa-fullchain.pem" "/etc/ssl/letsencrypt/${certdir}/rsa-key.pem" | tee "/etc/haproxy/ssl/${certdir}-rsa.pem" > /dev/null
+    chmod 600 "/etc/haproxy/ssl/${certdir}-rsa.pem"
     rm -f "/etc/haproxy/ssl/${certdir}-rsa.pem.issuer"
     rm -f "/etc/haproxy/ssl/${certdir}-rsa.pem.ocsp"
     /bootstrap.sh/externals/haproxy-ocsp-stapling-updater/hapos-upd --cert "/etc/haproxy/ssl/${certdir}-rsa.pem" --VAfile -
 
     cat "/etc/ssl/letsencrypt/${certdir}/ec-fullchain.pem" "/etc/ssl/letsencrypt/${certdir}/ec-key.pem" | tee "/etc/haproxy/ssl/${certdir}-ec.pem" > /dev/null
+    chmod 600 "/etc/haproxy/ssl/${certdir}-ec.pem"
     rm -f "/etc/haproxy/ssl/${certdir}-ec.pem.issuer"
     rm -f "/etc/haproxy/ssl/${certdir}-ec.pem.ocsp"
     /bootstrap.sh/externals/haproxy-ocsp-stapling-updater/hapos-upd --cert "/etc/haproxy/ssl/${certdir}-ec.pem" --VAfile -
