@@ -11,5 +11,5 @@ frontend ft_tcp443
     tcp-request content accept if { req.ssl_hello_type 1 }
 
     # no default backend - SSL/TLS is opt-in only!
-    use_backend %[req.ssl_sni,lower,map_end(/etc/haproxy/sni2backend-ec.map)] if { req.ssl_ec_ext 1 }
-    use_backend %[req.ssl_sni,lower,map_end(/etc/haproxy/sni2backend.map)]
+    use_backend %[req.ssl_sni,lower,map_end(/etc/haproxy/sni2backend.map.ecdsa)] if { req.ssl_ec_ext 1 }
+    use_backend %[req.ssl_sni,lower,map_end(/etc/haproxy/sni2backend.map.rsa)]
