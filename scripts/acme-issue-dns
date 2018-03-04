@@ -3,8 +3,7 @@
 export DO_API_KEY="..."
 
 
-DOMAIN=mx.quyo.net
-RELOADCMD=mx
+DOMAIN=quyo.net
 
 mkdir -p "/etc/ssl/letsencrypt/$DOMAIN"
 
@@ -15,13 +14,15 @@ chmod 750 "/etc/ssl/letsencrypt"
 chmod 750 "/etc/ssl/letsencrypt/$DOMAIN"
 
 
+RELOADCMD=haproxy-rsa
+
 acme.sh \
     --issue \
     --dns dns_dgon \
     --domain-alias acme.dns.do.quyo.net \
     \
-    -d mx.quyo.net \
-    -d mx.fra1.do.quyo.net \
+    -d $DOMAIN \
+    -d www.$DOMAIN \
     \
     --accountkeylength 4096 \
     --keylength 4096 \
@@ -34,13 +35,15 @@ acme.sh \
     --reloadcmd "$HOME/.acme.sh/hooks/reloadcmd/$RELOADCMD"
 
 
+RELOADCMD=haproxy-ec
+
 acme.sh \
     --issue \
     --dns dns_dgon \
     --domain-alias acme.dns.do.quyo.net \
     \
-    -d mx.quyo.net \
-    -d mx.fra1.do.quyo.net \
+    -d $DOMAIN \
+    -d www.$DOMAIN \
     \
     --accountkeylength 4096 \
     --keylength ec-256 \
