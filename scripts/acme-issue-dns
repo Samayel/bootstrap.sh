@@ -46,7 +46,7 @@ acme.sh \
     -d www.$DOMAIN \
     \
     --accountkeylength 4096 \
-    --keylength ec-256 \
+    --keylength ec-384 \
     --days 30 \
     \
     --cert-file      "/etc/ssl/letsencrypt/$DOMAIN/ec-cert.pem"  \

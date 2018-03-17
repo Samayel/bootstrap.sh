@@ -28,7 +28,7 @@ acme.sh \
     -d mx.fra1.do.quyo.net \
     \
     --accountkeylength 4096 \
-    --keylength ec-256 \
+    --keylength ec-384 \
     --days 30 \
     \
     --cert-file      /etc/ssl/letsencrypt/mx.quyo.net/ec-cert.pem  \
