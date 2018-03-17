@@ -1,8 +1,10 @@
+AbstractAlgebra
 AbstractFFTs
 AbstractNumbers
 AbstractOperators
 AbstractTrees
 AccurateArithmetic
+Akagera
 AMG
 AmplNLReader
 AmplNLWriter
@@ -10,6 +12,7 @@ ArbFloats
 ArgCheck
 ArgParse
 ASTInterpreter
+AsyPlots
 Atom
 Augmentor
 AutoGrad
@@ -26,9 +29,11 @@ BinDeps
 BlackBoxOptim
 BlackBoxOptimizationBenchmarking
 Blink
+BlockBandedMatrices
 Blosc
 Bokeh
 BoundaryValueDiffEq
+BSON
 @windows BufferedStreams
 BusinessDays
 Cairo
@@ -46,6 +51,7 @@ Clustering
 CMPFit
 CodecBase
 CodecBzip2
+CodecLz4
 Codecs
 CodecXz
 CodecZlib
@@ -59,6 +65,7 @@ ColorVectorSpace
 CombinatorialBandits
 Combinatorics
 CommunityDetection
+Commutator
 Compat
 Compose
 Conda
@@ -131,10 +138,13 @@ DWARF
 DynamicalSystems
 DynamicPolynomials
 DynaWAVE
+EAGOBranchBound
+EAGOParametricInterval
 EarCut
 EarthOrientation
 Eglob
 ElasticArrays
+Electron
 ELF
 Erdos
 ErrorfreeArithmetic
@@ -146,6 +156,7 @@ Expr2LaTeX
 ExprOptimization
 ExprRules
 ExtensibleScheduler
+ExtremeStats
 FastClosures
 FastGroupBy
 Fatou
@@ -154,6 +165,7 @@ FeatherFiles
 FEMQuad
 FFTW
 FileIO
+FilePathsBase
 FillArrays
 FinancialToolbox
 Fire
@@ -162,14 +174,19 @@ FixedPointDecimals
 FixedPointNumbers
 FixedPolynomials
 FixedSizeArrays
+FluorescentSeries
 Flux
+FluxJS
 Formatting
 ForwardDiff
 FProfile
+FractionalGaussianFields
 Fuji
 FunctionalCollections
 Gadfly
 GAFramework
+GaussianDistributions
+GaussianRandomFields
 GeoStatsBase
 GeoStatsDevTools
 GLM
@@ -193,6 +210,7 @@ Hecke
 Hermetic
 Hexagons
 Hiccup
+HigherOrderKernels
 HigherPrecision
 @osx Homebrew
 Homotopies
@@ -227,10 +245,12 @@ IntervalConstraintProgramming
 IntervalContractors
 IntervalOptimisation
 IntervalRootFinding
+Intervals
 InverseDistanceWeighting
 IOIndents
 Ipopt
 IsoRank
+ItemGraphs
 IterableTables
 IterativeSolvers
 IteratorInterfaceExtensions
@@ -241,8 +261,10 @@ JDBC
 JLD
 JLD2
 JPLEphemeris
+JSExpr
 JSON
 JuliaDB
+JuliaDBMeta
 JuliaKara
 JuliaParser
 JuliaWebAPI
@@ -257,11 +279,13 @@ Keys
 Knet
 Kriging
 KrylovMethods
+Kwonly
 LabelNumerals
 Latexify
 LaTeXStrings
 LayerDicts
 Lazy
+LBFGSB
 LCA
 LearningStrategies
 LegacyStrings
@@ -289,6 +313,7 @@ MachO
 MacroTools
 Maracas
 MarketData
+MathOptInterface
 MathProgBase
 MatrixChainMultiply
 MatrixNetworks
@@ -302,13 +327,16 @@ Memoize
 MemPool
 MergeSorted
 Merlin
+MeshCat
 MetaGraphs
+Metalhead
 MicroLogging
 MINPACK
 Missings
 MKLSparse
 MLBase
 MLDataPattern
+MLDatasets
 MLDataUtils
 MLLabelUtils
 MNIST
@@ -325,12 +353,14 @@ MultivariatePolynomials
 Mustache
 Mux
 MXNet
+Nabla
 NaNMath
 NanoTimes
 Napier
 NaturalSelection
 NBInclude
 NearestNeighbors
+NeighbourLists
 Nemo
 NEOS
 NetalignMeasures
@@ -364,6 +394,7 @@ OrdinaryDiffEq
 PackageCompiler
 PackageGenerator
 PaddedViews
+PageAlignedArrays
 ParallelAccelerator
 ParameterizedFunctions
 Parameters
@@ -378,6 +409,7 @@ PGFPlotsX
 PhantomJS
 PicoSAT
 PkgTemplates
+PlanarMaps
 Plotly
 PlotlyJS
 PlotRecipes
@@ -416,6 +448,7 @@ RCall
 RDatasets
 Reactive
 ReadWriteDlm2
+Reconstructables
 Rectangle
 RecursiveArrayTools
 RecurUnroll
@@ -443,6 +476,8 @@ SchroedingersSmoke
 SCS
 SemialgebraicSets
 SequentialMonteCarlo
+SessionHacker
+Setfield
 SHA
 ShiftedArrays
 Showoff
@@ -461,6 +496,7 @@ SparseInterp
 SparseMatrixLILs
 SparseRegression
 SpatialEcology
+SpatialGrids
 SpecialFunctions
 SQLite
 StatFiles
@@ -471,6 +507,7 @@ StatsFuns
 Steganography
 StochasticDiffEq
 StreamStats
+StringBuilders
 StringCases
 StringEncodings
 StructDualDynProg
@@ -489,6 +526,8 @@ SymmetricTensors
 SymPy
 TableTraits
 TableTraitsUtils
+TabularDisplay
+Tachyons
 TaylorIntegration
 TaylorSeries
 TensorFlow
@@ -512,10 +551,13 @@ TinySparse
 Tokamak
 Tokenize
 TraceCalls
+Traceur
 TranscodingStreams
+TriangleMesh
 TSne
 TupleTools
 TypedBools
+TypedPolynomials
 TypedTables
 TypeSortedCollections
 uCSV
@@ -532,10 +574,13 @@ Unums
 URIParser
 ValidatedNumerics
 ValuedTuples
+Vinyl
 vOptSpecific
 VT100
+Vue
 WeakRefStrings
 WebFuncs
+WebIO
 WebSockets
 @windows WinReg
 @windows WinRPM
