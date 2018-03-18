@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-/opt/certbot/certbot-auto renew --quiet
