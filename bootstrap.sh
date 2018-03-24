@@ -21,5 +21,6 @@ apt-get -y install debconf-utils
 ./scripts/swapfile
 ./scripts/update-manager
 ./scripts/unbound
+./scripts/systemd-resolved
 
 shutdown -r +1

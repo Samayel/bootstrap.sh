@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+systemctl disable systemd-resolved.service
+service systemd-resolved stop
+
+rm /etc/resolv.conf
+
+echo "nameserver 127.0.0.1" > /etc/resolv.conf
+echo "nameserver ::1" >> /etc/resolv.conf
