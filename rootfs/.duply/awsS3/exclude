@@ -14,3 +14,4 @@
 - /proc
 - /sys
 - /tmp
+- /var/lib/lxcfs/cgroup
