@@ -28,7 +28,7 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
     * Pass: KeePass (GPG - $HOST)
   * /bootstrap.sh/externals/duply/duply awsS3 create
   * cp /bootstrap.sh/homefs/.duply/awsS3/* /root/.duply/awsS3/
-  * ln -sf /bootstrap.sh/homefs/.duply/awsS3/exclude --target-directory=/root/.duply/awsS3/exclude
+  * ln -sf /bootstrap.sh/homefs/.duply/awsS3/exclude --target-directory=/root/.duply/awsS3/
   * joe /root/.duply/awsS3/conf
     * GPG_KEY / GPG_PW
     * TARGET
