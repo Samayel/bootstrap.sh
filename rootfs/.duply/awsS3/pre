@@ -1,0 +1,8 @@
+#!/bin/sh
+
+LOCALDIR=/etc/local
+
+test -d $LOCALDIR || mkdir -p $LOCALDIR
+if test -d $LOCALDIR; then
+  dpkg --get-selections > $LOCALDIR/dpkg-selections
+fi

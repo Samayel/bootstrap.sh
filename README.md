@@ -17,6 +17,16 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 * Samayel/bootstrap.sh/rootfs/etc/monit/conf-available/quyo-hosts
 * https://discovery.cryptosense.com
 * johm@shell:~/.ssh/config
-* bup@shell:~/bin/bup/20-bup-$HOST
-    * ~bup/.ssh/config
-    * ssh $HOST 'bup init' (validate hostkey + initialize bup)
+* setup backup
+** duplicity
+*** gpg --gen-key
+**** Name: duplicity
+**** Mail: duplicity@$HOST
+**** Pass: KeePass (GPG - $HOST)
+*** /bootstrap.sh/externals/duply/duply awsS3 create
+*** cp /bootstrap.sh/rootfs/.duply/awsS3/* /root/.duply/awsS3/
+*** joe /root/.duply/awsS3/conf
+**** GPG_KEY / GPG_PW
+**** TARGET
+**** AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
+** apt install automysqlbackup

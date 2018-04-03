@@ -5,7 +5,7 @@ apt-get install -y openssh-client openssh-server openssh-sftp-server
 apt-get install -y wget curl
 apt-get install -y screen tmux dtach
 apt-get install -y vim joe nano
-apt-get install -y git bup
+apt-get install -y git
 apt-get install -y mc
 apt-get install -y chrony
 apt-get install -y htop iotop iftop traceroute
@@ -15,3 +15,4 @@ apt-get install -y monit
 apt-get install -y ccze
 # apt-get install -y logwatch libsys-cpu-perl libsys-meminfo-perl
 apt-get install -y fail2ban whois python3-pyinotify
+apt-get install -y duplicity gnupg python-boto
