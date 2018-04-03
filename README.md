@@ -27,13 +27,14 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
     * Mail: duplicity@$HOST
     * Pass: KeePass (GPG - $HOST)
   * /bootstrap.sh/externals/duply/duply awsS3 create
-  * cp /bootstrap.sh/rootfs/.duply/awsS3/* /root/.duply/awsS3/
+  * cp /bootstrap.sh/homefs/.duply/awsS3/* /root/.duply/awsS3/
+  * ln -sf /bootstrap.sh/homefs/.duply/awsS3/exclude --target-directory=/root/.duply/awsS3/exclude
   * joe /root/.duply/awsS3/conf
     * GPG_KEY / GPG_PW
     * TARGET
     * AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
   * /bootstrap.sh/externals/duply/duply awsS3 status
-  * touch /root/.cache/duplicity/.duplicity-ignore
-  * tar czf /root/tmp/duply-awsS3.tar.gz /root/.duply/awsS3/
+  * tar czf "/root/tmp/duply-awsS3-$(hostname).tar.gz" /root/.duply/awsS3/
     * add to KeePass
-  * TODO: cron job
+  * ln -sf /bootstrap.sh/rootfs/etc/cron.daily/duplicity --target-directory=/etc/cron.daily
+  * ln -sf /bootstrap.sh/rootfs/etc/cron.weekly/duplicity --target-directory=/etc/cron.weekly

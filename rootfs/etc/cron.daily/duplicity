@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+/bootstrap.sh/externals/duply/duply awsS3 backup

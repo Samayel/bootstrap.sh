@@ -12,6 +12,7 @@
 - /media
 - /mnt
 - /proc
+- /root/.cache/duplicity
 - /sys
 - /tmp
 - /var/lib/lxcfs/cgroup
