@@ -33,6 +33,7 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
     * TARGET
     * AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
   * /bootstrap.sh/externals/duply/duply awsS3 status
+  * touch /root/.cache/duplicity/.duplicity-ignore
   * tar czf /root/tmp/duply-awsS3.tar.gz /root/.duply/awsS3/
     * add to KeePass
   * TODO: cron job
