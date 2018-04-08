@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-export DO_API_KEY="..."
+export ACMEDNS_UPDATE_URL="https://api.ca.quyo.net/update"
+export ACMEDNS_USERNAME="<username>"
+export ACMEDNS_PASSWORD="<password>"
+export ACMEDNS_SUBDOMAIN="<subdomain>"
 
 
 DOMAIN=quyo.net
@@ -18,11 +21,11 @@ RELOADCMD=haproxy-rsa
 
 acme.sh \
     --issue \
-    --dns dns_dgon \
-    --domain-alias acme.dns.do.quyo.net \
+    --dns dns_acmedns \
+    --domain-alias ${ACMEDNS_SUBDOMAIN}.acme-challenge.ca.quyo.net \
     \
-    -d $DOMAIN \
-    -d www.$DOMAIN \
+    -d ${DOMAIN} \
+    -d www.${DOMAIN} \
     \
     --accountkeylength 4096 \
     --keylength 4096 \
@@ -39,11 +42,11 @@ RELOADCMD=haproxy-ec
 
 acme.sh \
     --issue \
-    --dns dns_dgon \
-    --domain-alias acme.dns.do.quyo.net \
+    --dns dns_acmedns \
+    --domain-alias ${ACMEDNS_SUBDOMAIN}.acme-challenge.ca.quyo.net \
     \
-    -d $DOMAIN \
-    -d www.$DOMAIN \
+    -d ${DOMAIN} \
+    -d www.${DOMAIN} \
     \
     --accountkeylength 4096 \
     --keylength ec-384 \
