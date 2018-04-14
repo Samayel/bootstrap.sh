@@ -25,3 +25,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: master [.:[:xdigit:]]+#[[:digit:]]+ \(source [.:[:xdigit:]]+#[[:digit:]]+\) deleted from unreachable cache$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): reconfiguring zone keys$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): next key event: [[:digit:]]{2}-[A-Za-z]{3}-[[:digit:]]{4} [[:digit:]:.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+/key ns\.(nyc|lon)1\.do\.quyo\.net( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR started: TSIG ns\.(nyc|lon)1\.do\.quyo\.net \(serial [[:digit:]]{10} -> [[:digit:]]{10}\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+/key ns\.(nyc|lon)1\.do\.quyo\.net( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR ended$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(unsigned\): loaded serial [[:digit:]]{10}$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): sending notifies \(serial [[:digit:]]{10}\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): serial [[:digit:]]{10} \(unsigned [[:digit:]]{10}\)$
