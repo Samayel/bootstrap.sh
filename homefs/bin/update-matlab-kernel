@@ -9,7 +9,7 @@ source activate matlab
 
 pip install matlab_kernel
 
-pushd ~/opt/MATLAB/R2017a/extern/engines/python
+pushd ~/opt/MATLAB/R2018a/extern/engines/python
 python setup.py install
 popd
 

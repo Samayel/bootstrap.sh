@@ -8,6 +8,7 @@ Akagera
 AMG
 AmplNLReader
 AmplNLWriter
+ApproxBayes
 ArbFloats
 ArgCheck
 ArgParse
@@ -45,6 +46,7 @@ Cbc
 ChangePrecision
 Checkers
 CholmodSolve2
+Chunks
 Circuitscape
 ClassicalCiphers
 Clustering
@@ -90,6 +92,7 @@ Curvelet
 CxxWrap
 D3Trees
 Dagger
+DarkSky
 DataArrays
 DataDeps
 DataDepsGenerators
@@ -109,6 +112,7 @@ DecisionTree
 DeepDiffs
 Defer
 DelayDiffEq
+Destruct
 DiffBase
 DiffEqApproxFun
 DiffEqBayes
@@ -138,6 +142,7 @@ DWARF
 DynamicalSystems
 DynamicPolynomials
 DynaWAVE
+EAGO
 EAGOBranchBound
 EAGOParametricInterval
 EarCut
@@ -151,6 +156,7 @@ ErrorfreeArithmetic
 EventSimulation
 Evolutionary
 ExcelFiles
+ExecutableSpecifications
 ExpectationStubs
 Expr2LaTeX
 ExprOptimization
@@ -169,6 +175,7 @@ FilePathsBase
 FillArrays
 FinancialToolbox
 Fire
+FirstOrderLogic
 FirstOrderSolvers
 FixedPointDecimals
 FixedPointNumbers
@@ -212,6 +219,7 @@ Hexagons
 Hiccup
 HigherOrderKernels
 HigherPrecision
+HilbertSpaceFillingCurve
 @osx Homebrew
 Homotopies
 HomotopyContinuation
@@ -227,6 +235,7 @@ IJulia
 ImageDistances
 ImageDraw
 ImageFeatures
+ImageInpainting
 ImageInTerminal
 ImageMagick
 ImageMorphology
@@ -237,6 +246,7 @@ IndexedArrays
 IndexedTables
 Indexing
 Interact
+InteractiveCodeSearch
 InterestRates
 InternedStrings
 Interpolations
@@ -285,6 +295,7 @@ Latexify
 LaTeXStrings
 LayerDicts
 Lazy
+LazySets
 LBFGSB
 LCA
 LearningStrategies
@@ -311,6 +322,7 @@ LsqFit
 LTISystems
 MachO
 MacroTools
+ManualMemory
 Maracas
 MarketData
 MathOptInterface
@@ -402,11 +414,15 @@ ParserCombinator
 Parts
 PDFExtract
 PDMats
+Peaks
 Perceptrons
+PeriodicTable
 Persa
 PGFPlots
 PGFPlotsX
 PhantomJS
+PhyloNetworks
+PhysConsts
 PicoSAT
 PkgTemplates
 PlanarMaps
@@ -569,6 +585,7 @@ UnitfulAngles
 UnitfulAstro
 UnitfulUS
 Unrolled
+UnsafeArrays
 UnsafeAtomics
 Unums
 URIParser
@@ -587,6 +604,7 @@ WebSockets
 WoodburyMatrices
 XDiff
 XGrad
+XLSX
 Xtensor
 ZChop
 ZippedArrays
