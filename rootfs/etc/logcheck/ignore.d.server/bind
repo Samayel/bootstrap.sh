@@ -14,8 +14,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: success resolving '[^[:space:]]+' \(in '[.[:alnum:]-]+'\?\) after (disabling EDNS|reducing the advertised EDNS UDP packet size to 512 octets)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: error \((FORMERR|connection refused|unexpected RCODE (REFUSED|SERVFAIL)|(network|host) unreachable)\) resolving '[^[:space:]]+': [.:[:xdigit:]]+#[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: query (\(cache\) )?'[._[:alnum:]-]+/(A|AAAA|ANY|TXT|SOA|NS|DS|PTR)/(IN|CH)' denied$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: zone transfer '[._[:alnum:]-]+/AXFR/IN' denied$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: update( forwarding)? '[._[:alnum:]-]+/IN' denied$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: notify question section contains no SOA$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: message parsing failed: (unexpected end of input|bad compression pointer|bad label type|FORMERR)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR ended$
@@ -25,9 +23,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: master [.:[:xdigit:]]+#[[:digit:]]+ \(source [.:[:xdigit:]]+#[[:digit:]]+\) deleted from unreachable cache$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): reconfiguring zone keys$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): next key event: [[:digit:]]{2}-[A-Za-z]{3}-[[:digit:]]{4} [[:digit:]:.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+/key ns\.(nyc|lon)1\.do\.quyo\.net( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR started: TSIG ns\.(nyc|lon)1\.do\.quyo\.net \(serial [[:digit:]]{10} -> [[:digit:]]{10}\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: client [.:[:xdigit:]]+#[[:digit:]]+/key ns\.(nyc|lon)1\.do\.quyo\.net( \([._[:alnum:]-]+\))?: transfer of '[._[:alnum:]-]+/IN': IXFR ended$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(unsigned\): loaded serial [[:digit:]]{10}$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): sending notifies \(serial [[:digit:]]{10}\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN \(signed\): serial [[:digit:]]{10} \(unsigned [[:digit:]]{10}\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ named\[[[:digit:]]+\]: zone [._[:alnum:]-]+/IN: zone transfer deferred due to quota$
