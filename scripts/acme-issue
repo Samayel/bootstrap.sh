@@ -29,6 +29,7 @@ acme.sh \
     \
     --accountkeylength 4096 \
     --keylength 4096 \
+    --ocsp-must-staple \
     --days 30 \
     \
     --cert-file      "/etc/ssl/letsencrypt/$DOMAIN/rsa-cert.pem"  \
@@ -50,6 +51,7 @@ acme.sh \
     \
     --accountkeylength 4096 \
     --keylength ec-384 \
+    --ocsp-must-staple \
     --days 30 \
     \
     --cert-file      "/etc/ssl/letsencrypt/$DOMAIN/ec-cert.pem"  \
