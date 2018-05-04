@@ -1,18 +1,19 @@
 #!/usr/bin/env sh
 
-apt-get install -y update-manager-core
-apt-get install -y openssh-client openssh-server openssh-sftp-server
-apt-get install -y wget curl
-apt-get install -y screen tmux dtach
-apt-get install -y vim joe nano
-apt-get install -y git
-apt-get install -y mc
-apt-get install -y chrony
-apt-get install -y htop iotop iftop traceroute
-DEBIAN_FRONTEND=noninteractive apt-get install -y postfix logcheck
-apt-get install -y cron-apt
-apt-get install -y monit
-apt-get install -y ccze
-# apt-get install -y logwatch libsys-cpu-perl libsys-meminfo-perl
-apt-get install -y fail2ban whois python3-pyinotify
-apt-get install -y duplicity gnupg python-boto
+apt install -y update-manager-core
+apt install -y openssh-client openssh-server openssh-sftp-server
+apt install -y wget curl
+apt install -y screen tmux dtach
+apt install -y vim joe nano
+apt install -y git
+apt install -y mc
+apt install -y chrony
+apt install -y htop iotop iftop traceroute
+DEBIAN_FRONTEND=noninteractive apt install -y postfix logcheck
+apt install -y cron-apt
+apt install -y monit
+apt install -y ccze
+# apt install -y logwatch libsys-cpu-perl libsys-meminfo-perl
+apt install -y fail2ban whois python3-pyinotify
+apt install -y duplicity gnupg python-boto
+apt install -y hash-slinger
