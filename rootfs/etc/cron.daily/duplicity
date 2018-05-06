@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
 /bootstrap.sh/scripts/cronic /bootstrap.sh/externals/duply/duply awsS3 backup
+/bootstrap.sh/externals/duply/duply awsS3 purgeIncr_purgeFull_purge --force
