@@ -19,6 +19,7 @@ Augmentor
 AutoGrad
 AutoHashEquals
 AxisAlgorithms
+BanditOpt
 Bandits
 BasisFunctionExpansions
 BayesNets
@@ -30,6 +31,7 @@ BinDeps
 BlackBoxOptim
 BlackBoxOptimizationBenchmarking
 Blink
+Blobs
 BlockBandedMatrices
 Blosc
 Bokeh
@@ -44,8 +46,10 @@ CategoricalArrays
 CausalInference
 Cbc
 ChangePrecision
+CharSetEncodings
 Checkers
 CholmodSolve2
+ChrBase
 Chunks
 Circuitscape
 ClassicalCiphers
@@ -66,6 +70,7 @@ ColorTypes
 ColorVectorSpace
 CombinatorialBandits
 Combinatorics
+CombineML
 CommunityDetection
 Commutator
 Compat
@@ -125,6 +130,7 @@ DiffRules
 DiffTests
 Digits
 DimensionalPlotRecipes
+Discreet
 DiscretePredictors
 Discretizers
 Dispatcher
@@ -150,7 +156,9 @@ EarthOrientation
 Eglob
 ElasticArrays
 Electron
+ElectronDisplay
 ELF
+EmpiricalCDFs
 Erdos
 ErrorfreeArithmetic
 EventSimulation
@@ -158,6 +166,7 @@ Evolutionary
 ExcelFiles
 ExecutableSpecifications
 ExpectationStubs
+ExpmV
 Expr2LaTeX
 ExprOptimization
 ExprRules
@@ -184,6 +193,7 @@ FixedSizeArrays
 FluorescentSeries
 Flux
 FluxJS
+Format
 Formatting
 ForwardDiff
 FProfile
@@ -196,7 +206,6 @@ GaussianDistributions
 GaussianRandomFields
 GeoStatsBase
 GeoStatsDevTools
-GLM
 GLMNet
 GLPKMathProgInterface
 GLPlot
@@ -235,6 +244,7 @@ IJulia
 ImageDistances
 ImageDraw
 ImageFeatures
+ImageHistogram
 ImageInpainting
 ImageInTerminal
 ImageMagick
@@ -246,7 +256,10 @@ IndexedArrays
 IndexedTables
 Indexing
 Interact
+InteractBase
+InteractBulma
 InteractiveCodeSearch
+InteractUIkit
 InterestRates
 InternedStrings
 Interpolations
@@ -257,8 +270,10 @@ IntervalOptimisation
 IntervalRootFinding
 Intervals
 InverseDistanceWeighting
+InverseLaplace
 IOIndents
 Ipopt
+IPython
 IsoRank
 ItemGraphs
 IterableTables
@@ -285,6 +300,7 @@ Juno
 Jute
 KahanSummation
 KernelDensity
+KeyedTables
 Keys
 Knet
 Kriging
@@ -306,12 +322,14 @@ LempelZiv
 @windows Libz
 LightGraphs
 LightGraphsFlows
+LightGraphsMatching
 LightXML
 LineSearches
 LinkedLists
 LLVM
 LNR
 LocalFilters
+LocalFunctionApproximation
 Loess
 Logging
 LogProbs
@@ -325,7 +343,9 @@ MacroTools
 ManualMemory
 Maracas
 MarketData
+MathematicalSystems
 MathOptInterface
+MathOptInterfaceMosek
 MathProgBase
 MatrixChainMultiply
 MatrixNetworks
@@ -345,6 +365,7 @@ Metalhead
 MicroLogging
 MINPACK
 Missings
+Mixers
 MKLSparse
 MLBase
 MLDataPattern
@@ -353,7 +374,9 @@ MLDataUtils
 MLLabelUtils
 MNIST
 Mocha
+ModuleInterfaceTools
 MosaicViews
+MovingWeightedLeastSquares
 MuladdMacro
 MultiDimEquations
 MultiJuMP
@@ -362,6 +385,7 @@ Multisets
 MultivariateAnomalies
 MultivariateMoments
 MultivariatePolynomials
+MurmurHash3
 Mustache
 Mux
 MXNet
@@ -385,6 +409,7 @@ NLsolve
 NLSolversBase
 NodeJS
 NOMAD
+NonUniformRandomVariateGeneration
 NullableArrays
 Nulls
 NumericIO
@@ -403,6 +428,7 @@ OptimBase
 OptimTestProblems
 OptionalData
 OrdinaryDiffEq
+OrthogonalPolynomials
 PackageCompiler
 PackageGenerator
 PaddedViews
@@ -412,6 +438,7 @@ ParameterizedFunctions
 Parameters
 ParserCombinator
 Parts
+PCRE2
 PDFExtract
 PDMats
 Peaks
@@ -431,6 +458,7 @@ PlotlyJS
 PlotRecipes
 Plots
 PLSRegressor
+PoissonRandom
 PolyJuMP
 PolynomialBases
 PolynomialFactors
@@ -469,11 +497,15 @@ Rectangle
 RecursiveArrayTools
 RecurUnroll
 Reduce
+ReduceAlgebra
+ReduceLinAlg
 Reexport
 ReferenceTests
 RegressionTables
 Reinforce
+Rematch
 RemoteFiles
+REPLTetris
 Requests
 RequirementVersions
 Requires
@@ -508,6 +540,7 @@ SnowballStemmer
 Somoclu
 SortingAlgorithms
 SortingLab
+SortJoin
 SparseInterp
 SparseMatrixLILs
 SparseRegression
@@ -517,29 +550,43 @@ SpecialFunctions
 SQLite
 StatFiles
 StaticArrays
+StaticPolynomials
 StatPlots
 StatsBase
 StatsFuns
 Steganography
 StochasticDiffEq
+StrAPI
+StrBase
 StreamStats
+StrEntities
+StrFormat
+StrICU
 StringBuilders
 StringCases
 StringEncodings
+StringLiterals
+StrLiterals
+StrRegex
+Strs
+StrTables
 StructDualDynProg
 StructIO
 StructJuMP
 StructuredQueries
+SubMatrixSelectionSVD
 SubpixelRegistration
 SubsetSelection
 SugarBLAS
 SumOfSquares
 Sundials
 Surprise
+SurrealNumbers
 Symata
 SymEngine
 SymmetricTensors
 SymPy
+TableShowUtils
 TableTraits
 TableTraitsUtils
 TabularDisplay
@@ -596,16 +643,19 @@ vOptSpecific
 VT100
 Vue
 WeakRefStrings
+WebAssembly
 WebFuncs
 WebIO
 WebSockets
 @windows WinReg
 @windows WinRPM
 WoodburyMatrices
+WordTokenizers
 XDiff
 XGrad
 XLSX
 Xtensor
+Yao
 ZChop
 ZippedArrays
 Zlib
