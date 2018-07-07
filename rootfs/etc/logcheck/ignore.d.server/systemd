@@ -50,3 +50,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ runuser: pam_unix\(runuser:session\): session opened for user [[:alnum:]-]+ by \(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ runuser: pam_unix\(runuser:session\): session closed for user [[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ 50-motd-news\[[[:digit:]]+\]:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ popularity-contest: unable to submit report
