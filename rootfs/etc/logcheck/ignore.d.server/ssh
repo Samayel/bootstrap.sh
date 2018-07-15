@@ -1,3 +1,6 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (error: )?Received disconnect from [:.[:xdigit:]]+( port [[:digit:]]{1,5})?:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted (gssapi(-with-mic|-keyex)?|rsa|dsa|password|publickey|keyboard-interactive/pam|hostbased) for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]{1,5}( (ssh|ssh2))?(: (RSA|ECDSA|ED25519) (([[:xdigit:]]{2}:){15}[[:xdigit:]]{2}|SHA256:[+/[:alnum:]]+))?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Address [._[:alnum:]-]+ maps to [._[:alnum:]-]+, but this does not map back to the address - POSSIBLE BREAK-?IN ATTEMPT!$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Authorized to [^[:space:]]+, krb5 principal [^[:space:]]+ \(krb5_kuserok\)$
@@ -12,13 +15,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Nasty PTR record "[:[:xdigit:].]+" is set up for [:[:xdigit:].]+, ignoring$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: PAM pam_putenv: delete non-existent entry; [[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Postponed (keyboard-interactive(/pam)?|publickey) for (invalid user )?[^[:space:]]+ from [^[:space:]]+ port [[:digit:]]{1,5}( (ssh|ssh2)( \[preauth\])?)?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: [12]: Timeout, server not responding\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: 11: (disconnected by user|Closed due to user request\.)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: 11: Bye Bye \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: [[:digit:]]+: Client disconnect$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+: [[:digit:]]+: Disconnect requested by Windows SSH Client\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:11: (disconnected by user|Bye Bye|end|Client disconnecting normally|Norm|Normal Shutdown(, Thank you for playing)?)?( \[preauth\])?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by (invalid|authenticating) user  ?[-_.[:alnum:]]* [:.[:xdigit:]]+ port [[:digit:]]{1,5} \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Server listening on [:[:xdigit:].]+ port [[:digit:]]{1,5}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: User [-_.[:alnum:]]+ from [-_.[:alnum:]]+ not allowed because (listed in Deny|not listed in Allow)Users$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: User [-_.[:alnum:]]+ from [-_.[:alnum:]]+ not allowed because none of user's groups are listed in AllowGroups$
@@ -47,14 +43,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: syslogin_perform_logout: logout\(\) returned an error$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: warning: /etc/hosts\.(allow|deny), line [[:digit:]]+: can't verify hostname: getaddrinfo\([._[:alnum:]-]+, AF_INET\) failed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: warning: /etc/hosts\.(allow|deny), line [[:digit:]]+: host name/(name|address) mismatch: [._[:alnum:]-]+ != [._[:alnum:]-]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Connection (closed|reset) by [:.[:xdigit:]]+ port [[:digit:]]{1,5} \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:2: Handshake failed \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:3: java\.net\.SocketTimeoutException: Read timed out \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:3: com\.jcraft\.jsch\.JSchException: timeout in waiting for rekeying process\. \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:13: User request \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:14: (Unable to connect using the available authentication methods|No more user authentication methods available\.) \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: Received disconnect from [:.[:xdigit:]]+ port [[:digit:]]{1,5}:0:$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnected from(( invalid| authenticating)? user [^[:space:]]*)? [:.[:xdigit:]]+ port [[:digit:]]{1,5}( \[preauth\])?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]{1,5}: no matching (key exchange method|cipher|MAC|host key type) found. Their offer:
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting invalid user [-_.[:alnum:]]* [:.[:xdigit:]]+ port [[:digit:]]{1,5}: Change of username or service not allowed: \([-_.[:alnum:]]*,ssh-connection\) -> \([-_.[:alnum:]]*,ssh-connection\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [:[:xdigit:].]+ port [[:digit:]]{1,5}: SSH-[._ [:alnum:]-]+ vs. SSH-[._ [:alnum:]-]+$
@@ -63,4 +51,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?ssh_dispatch_run_fatal: Connection from ([:.[:xdigit:]]+|UNKNOWN) port [[:digit:]]{1,5}: (DH GEX group out of range|message authentication code incorrect|incomplete message|Broken pipe) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: invalid public DH value: <= 1 \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: pam_systemd\(sshd:session\): Failed to create session: No such file or directory$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: dispatch_protocol_error: type [[:digit:]]+ seq [[:digit:]]+ \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sftp-server\[[[:digit:]]+\]: error: Unknown extended request "home-directory"$
