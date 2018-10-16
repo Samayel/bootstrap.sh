@@ -1,6 +1,7 @@
 # See man 5 aliases for format
 
-root:           johm@quyo.de
+johm:           johm@quyo.de
+root:           johm
 sysadmin:       root
 logcheck:       root
 monit:          root
