@@ -19,5 +19,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: ssl-build-param: SSL parameters regeneration completed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: managesieve-login: Login: user=<[._[:alnum:]-]+>, method=[[:alnum:]-]+, rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+, (TLS( handshake)?|secured)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Connect from local$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: (Successful quit|Connection closed \(in (DATA finished|RSET)\))$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\): Disconnect from local: (Successful quit|Connection closed \(in (DATA finished|RSET)\)|Client has quit the connection \(state = READY\))$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap|MANAGESIEVE)\([-_.@[:alnum:]]+\): (Logged out|Connection closed|Disconnected):? 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: lmtp\([-_.@[:alnum:]]+\)<[[:digit:]]+><[[:alnum:]+/]+>:( sieve:)? msgid=<?[^>]+>?: (stored mail into mailbox|saved mail to) ['-_.[:alnum:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: imap\([-_.@[:alnum:]]+\)<[[:digit:]]+><[[:alnum:]+/]+>: (Logged out|Disconnected for inactivity|Connection closed \((NOOP finished [.[:digit:]]+ secs ago|IDLE running for [.[:digit:]]+ \+ waiting input for [.[:digit:]]+ secs, [[:digit:]] B in \+ [[:digit:]]+\+[[:digit:]]+ B out, state=wait-input)\)) in=[[:digit:]]+ out=[[:digit:]]+ deleted=[[:digit:]]+ expunged=[[:digit:]]+ trashed=[[:digit:]]+ hdr_count=[[:digit:]]+ hdr_bytes=[[:digit:]]+ body_count=[[:digit:]]+ body_bytes=[[:digit:]]+$
