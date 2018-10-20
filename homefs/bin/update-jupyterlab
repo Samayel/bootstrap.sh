@@ -3,9 +3,8 @@
 set -e
 
 conda remove  -n jupyterlab -y --all
-conda create  -n jupyterlab -y -c conda-forge       python=3 jupyter jupyterlab widgetsnbextension
-conda install -n jupyterlab -y -c conda-forge       jupyter_contrib_nbextensions
-conda install -n jupyterlab -y -c damianavila82     rise
+conda create  -n jupyterlab -y -c conda-forge       python=3 jupyter jupyterlab widgetsnbextension jupyter_contrib_nbextensions rise
+#conda install -n jupyterlab -y -c damianavila82     rise
 
 source activate jupyterlab
 
