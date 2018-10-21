@@ -2,8 +2,7 @@ frontend ft_tcp443
     mode tcp
     option tcplog
 
-    bind *:443
-    bind :::443
+    bind :::443 v4v6
 
     # wait up to 5 seconds from the time the tcp socket opens
     # until the hello packet comes in (otherwise fallthru to the default)

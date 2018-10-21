@@ -2,8 +2,7 @@ frontend ft_tcp80
     mode tcp
     option tcplog
 
-    bind *:80
-    bind :::80
+    bind :::80 v4v6
 
     default_backend bk_tcp80_haproxy
 
