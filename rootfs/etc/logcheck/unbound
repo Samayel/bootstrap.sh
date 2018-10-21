@@ -1,0 +1,1 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: generate keytag query _ta-[[:xdigit:]-]+. NULL IN$

@@ -21,3 +21,4 @@ ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/spamc             --tar
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/spamd             --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/ssh               --target-directory=/etc/logcheck/ignore.d.server/
 ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/systemd           --target-directory=/etc/logcheck/ignore.d.server/
+ln -sf /bootstrap.sh/rootfs/etc/logcheck/ignore.d.server/unbound           --target-directory=/etc/logcheck/ignore.d.server/
