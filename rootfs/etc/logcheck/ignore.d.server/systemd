@@ -51,6 +51,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ (snapd\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+|/usr/lib/snapd/snapd\[[[:digit:]]+\]:) snapmgr\.go:[[:digit:]]+: No snaps to auto-refresh found$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snapd\[[[:digit:]]+\]: ([[:digit:]/]{10} [[:digit:]:.]+ )?autorefresh\.go:[[:digit:]]+: auto-refresh: all snaps are up-to-date$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snapd\[[[:digit:]]+\]: ([[:digit:]/]{10} [[:digit:]:.]+ )?storehelpers\.go:[[:digit:]]+: cannot refresh: snap has no updates available:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snapd\[[[:digit:]]+\]: udevmon\.go:[[:digit:]]+: udev monitor observed remove event for unknown device
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: #015#033\[K$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: No snaps are installed yet\. Try 'snap install hello-world'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snap\[[[:digit:]]+\]: All snaps up(-| )to(-| )date\.$
