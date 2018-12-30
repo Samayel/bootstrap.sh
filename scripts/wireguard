@@ -4,30 +4,31 @@ set -e
 
 add-apt-repository ppa:wireguard/wireguard
 apt update
-apt install wireguard
+apt install wireguard qrencode
 
 echo '127.0.0.1' > /etc/resolv.conf
 
-ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/wireguard-listen     /etc/unbound/unbound.conf.d/
+cp /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/wireguard-listen.conf        /etc/unbound/unbound.conf.d/
 
-ln -sf /bootstrap.sh/rootfs/etc/sysctl.d/99-quyo-wireguard.conf             /etc/sysctl.d/
+ln -sf /bootstrap.sh/rootfs/etc/sysctl.d/99-quyo-wireguard.conf                 /etc/sysctl.d/
 
-cat /bootstrap.sh/rootfs/etc/wireguard/wg0.conf                           > /etc/wireguard/wg0.conf
+cat /bootstrap.sh/rootfs/etc/wireguard/wg0.conf                               > /etc/wireguard/wg0.conf
 chmod 660 /etc/wireguard/wg0.conf
 
 
 # FIX /etc/wireguard/wg0.conf
 
-
-# mkdir ~/wireguard
-# cd wireguard
-# wg genkey | tee privatekey | wg pubkey > publickey
-# chmod 600 *
-
-
 # wg-quick up wg0
 # systemctl enable wg-quick@wg0
 
+# mkdir /etc/wireguard/keys
+# chmod 600 /etc/wireguard/keys
+# cd /etc/wireguard/keys
+# wg genkey | tee server.private.key | wg pubkey > server.public.key
+# chmod 600 *
 
-# wg set wg0 peer <Client Public Key> allowed-ips 10.10.1.2/32,fc00:10:1::2/128
+
+
+# qrencode -t ansiutf8 < client.conf
+# wg set wg0 peer <Client Public Key> allowed-ips 10.10.1.X/32,fc00:10:1::X/128
 # wg-quick save wg0
