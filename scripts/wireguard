@@ -12,6 +12,7 @@ cp /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/wireguard-listen.conf        
 
 ln -sf /bootstrap.sh/rootfs/etc/sysctl.d/99-quyo-wireguard.conf                 /etc/sysctl.d/
 
+
 cat /bootstrap.sh/rootfs/etc/wireguard/wg0.conf                               > /etc/wireguard/wg0.conf
 chmod 660 /etc/wireguard/wg0.conf
 
@@ -21,18 +22,29 @@ ln -sf /bootstrap.sh/rootfs/etc/wireguard/wg0-pre-down                          
 ln -sf /bootstrap.sh/rootfs/etc/wireguard/wg0-pre-up                            /etc/wireguard/
 
 
+mkdir /etc/tunsafe
+cat /bootstrap.sh/rootfs/etc/tunsafe/tun0.conf                                > /etc/tunsafe/tun0.conf
+chmod 660 /etc/tunsafe/tun0.conf
+
+ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-post-down                          /etc/tunsafe/
+ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-post-up                            /etc/tunsafe/
+ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-pre-down                           /etc/tunsafe/
+ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-pre-up                             /etc/tunsafe/
+
+
 # FIX /etc/wireguard/wg0.conf
+# FIX /etc/tunsafe/tun0.conf
 
 # wg-quick up wg0
 # systemctl enable wg-quick@wg0
+
+
 
 # mkdir /etc/wireguard/keys
 # chmod 600 /etc/wireguard/keys
 # cd /etc/wireguard/keys
 # wg genkey | tee server.private.key | wg pubkey > server.public.key
 # chmod 600 *
-
-
 
 # qrencode -t ansiutf8 < client.conf
 # wg set wg0 peer <Client Public Key> allowed-ips 10.10.1.X/32,fc00:10:1::X/128
