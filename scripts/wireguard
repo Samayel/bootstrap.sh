@@ -15,6 +15,11 @@ ln -sf /bootstrap.sh/rootfs/etc/sysctl.d/99-quyo-wireguard.conf                 
 cat /bootstrap.sh/rootfs/etc/wireguard/wg0.conf                               > /etc/wireguard/wg0.conf
 chmod 660 /etc/wireguard/wg0.conf
 
+ln -sf /bootstrap.sh/rootfs/etc/wireguard/wg0-post-down                         /etc/wireguard/
+ln -sf /bootstrap.sh/rootfs/etc/wireguard/wg0-post-up                           /etc/wireguard/
+ln -sf /bootstrap.sh/rootfs/etc/wireguard/wg0-pre-down                          /etc/wireguard/
+ln -sf /bootstrap.sh/rootfs/etc/wireguard/wg0-pre-up                            /etc/wireguard/
+
 
 # FIX /etc/wireguard/wg0.conf
 
