@@ -1,0 +1,15 @@
+[Unit]
+Description=TunSafe
+
+[Service]
+Type=simple
+PIDFile=/run/tunsafe.pid
+ExecStart=/bootstrap.sh/externals/TunSafe/tunsafe start /etc/tunsafe/tun0.conf
+User=root
+Group=root
+Restart=always
+RestartSec=60
+#KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target

@@ -31,12 +31,15 @@ ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-post-up                            
 ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-pre-down                           /etc/tunsafe/
 ln -sf /bootstrap.sh/rootfs/etc/tunsafe/tun0-pre-up                             /etc/tunsafe/
 
+ln -sf /bootstrap.sh/rootfs/lib/systemd/system/tunsafe.service                  /lib/systemd/system/
+
 
 # FIX /etc/wireguard/wg0.conf
 # FIX /etc/tunsafe/tun0.conf
 
 # wg-quick up wg0
 # systemctl enable wg-quick@wg0
+# systemctl enable tunsafe
 
 
 
