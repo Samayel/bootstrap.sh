@@ -4,3 +4,6 @@
 [submodule "externals/acme.sh"]
 	path = externals/acme.sh
 	url = https://github.com/Neilpang/acme.sh.git
+[submodule "externals/TunSafe"]
+	path = externals/TunSafe
+	url = https://github.com/TunSafe/TunSafe.git
