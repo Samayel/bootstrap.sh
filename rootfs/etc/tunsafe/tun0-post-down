@@ -11,14 +11,5 @@ ip6tables -t nat -D POSTROUTING -s fc00:10:2::/64 -o ens3 -j MASQUERADE
 IPV4=$(hostname -I | tr ' ' '\n' | egrep '^[0-9.]+$'       | egrep -v '^(127|10|192)\.')
 IPV6=$(hostname -I | tr ' ' '\n' | egrep '^[0-9a-fA-F:]+$' | egrep -v '^(:|fc00):')
 
-iptables  -t nat -D PREROUTING -d $IPV4 -p tcp --dport 53    -j DNAT --to-destination :443
-ip6tables -t nat -D PREROUTING -d $IPV6 -p tcp --dport 53    -j DNAT --to-destination :443
-
-iptables  -t nat -D PREROUTING -d $IPV4 -p tcp --dport 80    -j DNAT --to-destination :443
-ip6tables -t nat -D PREROUTING -d $IPV6 -p tcp --dport 80    -j DNAT --to-destination :443
-
-iptables  -t nat -D PREROUTING -d $IPV4 -p tcp --dport 587   -j DNAT --to-destination :443
-ip6tables -t nat -D PREROUTING -d $IPV6 -p tcp --dport 587   -j DNAT --to-destination :443
-
-iptables  -t nat -D PREROUTING -d $IPV4 -p tcp --dport 51820 -j DNAT --to-destination :443
-ip6tables -t nat -D PREROUTING -d $IPV6 -p tcp --dport 51820 -j DNAT --to-destination :443
+iptables  -t nat -D PREROUTING -d $IPV4 -p tcp -m multiport ! --dports 22,443 -j DNAT --to-destination :443
+ip6tables -t nat -D PREROUTING -d $IPV6 -p tcp -m multiport ! --dports 22,443 -j DNAT --to-destination :443
