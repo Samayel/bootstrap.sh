@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ tunsafe\[[[:digit:]]+\]: (message repeated [[:digit:]]+ times: \[ )?(Created new|Destroyed) tcp socket\]?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ tunsafe\[[[:digit:]]+\]: (message repeated [[:digit:]]+ times: \[ )?TcpSocket error\]?$
