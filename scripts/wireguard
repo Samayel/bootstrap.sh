@@ -6,7 +6,7 @@ add-apt-repository ppa:wireguard/wireguard
 apt update
 apt install wireguard qrencode
 
-echo '127.0.0.1' > /etc/resolv.conf
+echo 'nameserver 127.0.0.1' > /etc/resolv.conf
 
 ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/quyo-public-resolver.conf.d      /etc/unbound/unbound.conf.d/
 ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/zzz-quyo-public-resolver.conf    /etc/unbound/unbound.conf.d/
