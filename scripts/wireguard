@@ -8,7 +8,9 @@ apt install wireguard qrencode
 
 echo '127.0.0.1' > /etc/resolv.conf
 
-cp /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/zzz-quyo-wireguard-listen.conf       /etc/unbound/unbound.conf.d/
+ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/quyo-public-resolver.conf.d      /etc/unbound/unbound.conf.d/
+ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/zzz-quyo-public-resolver.conf    /etc/unbound/unbound.conf.d/
+ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/zzz-quyo-wireguard-listen.conf   /etc/unbound/unbound.conf.d/
 
 ln -sf /bootstrap.sh/rootfs/etc/sysctl.d/99-quyo-wireguard.conf                         /etc/sysctl.d/
 
