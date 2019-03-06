@@ -6,5 +6,5 @@ service systemd-resolved stop
 rm /etc/resolv.conf
 
 echo "nameserver 127.0.0.1" > /etc/resolv.conf
-echo "nameserver 1.1.1.1" >> /etc/resolv.conf
-echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+echo "nameserver 165.227.161.223" >> /etc/resolv.conf
+echo "nameserver 178.128.253.196" >> /etc/resolv.conf
