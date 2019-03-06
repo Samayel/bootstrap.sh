@@ -88,6 +88,12 @@
    if failed ping6                                              for 3 times within 15 cycles then alert  # IPv6 only
    if failed port 22 protocol ssh with timeout 15 seconds       for 3 times within 15 cycles then alert
 
+ check host dox.ams3 with address dox.ams3.do.quyo.net
+   group network
+   if failed ping4                                              for 3 times within 15 cycles then alert  # IPv4 only
+   if failed ping6                                              for 3 times within 15 cycles then alert  # IPv6 only
+   if failed port 22 protocol ssh with timeout 15 seconds       for 3 times within 15 cycles then alert
+
  check host ns.fra1 with address ns.fra1.do.quyo.net
    group network
    if failed ping4                                              for 3 times within 15 cycles then alert  # IPv4 only
