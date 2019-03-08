@@ -10,6 +10,7 @@ ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/quyo-public-resolver.conf
 ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/zzz-quyo-public-resolver.conf    /etc/unbound/unbound.conf.d/
 ln -sf /bootstrap.sh/rootfs/etc/unbound/unbound.conf.d/zzz-quyo-dnsdist-listen.conf     /etc/unbound/unbound.conf.d/
 
+ln -sf /bootstrap.sh/rootfs/etc/dnsdist/quyo-public-resolver.conf.d                     /etc/dnsdist/
 ln -sf /bootstrap.sh/rootfs/etc/dnsdist/dnsdist.conf                                    /etc/dnsdist/
 
 # monit -> dnsdist
