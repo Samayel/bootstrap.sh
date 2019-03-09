@@ -16,3 +16,17 @@ ln -sf /bootstrap.sh/rootfs/etc/dnsdist/dnsdist.conf                            
 # monit -> dnsdist
 # acme-setup
 # acme-issue
+
+
+#
+# dnscrypt setup
+#
+# apt install libevent-2.1-6 libevent-dev libsodium23 libsodium-dev
+# compile https://github.com/Cofyc/dnscrypt-wrapper
+#
+# ./dnscrypt-wrapper --gen-provider-keypair --provider-name=2.dnscrypt-cert.dox.quyo.net --dnssec --nolog --nofilter --ext-address=[IP]
+#
+# SERIAL=$(date +%s)
+# ./dnscrypt-wrapper --gen-crypt-keypair --crypt-secretkey-file=resolver-${SERIAL}.key --cert-file-expire-days=9125
+# ./dnscrypt-wrapper --gen-cert-file --crypt-secretkey-file=resolver-${SERIAL}.key --provider-cert-file=resolver-${SERIAL}.crt --cert-file-expire-days=9125 --provider-publickey-file=provider.pub.key --provider-secretkey-file=provider.sec.key
+#
