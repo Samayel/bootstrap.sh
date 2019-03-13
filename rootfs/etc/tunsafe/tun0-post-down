@@ -4,7 +4,7 @@
 # ip6tables -D FORWARD -i tun0 -j ACCEPT
 
 iptables  -t nat -D POSTROUTING -s 172.23.223.0/24           -o ens3 -j MASQUERADE
-ip6tables -t nat -D POSTROUTING -s fdb1:7929:32d4:ebb2::/64  -o ens3 -j MASQUERADE
+ip6tables -t nat -D POSTROUTING -s fd9b:48d9:b3fd:8081::/64  -o ens3 -j MASQUERADE
 
 
 
