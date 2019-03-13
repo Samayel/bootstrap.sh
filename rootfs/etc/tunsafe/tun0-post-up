@@ -3,13 +3,13 @@
 # iptables  -A FORWARD -i tun0 -j ACCEPT
 # ip6tables -A FORWARD -i tun0 -j ACCEPT
 
-iptables  -t nat -A POSTROUTING -s 10.10.2.0/24   -o ens3 -j MASQUERADE
-ip6tables -t nat -A POSTROUTING -s fc00:10:2::/64 -o ens3 -j MASQUERADE
+iptables  -t nat -A POSTROUTING -s 172.23.223.0/24           -o ens3 -j MASQUERADE
+ip6tables -t nat -A POSTROUTING -s fdb1:7929:32d4:ebb2::/64  -o ens3 -j MASQUERADE
 
 
 
-IPV4=$(hostname -I | tr ' ' '\n' | egrep '^[0-9.]+$'       | egrep -v '^(127|10|192)\.')
-IPV6=$(hostname -I | tr ' ' '\n' | egrep '^[0-9a-fA-F:]+$' | egrep -v '^(:|fc00):')
+IPV4=$(hostname -I | tr ' ' '\n' | egrep '^[0-9.]+$'       | egrep -v '^(127|10|192\.168|172\.23)\.')
+IPV6=$(hostname -I | tr ' ' '\n' | egrep '^[0-9a-fA-F:]+$' | egrep -v '^(:|fc00|fd00):')
 
 iptables  -t nat -A PREROUTING -d $IPV4 -p tcp -m multiport ! --dports 22,443 -j DNAT --to-destination :443
 ip6tables -t nat -A PREROUTING -d $IPV6 -p tcp -m multiport ! --dports 22,443 -j DNAT --to-destination :443
