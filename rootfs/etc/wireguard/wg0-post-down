@@ -9,7 +9,7 @@ ip6tables -t nat -D POSTROUTING -s fd9b:48d9:b3fd:e917::/64  -o ens3 -j MASQUERA
 
 
 IPV4=$(hostname -I | tr ' ' '\n' | egrep '^[0-9.]+$'       | egrep -v '^(127|10|192\.168|172\.23)\.')
-IPV6=$(hostname -I | tr ' ' '\n' | egrep '^[0-9a-fA-F:]+$' | egrep -v '^(:|fc00|fd00):')
+IPV6=$(hostname -I | tr ' ' '\n' | egrep '^[0-9a-fA-F:]+$' | egrep -v '^(:|f[cd]):')
 
 iptables  -t nat -D PREROUTING -d $IPV4 -p udp ! --dport 443 -j DNAT --to-destination :443
 ip6tables -t nat -D PREROUTING -d $IPV6 -p udp ! --dport 443 -j DNAT --to-destination :443
