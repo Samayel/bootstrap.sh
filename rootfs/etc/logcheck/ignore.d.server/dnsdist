@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsdist\[[[:digit:]]+\]: Error while retrieving the security update for version dnsdist-[[:digit:].-]+\.Ubuntu: Unable to get a valid Security Status update$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dnsdist\[[[:digit:]]+\]: Could not retrieve security status update for '[[:digit:].-]+\.Ubuntu' on dnsdist-[[:digit:].-]+\.Ubuntu\.security-status\.secpoll\.powerdns\.com\.$
