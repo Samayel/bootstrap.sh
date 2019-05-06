@@ -1,40 +1,18 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Daily apt (download|upgrade and clean) activities\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Daily apt (download|upgrade and clean) activities\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Stopping|Reloading) .+\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopped|Reloaded) .+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: [a-z0-9.@-]+\.(service|mount|socket|scope): Succeeded\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: apt-daily\.timer: Adding( [[:digit:]]+h)?( [[:digit:]]+min)?( [.[:digit:]]+m?s)? random time\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Cleanup of Temporary Directories\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Cleanup of Temporary Directories\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Clean php session files\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Clean php session files\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Listening on|Closed) D-Bus User Message Bus Socket\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Reached|Stopped) target [ [:alnum:]]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Stopping) User Manager for UID [0-9]+\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopped) User Manager for UID [0-9]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Session [[:digit:]]+ of user [.[:alnum:]-]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Listening on|Closed) D-Bus User Message Bus Socket\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reached target [ [:alnum:]]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Created|Removed) slice (User Slice of UID [.[:alnum:]-]+|user-[[:digit:]]+\.slice)\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopping|Stopped) /run/user/[[:digit:]] mount wrapper\.(\.\.)?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Started|Stopping|Stopped) User Runtime Directory /run/user/[[:digit:]]+\.(\.\.)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Startup finished in [.[:digit:]]+m?s\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Started) Exit the Session\.(\.\.)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Received SIGRTMIN\+24 from PID [[:digit:]]+ \(kill\)\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Automatically (refresh installed snaps|fetch and run repair assertions)\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Automatically (refresh installed snaps|fetch and run repair assertions)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: snapd\.refresh\.timer: Adding ([[:digit:].]+(h|min|s|ms|us) )+random time\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Message of the Day\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Message of the Day\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: motd-news\.timer: Adding ([[:digit:].]+(h|min|s|ms|us) )+random time\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Perl-based spam filter using text analysis\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) Perl-based spam filter using text analysis\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) HAProxy Load Balancer\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Reload(ing|ed) Postfix Mail Transport Agent( \(instance -\))?\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: user@[[:digit:]]+\.service: Killing process [[:digit:]]+ \((kill|systemctl)\) with signal SIGKILL\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: user-runtime-dir@[[:digit:]]+\.service: Unit not needed anymore\. Stopping\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Starting Discard unused blocks\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Started Discard unused blocks\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Started) Rotate log files\.(\.\.)?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: [a-z0-9.@-]+\.(service|mount|socket|scope): Succeeded\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: failed to create db file '[^']+' for '[^']+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: Network interface NamePolicy= disabled on kernel command line, ignoring\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Using degraded feature set \(UDP\+EDNS0\+DO\) for DNS server [[:xdigit:].:]{3,39}\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Grace period over, resuming full feature set \(UDP\+EDNS0\+DO\+LARGE\) for DNS server [[:xdigit:].:]{3,39}\.$
