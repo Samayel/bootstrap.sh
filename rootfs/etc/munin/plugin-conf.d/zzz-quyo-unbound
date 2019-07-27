@@ -1,6 +1,6 @@
 [unbound*]
 user root
-# env.statefile /usr/local/var/munin/plugin-state/unbound-state
+env.statefile /var/lib/munin-node/plugin-state/root/unbound-state
 env.unbound_conf /etc/unbound/unbound.conf
 env.unbound_control /usr/sbin/unbound-control
 env.spoof_warn 1000
