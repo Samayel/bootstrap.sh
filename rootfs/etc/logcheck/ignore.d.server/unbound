@@ -1,1 +1,3 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: generate keytag query _ta-[[:xdigit:]-]+. NULL IN$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: validation failure 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: validator: error. failed to classify response message: 

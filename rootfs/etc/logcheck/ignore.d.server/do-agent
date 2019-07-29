@@ -1,6 +1,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ do-agent\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+ Checking for newer version of do-agent$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ do-agent\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+ No( repository)? update available$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ do-agent\[[[:digit:]]+\]: [[:digit:]/]{10} [[:digit:]:.]+ Unable to update do-agent: Update: Error initializing repository: tuf: failed to decode root\.json: expired at [[:digit:]-]{10} [:[:digit:]]{8} \+0000 UTC$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /opt/digitalocean/bin/do-agent\[[[:digit:]]+\]: /mnt/gocd-data/var/lib/go-agent1/pipelines/do-agent/cmd/do-agent/run.go:[[:digit:]]+: failed to (send metrics|write diagnostic information):
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /opt/digitalocean/bin/do-agent\[[[:digit:]]+\]: /mnt/gocd-data/var/lib/go-agent1/pipelines/do-agent/pkg/clients/tsclient/client.go:[[:digit:]]+: failed to read response body of sonar message:
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /opt/digitalocean/bin/do-agent\[[[:digit:]]+\]: /mnt/gocd-data/var/lib/go-agent1/pipelines/do-agent/pkg/writer/sonar.go:[[:digit:]]+: failed to flush:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /opt/digitalocean/bin/do-agent\[[[:digit:]]+\]: [a-z0-9/-]+run.go:[[:digit:]]+: failed to (send metrics|write diagnostic information):
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /opt/digitalocean/bin/do-agent\[[[:digit:]]+\]: [a-z0-9/-]+client.go:[[:digit:]]+: failed to read response body of sonar message:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /opt/digitalocean/bin/do-agent\[[[:digit:]]+\]: [a-z0-9/-]+sonar.go:[[:digit:]]+: failed to flush:
