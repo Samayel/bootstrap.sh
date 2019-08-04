@@ -10,3 +10,6 @@
 [submodule "externals/munin-monitoring-contrib"]
 	path = externals/munin-monitoring-contrib
 	url = https://github.com/munin-monitoring/contrib.git
+[submodule "externals/feather"]
+	path = externals/feather
+	url = https://github.com/danrue/feather.git
