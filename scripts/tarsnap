@@ -6,3 +6,8 @@ echo "deb http://pkg.tarsnap.com/experimental/deb/disco ./" | sudo tee /etc/apt/
 
 apt update
 apt install tarsnap tarsnap-archive-keyring
+
+# sed -i -e 's/^#humanize-numbers/humanize-numbers/' /etc/tarsnap.conf
+# tarsnap-keygen --keyfile /root/tarsnap.key --user johm@quyo.de --machine $(hostname)
+
+# tarsnap -c -f predator.ka.local.quyo.net_home-johm-opt-mersenneforum.org_$(date +%Y-%m-%d_%H-%M-%S) /home/johm/opt/mersenneforum.org
