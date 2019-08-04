@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+wget -qO - https://pkg.tarsnap.com/tarsnap-deb-packaging-key.asc | apt-key add -
+wget -qO - https://pkg.tarsnap.com/experimental/tarsnap-EXPERIMENTAL-deb-packaging-key.asc | apt-key add -
+echo "deb http://pkg.tarsnap.com/experimental/deb/disco ./" | sudo tee /etc/apt/sources.list.d/tarsnap.list
+
+apt update
+apt install tarsnap tarsnap-archive-keyring

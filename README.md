@@ -18,6 +18,7 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 * https://discovery.cryptosense.com
 * johm@shell:~/.ssh/config
 * setup munin(-node)
+* install tarsnap (./scripts/tarsnap)
 
 ## Setup backup
 

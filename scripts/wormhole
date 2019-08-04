@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-/usr/bin/wormhole \
-    --relay-url ws://relay.wormhole.quyo.net:4000/v1 \
-    --transit-helper tcp:transit.wormhole.quyo.net:4001 \
-    "$@"
