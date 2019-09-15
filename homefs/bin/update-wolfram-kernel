@@ -5,7 +5,8 @@ set -e
 conda remove -n wolfram -y --all
 conda create -n wolfram -y python=3 ipykernel notebook
 
-source activate wolfram
+. "/home/johm/miniconda3/etc/profile.d/conda.sh"
+conda activate wolfram
 
 pip install metakernel mathics
 # pip install git+https://github.com/mmatera/iwolfram
@@ -14,4 +15,4 @@ pushd ~/repository/github.com/mmatera/iwolfram
 python setup.py install
 popd
 
-source deactivate wolfram
+conda deactivate

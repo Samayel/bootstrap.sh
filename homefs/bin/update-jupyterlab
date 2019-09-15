@@ -3,17 +3,15 @@
 set -e
 
 conda remove  -n jupyterlab -y --all
-conda create  -n jupyterlab -y -c conda-forge       python=3 jupyter jupyterlab widgetsnbextension jupyter_contrib_nbextensions rise
-#conda install -n jupyterlab -y -c damianavila82     rise
+conda create  -n jupyterlab -y -c conda-forge       python=3 jupyter jupyterlab widgetsnbextension jupyter_contrib_nbextensions rise hide_code
 
-source activate jupyterlab
-
-pip install hide_code
+. "/home/johm/miniconda3/etc/profile.d/conda.sh"
+conda activate jupyterlab
 
 pip install jupyterlab_widgets
 # jupyter labextension install --py jupyterlab_widgets
 # jupyter labextension enable  --py jupyterlab_widgets
 
-source deactivate jupyterlab
+conda deactivate
 
 ssh shell 'service jupyterlab restart; service jupyterlab status'

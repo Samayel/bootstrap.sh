@@ -5,7 +5,8 @@ set -e
 conda remove -n matlab -y --all
 conda create -n matlab -y python=3.5 ipykernel notebook pyzmq numpy
 
-source activate matlab
+. "/home/johm/miniconda3/etc/profile.d/conda.sh"
+conda activate matlab
 
 pip install matlab_kernel
 
@@ -13,7 +14,7 @@ pushd ~/opt/MATLAB/R2018a/extern/engines/python
 python setup.py install
 popd
 
-source deactivate matlab
+conda deactivate
 
 
 # conda remove -n matlab -y --all

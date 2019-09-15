@@ -5,7 +5,8 @@ set -e
 conda remove -n mathics -y --all
 conda create -n mathics -y python=3
 
-source activate mathics
+. "/home/johm/miniconda3/etc/profile.d/conda.sh"
+conda activate mathics
 pip install mathics
 # pip install imathics
-source deactivate mathics
+conda deactivate

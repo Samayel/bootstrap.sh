@@ -5,6 +5,7 @@ set -e
 conda remove -n bash -y --all
 conda create -n bash -y python=3 ipykernel notebook
 
-source activate bash
+. "/home/johm/miniconda3/etc/profile.d/conda.sh"
+conda activate bash
 pip install bash_kernel
-source deactivate bash
+conda deactivate
