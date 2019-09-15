@@ -28,3 +28,5 @@
 #	new = green italic
 [gist]
 	home = /home/johm/repository/gist.github.com/Samayel
+[rebase]
+	autoStash = true
