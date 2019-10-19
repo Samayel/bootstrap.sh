@@ -7,7 +7,7 @@
 
  check filesystem runfs with path /run
    group system
-   if space usage > 80% for 5 times within 15 cycles then exec "/sbin/udevadm info --cleanup-db"
-   if inode usage > 80% for 5 times within 15 cycles then exec "/sbin/udevadm info --cleanup-db"
+#  if space usage > 80% for 5 times within 15 cycles then exec "/sbin/udevadm info --cleanup-db"
+#  if inode usage > 80% for 5 times within 15 cycles then exec "/sbin/udevadm info --cleanup-db"
    if space usage > 90% for 5 times within 15 cycles then alert
    if inode usage > 90% for 5 times within 15 cycles then alert
