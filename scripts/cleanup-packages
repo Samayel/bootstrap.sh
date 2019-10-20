@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+apt-show-versions | grep 'No available version' | egrep "$1" | awk -F: '{print $1}' | xargs apt purge -y
