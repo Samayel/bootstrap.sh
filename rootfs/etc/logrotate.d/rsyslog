@@ -3,7 +3,7 @@
 	rotate 28
 	daily
 	missingok
-	notifempty
+#	notifempty
 	delaycompress
 	compress
 	postrotate
@@ -27,7 +27,7 @@
 	rotate 28
 	daily
 	missingok
-	notifempty
+#	notifempty
 	compress
 	delaycompress
 	sharedscripts
