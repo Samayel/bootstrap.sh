@@ -11,6 +11,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: motd-news\.timer: Adding ([[:digit:].]+(h|min|s|ms|us) )+random time\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: user@[[:digit:]]+\.service: Killing process [[:digit:]]+ \((kill|systemctl)\) with signal SIGKILL\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: user-runtime-dir@[[:digit:]]+\.service: Unit not needed anymore\. Stopping\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: packagekit\.service: Main process exited, code=killed, status=15/TERM$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: failed to create db file '[^']+' for '[^']+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: Network interface NamePolicy= disabled on kernel command line, ignoring\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
@@ -41,3 +42,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ runuser: pam_unix\(runuser:session\): session closed for user [[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ 50-motd-news\[[[:digit:]]+\]:
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ popularity-contest: unable to submit report
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dbus-daemon\[[[:digit:]]+\]: \[system\] Activating via systemd: service name='org\.freedesktop\.PackageKit' unit='packagekit\.service' requested by ':1\.[[:digit:]]+' \(uid=0 pid=[[:digit:]]+ comm="/usr/bin/gdbus call --system --dest org\.freedeskto" label="unconfined"\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dbus-daemon\[[[:digit:]]+\]: \[system\] Successfully activated service 'org\.freedesktop\.PackageKit'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ PackageKit: daemon (start|quit)$
