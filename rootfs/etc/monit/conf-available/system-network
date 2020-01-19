@@ -2,22 +2,22 @@
    group system
    if failed  link then alert
    if changed link then alert
-   if saturation     > 50%    for 5 times within 15 cycles then alert
-   if download       > 5 MB/s for 5 times within 15 cycles then alert
-   if upload         > 5 MB/s for 5 times within 15 cycles then alert
-   if total download > 20 GB   in last hour then alert
-   if total upload   > 20 GB   in last hour then alert
-   if total download > 50 GB  in last day then alert
-   if total upload   > 50 GB  in last day then alert
+   if saturation     > 75%    for 25 times within 30 cycles then alert
+   if download       > 5 MB/s for 25 times within 30 cycles then alert
+   if upload         > 5 MB/s for 25 times within 30 cycles then alert
+   if total download >  50 GB  in last hour then alert
+   if total upload   >  50 GB  in last hour then alert
+   if total download > 100 GB  in last day then alert
+   if total upload   > 100 GB  in last day then alert
 
  check network private-network with interface eth1
    group system
    if failed  link then alert
    if changed link then alert
-   if saturation     > 50%    for 5 times within 15 cycles then alert
-   if download       > 5 MB/s for 5 times within 15 cycles then alert
-   if upload         > 5 MB/s for 5 times within 15 cycles then alert
-   if total download > 20 GB   in last hour then alert
-   if total upload   > 20 GB   in last hour then alert
-   if total download > 50 GB  in last day then alert
-   if total upload   > 50 GB  in last day then alert
+   if saturation     > 75%    for 25 times within 30 cycles then alert
+   if download       > 5 MB/s for 25 times within 30 cycles then alert
+   if upload         > 5 MB/s for 25 times within 30 cycles then alert
+   if total download >  50 GB  in last hour then alert
+   if total upload   >  50 GB  in last hour then alert
+   if total download > 100 GB  in last day then alert
+   if total upload   > 100 GB  in last day then alert
