@@ -1,109 +1,109 @@
  check host shell.johm.cst.fra1 with address shell.johm.cst.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host ttrss.johm.cst.fra1 with address ttrss.johm.cst.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host sandstorm.svc.fra1 with address sandstorm.svc.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host quyo.svc.fra1 with address quyo.svc.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host peru.cst.fra1 with address peru.cst.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host tokbela.cst.fra1 with address tokbela.cst.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host s2000.cst.fra1 with address s2000.cst.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host klio.cst.fra1 with address klio.cst.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host stats.fra1 with address stats.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.nyc3 with address vpn.nyc3.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.fra1 with address vpn.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.ams3 with address vpn.ams3.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.sgp1 with address vpn.sgp1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.sfo2 with address vpn.sfo2.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.tor1 with address vpn.tor1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.lon1 with address vpn.lon1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host vpn.blr1 with address vpn.blr1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host dox.fra1 with address dox.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host dox.ams3 with address dox.ams3.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host ns.fra1 with address ns.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host ca.fra1 with address ca.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
 
  check host mx.fra1 with address mx.fra1.do.quyo.net
    group network
-   if failed ping4 for 5 times within 15 cycles then alert  # IPv4 only
-   if failed ping6 for 5 times within 15 cycles then alert  # IPv6 only
+   if failed ping4 for 5 times within 30 cycles then alert  # IPv4 only
+   if failed ping6 for 5 times within 30 cycles then alert  # IPv6 only
