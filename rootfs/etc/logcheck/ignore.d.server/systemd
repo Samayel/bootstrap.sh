@@ -1,5 +1,5 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Stopping|Reloading) .+[.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopped|Reloaded) .+[.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Starting|Stopping|Reloading|Mounting)( |\.)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (Started|Stopped|Reloaded|Mounted)( |\.)
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Finished .+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: [a-z0-9.@_-]+\.(service|mount|socket|scope): Succeeded\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: apt-daily\.timer: Adding( [[:digit:]]+h)?( [[:digit:]]+min)?( [.[:digit:]]+m?s)? random time\.$
