@@ -44,8 +44,10 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ runuser: pam_unix\(runuser:session\): session closed for user [[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ 50-motd-news\[[[:digit:]]+\]:
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ popularity-contest: unable to submit report
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dbus-daemon\[[[:digit:]]+\]: \[system\] Activating via systemd: service name='org\.freedesktop\.PackageKit' unit='packagekit\.service' requested by ':1\.[[:digit:]]+' \(uid=0 pid=[[:digit:]]+ comm="/usr/bin/gdbus call --system --dest org\.freedeskto" label="unconfined"\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dbus-daemon\[[[:digit:]]+\]: \[system\] Successfully activated service 'org\.freedesktop\.PackageKit'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dbus-daemon\[[[:digit:]]+\]: \[system\] Activating via systemd: service name=
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dbus-daemon\[[[:digit:]]+\]: \[system\] Successfully activated service
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ PackageKit: daemon (start|quit)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ os-prober: debug: 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ [[:digit:]]+[[:alnum:]-]+: debug: (Not on UEFI platform$|/dev/vda[[:digit:]]+ )
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fwupdmgr\[[[:digit:]]+\]: Fetching (metadata|signature) https://cdn\.fwupd\.org/downloads/firmware\.xml\.gz(\.asc)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fwupdmgr\[[[:digit:]]+\]: Successfully downloaded new metadata: 0 local devices supported$
