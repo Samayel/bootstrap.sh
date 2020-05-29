@@ -19,6 +19,7 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 * johm@shell:~/.ssh/config
 * setup munin(-node)
 * install tarsnap (./scripts/tarsnap)
+* take back control from systemd networking (./scripts/disable-systemd-networking)
 
 ## Setup backup
 

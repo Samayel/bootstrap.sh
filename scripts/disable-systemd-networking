@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+#
+# https://www.naut.ca/blog/2018/12/12/disabling-systemd-networking/
+#
+
+#
+# Disabling networkd
+#
+
+apt install ifupdown
+
+joe /etc/network/interfaces
+
+systemctl stop    systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
+systemctl disable systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
+
+apt purge netplan.io
+
+
+#
+# Disabling resolved
+#
+
+systemctl stop    systemd-resolved
+systemctl disable systemd-resolved.service
+
+# rm  /etc/resolv.conf
+# joe /etc/resolv.conf
+
+
+apt remove openresolv
+apt purge dhcpcd5 isc-dhcp-client isc-dhcp-common
