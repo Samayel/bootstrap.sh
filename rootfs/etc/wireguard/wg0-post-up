@@ -3,8 +3,8 @@
 # iptables  -A FORWARD -i wg0 -j ACCEPT
 # ip6tables -A FORWARD -i wg0 -j ACCEPT
 
-iptables  -t nat -A POSTROUTING -s 172.23.222.0/24           -o ens3 -j MASQUERADE
-ip6tables -t nat -A POSTROUTING -s fd9b:48d9:b3fd:e917::/64  -o ens3 -j MASQUERADE
+iptables  -t nat -A POSTROUTING -s 172.23.222.0/24           -o eth0 -j MASQUERADE
+ip6tables -t nat -A POSTROUTING -s fd9b:48d9:b3fd:e917::/64  -o eth0 -j MASQUERADE
 
 
 
