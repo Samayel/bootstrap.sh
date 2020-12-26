@@ -1,4 +1,4 @@
- check process unbound with pidfile /var/run/unbound.pid
+ check process unbound with matching "/usr/sbin/unbound"
    group daemon
    group unbound
    start program = "/usr/sbin/service unbound start"
