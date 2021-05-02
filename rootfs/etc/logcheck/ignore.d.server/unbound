@@ -1,3 +1,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: generate keytag query _ta-[[:xdigit:]-]+. NULL IN$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: validation failure 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: validator: error. failed to classify response message: 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] error: read \(in tcp r\): Connection reset by peer for [:.[:xdigit:]]+ port [0-9]+$

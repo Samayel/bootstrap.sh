@@ -51,4 +51,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ [[:digit:]]+[[:alnum:]-]+: debug: (Not on UEFI platform$|/dev/vda[[:digit:]]+ )
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fwupdmgr\[[[:digit:]]+\]: Fetching (metadata|signature) https://cdn\.fwupd\.org/downloads/firmware\.xml\.gz(\.asc)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fwupdmgr\[[[:digit:]]+\]: Successfully downloaded new metadata: 0 local devices supported$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fwupdmgr\[[[:digit:]]+\]: Updating lvfs$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ fwupd\[[[:digit:]]+\]: [:[:digit:]]+ FuDeviceList         ignoring device [[:xdigit:]]+ \[optionrom\] existing device [[:xdigit:]]+ \[optionrom\] already exists$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ lxcfs\[[[:digit:]]+\]: proc_fuse\.c: [[:digit:]]+: proc_stat_read: cpu[[:digit:]]+ from / has unexpected cpu time: [[:digit:]]+ in /proc/stat, [[:digit:]]+ in cpuacct\.usage_all; unable to determine idle time$

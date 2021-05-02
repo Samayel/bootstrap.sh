@@ -8,4 +8,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent and passphrase cache \(restricted|access for web browsers\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent \(ssh-agent emulation\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent \(access for web browsers\)\.$
-
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ gpg-agent\[[[:digit:]]+\]: can't connect to the SCdaemon: IPC connect call failed$
