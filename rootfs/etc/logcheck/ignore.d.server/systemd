@@ -14,6 +14,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: user-runtime-dir@[[:digit:]]+\.service: Unit not needed anymore\. Stopping\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: packagekit\.service: Main process exited, code=killed, status=15/TERM$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Condition check resulted in MD array scrubbing - continuation being skipped\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: /lib/systemd/system/[.[:alnum:]-]+\.service:[[:digit:]]+: Unit configured to use KillMode=none\. This is unsafe, as it disables systemd's process lifecycle management for the service\. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'\. Support for KillMode=none is deprecated and will eventually be removed\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: failed to create db file '[^']+' for '[^']+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: Network interface NamePolicy= disabled on kernel command line, ignoring\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
