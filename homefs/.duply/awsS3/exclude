@@ -13,6 +13,7 @@
 - /mnt
 - /proc
 - /root/.cache/duplicity
+- /run
 - /sys
 - /tmp
 - /var/lib/docker
