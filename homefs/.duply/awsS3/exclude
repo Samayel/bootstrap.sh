@@ -15,4 +15,7 @@
 - /root/.cache/duplicity
 - /sys
 - /tmp
+- /var/lib/docker
 - /var/lib/lxcfs/cgroup
+- /var/lib/snapd
+- /swapfile
