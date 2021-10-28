@@ -6,7 +6,7 @@ while IFS= read -r -d '' certdir; do
     chmod 600 "/etc/haproxy/ssl/${certdir}.pem.ecdsa"
     rm -f "/etc/haproxy/ssl/${certdir}.pem.ecdsa.issuer"
     rm -f "/etc/haproxy/ssl/${certdir}.pem.ecdsa.ocsp"
-    /bootstrap.sh/externals/haproxy-ocsp-stapling-updater/hapos-upd --cert "/etc/haproxy/ssl/${certdir}.pem.ecdsa" --VAfile -
+    /bootstrap.sh/scripts/hapos-upd --cert "/etc/haproxy/ssl/${certdir}.pem.ecdsa" --VAfile -
 
 done < <(find /etc/ssl/letsencrypt -mindepth 1 -maxdepth 1 -type d -printf '%f\0')
 
