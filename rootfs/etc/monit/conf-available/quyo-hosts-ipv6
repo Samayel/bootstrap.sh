@@ -13,11 +13,6 @@
    if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
    every 5 cycles
 
- check host quyo.svc.fra1-ipv6 with address quyo.svc.fra1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
  check host peru.cst.fra1-ipv6 with address peru.cst.fra1.do.quyo.net
    group network
    if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
