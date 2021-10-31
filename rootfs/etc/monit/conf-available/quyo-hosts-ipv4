@@ -8,11 +8,6 @@
    if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
    every 5 cycles
 
- check host tokbela.cst.fra1-ipv4 with address tokbela.cst.fra1.do.quyo.net
-   group network
-   if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
-   every 5 cycles
-
  check host s2000.cst.fra1-ipv4 with address s2000.cst.fra1.do.quyo.net
    group network
    if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
