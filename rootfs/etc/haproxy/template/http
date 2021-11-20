@@ -10,7 +10,7 @@ backend bk_tcp80_haproxy
     mode tcp
     option tcplog
 
-    server srv_http_haproxy unix@/http.sock send-proxy-v2
+    server srv_http_haproxy unix@/http.sock send-proxy-v2 check
 
 frontend ft_http
     mode http
