@@ -87,3 +87,8 @@
    group network
    if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
    every 5 cycles
+
+ check host matrix.fra1-ipv6 with address matrix.fra1.do.quyo.net
+   group network
+   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
+   every 5 cycles
