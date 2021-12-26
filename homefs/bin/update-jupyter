@@ -3,6 +3,6 @@
 set -e
 
 conda remove  -n jupyter -y --all
-conda create  -n jupyter -y -c conda-forge       python=3 jupyter widgetsnbextension jupyter_contrib_nbextensions rise hide_code
+conda create  -n jupyter -y -c conda-forge       python=3 jupyter widgetsnbextension jupyter_contrib_nbextensions rise hide_code xeus-sqlite xeus-python xeus-cling
 
 ssh shell 'service jupyter restart; service jupyter status'

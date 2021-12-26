@@ -3,7 +3,7 @@
 set -e
 
 conda remove  -n jupyterlab -y --all
-conda create  -n jupyterlab -y -c conda-forge       python=3 jupyter jupyterlab widgetsnbextension jupyter_contrib_nbextensions rise hide_code
+conda create  -n jupyterlab -y -c conda-forge       python=3 jupyter jupyterlab widgetsnbextension jupyter_contrib_nbextensions rise hide_code xeus-sqlite xeus-python xeus-cling
 
 . "/home/johm/miniconda3/etc/profile.d/conda.sh"
 conda activate jupyterlab
