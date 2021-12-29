@@ -63,11 +63,6 @@
    if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
    every 5 cycles
 
- check host ca.fra1-ipv4 with address ca.fra1.do.quyo.net
-   group network
-   if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
-   every 5 cycles
-
  check host mx.fra1-ipv4 with address mx.fra1.do.quyo.net
    group network
    if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
