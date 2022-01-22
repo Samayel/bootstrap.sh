@@ -1,2 +1,2 @@
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ chronyd\[[[:digit:]]+\]: Selected source [:.[:xdigit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ chronyd\[[[:digit:]]+\]: Selected source [:.[:xdigit:]]+
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ chronyd\[[[:digit:]]+\]: Source [:.[:xdigit:]]+ replaced with [:.[:xdigit:]]+$
