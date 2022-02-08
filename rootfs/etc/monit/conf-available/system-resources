@@ -12,4 +12,4 @@
    if cpu usage (system) > 75% for 25 times within 30 cycles then alert
 
    if memory usage       > 90% for 25 times within 30 cycles then alert
-   if swap usage         > 90% for 25 times within 30 cycles then alert
+   #if swap usage        > 90% for 25 times within 30 cycles then alert

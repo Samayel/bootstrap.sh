@@ -73,6 +73,11 @@
    if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
    every 5 cycles
 
+ check host rancher.fra1-ipv4 with address rancher.fra1.do.quyo.net
+   group network
+   if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only
+   every 5 cycles
+
  check host matrix.fra1-ipv4 with address matrix.fra1.do.quyo.net
    group network
    if failed ping4 for 3 times within 12 cycles then alert  # IPv4 only

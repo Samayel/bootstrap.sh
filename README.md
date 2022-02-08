@@ -13,13 +13,15 @@ BOOTSTRAP_TARGET=root@host ./remote-bootstrap
 
 ## Post-Scripts
 
-* Samayel/quyo.net/scripts/*quyo-runall
-* Samayel/bootstrap.sh/rootfs/etc/monit/conf-available/quyo-hosts
-* https://discovery.cryptosense.com
-* johm@shell:~/.ssh/config
-* setup munin(-node)
-* install tarsnap (./scripts/tarsnap)
-* take back control from systemd networking (./scripts/disable-systemd-networking)
+* check/fix hostname
+* update quyo.net/scripts/*quyo-runall
+* update bootstrap.sh/rootfs/etc/monit/conf-available/quyo-hosts
+* update ~/.ssh/config
+* setup checkmk
+* optional
+  * install tarsnap (./scripts/tarsnap)
+  * take back control from systemd networking (./scripts/disable-systemd-networking)
+  * ClouDNS Monitoring
 
 ## Setup backup
 
