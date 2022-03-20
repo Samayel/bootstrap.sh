@@ -27,7 +27,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: PAM: User not known to the underlying authentication module for i(llegal|nvalid) user [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: ssh_msg_send: write$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: kex protocol error: type 30 seq 1 \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: kex_exchange_identification: (read: Connection reset by peer|Connection closed by remote host)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: kex_exchange_identification: (read: Connection reset by peer|Connection closed by remote host|banner line contains invalid characters)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: banner exchange: Connection from ([:.[:xdigit:]]+|UNKNOWN)( port [[:digit:]]{1,5})?: invalid format$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Timeout before authentication for [:[:alnum:].]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Write failed: (Connection (timed out|reset by peer)|Broken pipe)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: recv_rexec_state: ssh_msg_recv failed$
