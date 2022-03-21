@@ -27,7 +27,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: PAM: User not known to the underlying authentication module for i(llegal|nvalid) user [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: ssh_msg_send: write$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: kex protocol error: type 30 seq 1 \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: kex_exchange_identification: (read: Connection reset by peer|Connection closed by remote host|banner line contains invalid characters)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: kex_exchange_identification: (read: Connection reset by peer|Connection closed by remote host|banner line contains invalid characters|client sent invalid protocol identifier .+)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: banner exchange: Connection from ([:.[:xdigit:]]+|UNKNOWN)( port [[:digit:]]{1,5})?: invalid format$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Timeout before authentication for [:[:alnum:].]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Write failed: (Connection (timed out|reset by peer)|Broken pipe)$
@@ -46,7 +46,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: warning: /etc/hosts\.(allow|deny), line [[:digit:]]+: can't verify hostname: getaddrinfo\([._[:alnum:]-]+, AF_INET\) failed$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: warning: /etc/hosts\.(allow|deny), line [[:digit:]]+: host name/(name|address) mismatch: [._[:alnum:]-]+ != [._[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?Unable to negotiate with [:.[:xdigit:]]+ port [[:digit:]]{1,5}: no matching (key exchange method|cipher|MAC|host key type) found. Their offer:
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting invalid user [-_.[:alnum:]]* [:.[:xdigit:]]+ port [[:digit:]]{1,5}: Change of username or service not allowed: \([-_.[:alnum:]]*,ssh-connection\) -> \([-_.[:alnum:]]*,ssh-connection\) \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting invalid user [-_.![:alnum:]]* [:.[:xdigit:]]+ port [[:digit:]]{1,5}: Change of username or service not allowed: \([-_.![:alnum:]]*,ssh-connection\) -> \([-_.[:alnum:]]*,ssh-connection\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [:[:xdigit:].]+ port [[:digit:]]{1,5}: SSH-[._ [:alnum:]-]+ vs. SSH-[._ [:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: mm_answer_moduli: bad parameters:( 2048| 1024)+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [^[:space:]]+ from [:.[:xdigit:]]+ port [[:digit:]]{1,5} ssh2 \[preauth\]$
@@ -56,4 +56,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: dispatch_protocol_error: type [[:digit:]]+ seq [[:digit:]]+ \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: padding error: need [[:digit:]]+ block [[:digit:]]+ mod [[:digit:]]+ \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: PAM service\(sshd\) ignoring max retries; [[:digit:]]+ > [[:digit:]]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: userauth_pubkey: key type ssh-rsa not in PubkeyAcceptedKeyTypes \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sftp-server\[[[:digit:]]+\]: error: Unknown extended request "home-directory"$
