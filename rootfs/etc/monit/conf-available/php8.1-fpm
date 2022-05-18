@@ -1,0 +1,6 @@
+ check process php8.1-fpm with pidfile /var/run/php/php8.1-fpm.pid
+   group daemon
+   group php8.1-fpm
+   start program = "/usr/sbin/service php8.1-fpm start"
+   stop  program = "/usr/sbin/service php8.1-fpm stop"
+   if 5 restarts within 5 cycles then timeout
