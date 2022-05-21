@@ -1,4 +1,4 @@
- check process chronyd with pidfile /var/run/chronyd.pid
+ check process chronyd with pidfile /var/run/chrony/chronyd.pid
    group daemon
    group chronyd
    start program = "/usr/sbin/service chrony start"
