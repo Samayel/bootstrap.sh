@@ -3,3 +3,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] info: validator: error. failed to classify response message: 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: \[[[:digit:]:]+\] error: read \(in tcp r\): Connection reset by peer for [:.[:xdigit:]]+ port [0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: message repeated [[:digit:]]+ times: \[ \[[[:digit:]:]+\] info: validation failure 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ unbound: (message repeated [[:digit:]]+ times: \[ )?\[[[:digit:]:]+\] error: udp connect failed: Invalid argument for [:.[:xdigit:]]+ port [0-9]+(\])?$

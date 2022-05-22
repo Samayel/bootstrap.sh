@@ -18,6 +18,9 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: .+: Deactivated successfully\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Configuration file [^ ]+ is marked world-inaccessible\. This has no effect as configuration data is accessible via APIs without restrictions\. Proceeding anyway\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: rsyslog\.service: Sent signal SIGHUP to main process [0-9]+ \(rsyslogd\) on client request\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: fwupd-refresh\.service: Main process exited, code=exited, status=1/FAILURE$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: fwupd-refresh\.service: Failed with result 'exit-code'\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Failed to start Refresh fwupd metadata and update motd\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: failed to create db file '[^']+' for '[^']+'$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-udevd\[[[:digit:]]+\]: Network interface NamePolicy= disabled on kernel command line, ignoring\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-resolved\[[[:digit:]]+\]: Switching to system DNS server [[:xdigit:].:]{3,39}\.$
