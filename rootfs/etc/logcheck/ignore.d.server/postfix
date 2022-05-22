@@ -186,6 +186,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: psc_cache_update: btree:/var/lib/postfix/postscreen_cache update average delay is [[:digit:]]+ ms$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: dnsblog reply timeout [[:digit:]]+s for [._[:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: warning: getpeername: Transport endpoint is not connected -- dropping this connection$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/postscreen\[[[:digit:]]+\]: using backwards-compatible default setting respectful_logging=no for client \[[.:[:xdigit:]]+\]:[[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/dnsblog\[[[:digit:]]+\]: addr [.:[:xdigit:]]+ listed by domain [-._[:alnum:]]+ as [.[:digit:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/dnsblog\[[[:digit:]]+\]: warning: dnsblog_query: lookup error for DNS query [._[:alnum:]-]+: Host or domain name not found. Name service error for name=[._[:alnum:]-]+ type=A: Host not found, try again$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: [[:xdigit:]]+: client=[._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\], orig_client=[._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]$
