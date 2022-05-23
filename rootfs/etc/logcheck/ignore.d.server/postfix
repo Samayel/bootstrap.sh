@@ -193,3 +193,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: proxy-accept: END-OF-MESSAGE: 250 2\.0\.0 from MTA\(smtp:\[127.0.0.1\]:10025\): 250 2\.0\.0 Ok: queued as [[:xdigit:]]+; from=<[^[:space:]]*> to=<[^[:space:]]*> proto=E?SMTP helo=<[^[:space:]]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: proxy-reject: END-OF-MESSAGE: 554 5\.7\.0 Reject, id=[[:digit:]-]+ - spam; from=<[^[:space:]]*> to=<[^[:space:]]+> proto=E?SMTP helo=<[^[:space:]]+>$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: improper command pipelining after [[:upper:]]+ from [._[:alnum:]-]+\[[[:xdigit:].:]{3,39}\]:
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/smtpd\[[[:digit:]]+\]: using backwards-compatible default setting smtpd_relay_before_recipient_restrictions=no to reject recipient 
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ postfix/tlsproxy\[[[:digit:]]+\]: TLS handshake failed for service=smtpd peer=\[[[:xdigit:].:]{3,39}\]:[[:digit:]]+$

@@ -8,4 +8,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent and passphrase cache \(restricted|access for web browsers\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent \(ssh-agent emulation\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Closed GnuPG cryptographic agent \(access for web browsers\)\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ gpg-agent\[[[:digit:]]+\]: can't connect to the SCdaemon: IPC connect call failed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ gpg-agent\[[[:digit:]]+\]: (message repeated [[:digit:]]+ times: \[ )?can't connect to the SCdaemon: IPC connect call failed(\])?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ gpg-agent\[[[:digit:]]+\]: gpg-agent \(GnuPG\) [[:digit:].]+ starting in supervised mode\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ gpg-agent\[[[:digit:]]+\]: using fd [[:digit:]]+ for (std|ssh|extra|browser) socket \(/run/user/0/gnupg/S\.gpg-agent(\.(ssh|extra|browser))?\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ gpg-agent\[[[:digit:]]+\]: listening on: std=[[:digit:]]+ extra=[[:digit:]]+ browser=[[:digit:]]+ ssh=[[:digit:]]+$

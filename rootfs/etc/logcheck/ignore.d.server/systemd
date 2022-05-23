@@ -17,7 +17,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: /lib/systemd/system/[.[:alnum:]-]+\.service:[[:digit:]]+: Unit configured to use KillMode=none\. This is unsafe, as it disables systemd's process lifecycle management for the service\. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'\. Support for KillMode=none is deprecated and will eventually be removed\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: .+: Deactivated successfully\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Configuration file [^ ]+ is marked world-inaccessible\. This has no effect as configuration data is accessible via APIs without restrictions\. Proceeding anyway\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: rsyslog\.service: Sent signal SIGHUP to main process [0-9]+ \(rsyslogd\) on client request\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: (message repeated [[:digit:]]+ times: \[ )?rsyslog\.service: Sent signal SIGHUP to main process [0-9]+ \(rsyslogd\) on client request\.(\])?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: fwupd-refresh\.service: Main process exited, code=exited, status=1/FAILURE$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: fwupd-refresh\.service: Failed with result 'exit-code'\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[[:digit:]]+\]: Failed to start Refresh fwupd metadata and update motd\.$
