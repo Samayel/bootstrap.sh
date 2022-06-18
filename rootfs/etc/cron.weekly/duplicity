@@ -1,3 +1,9 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# /bootstrap.sh/externals/duply/duply awsS3 purgeIncr_purgeFull_purge --force
+export USER=root
+source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+CRONIC=/bootstrap.sh/scripts/cronic
+DUPLY=/bootstrap.sh/scripts/duply.nix
+
+# ${CRONIC} ${DUPLY} awsS3 purgeIncr_purgeFull_purge --force
