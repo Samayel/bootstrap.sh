@@ -7,9 +7,3 @@
 [submodule "externals/TunSafe"]
 	path = externals/TunSafe
 	url = https://github.com/TunSafe/TunSafe.git
-[submodule "externals/munin-monitoring-contrib"]
-	path = externals/munin-monitoring-contrib
-	url = https://github.com/munin-monitoring/contrib.git
-[submodule "externals/feather"]
-	path = externals/feather
-	url = https://github.com/danrue/feather.git

@@ -12,8 +12,5 @@ apt install -y htop iotop iftop traceroute
 DEBIAN_FRONTEND=noninteractive apt install -y postfix logcheck
 apt install -y cron-apt
 apt install -y monit
-apt install -y ccze
 # apt install -y logwatch libsys-cpu-perl libsys-meminfo-perl
 apt install -y fail2ban whois python3-pyinotify
-apt install -y duplicity gnupg python-boto
-apt install -y hash-slinger
