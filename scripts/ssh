@@ -23,4 +23,3 @@ passwd -dl root
 ./scripts/ssh-hostkeys
 ./scripts/ssh-userkeys
 ./scripts/ssh-moduli
-./scripts/ssh-dhtool
