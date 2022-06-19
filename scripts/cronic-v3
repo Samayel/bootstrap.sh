@@ -16,6 +16,8 @@ set +e
 RESULT=$?
 set -e
 
+sed -i -e '/^\/nix\/store\/[a-z0-9.-]*\/bin\/\.duply-wrapped: line [0-9]*: WARNING:: command not found$/d' $TRACE
+
 PATTERN="^${PS4:0:1}\\+${PS4:1}"
 if grep -aq "$PATTERN" $TRACE
 then
