@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+nix-channel --update
+
+# CAUTION: very high load / out-of-memory in case of multiple nixpkgs channels possible
+nix-env -u --always
+
+# nix-env -q --installed | sed -e 's|-[0-9.]*$||' | xargs -I % sh -c 'echo updating % ; nix-env -iA nixpkgs.%'
