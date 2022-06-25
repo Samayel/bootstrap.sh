@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+nix copy \
+    --extra-experimental-features nix-command \
+    --to 's3://nix-cache-quyo-net?profile=nix-cache&region=eu-central-1' \
+    $(nix-build ./default.nix -A ${1})
