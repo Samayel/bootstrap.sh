@@ -2,5 +2,6 @@
 
 set -e
 
-nix-shell -p symlinks --run 'symlinks -dr /nix/var/nix/gcroots/ | egrep -v ^absolute:'
+nix run nixpkgs#symlinks -- -dr /nix/var/nix/gcroots/ | egrep -v ^absolute:
+
 nix-collect-garbage -d
