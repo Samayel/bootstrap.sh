@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-nix flake archive --json \
-  | jq -r '.path,(.inputs|to_entries[].value.path)' \
-  | cachix push quyo-public
