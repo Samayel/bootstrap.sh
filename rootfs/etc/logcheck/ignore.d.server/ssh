@@ -50,7 +50,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [:[:xdigit:].]+ port [[:digit:]]{1,5}: SSH-[._ [:alnum:]-]+ vs. SSH-[._ [:alnum:]-]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: mm_answer_moduli: bad parameters:( 2048| 1024)+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [^[:space:]]+ from [:.[:xdigit:]]+ port [[:digit:]]{1,5} ssh2 \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?ssh_dispatch_run_fatal: Connection from ([:.[:xdigit:]]+|UNKNOWN) port [[:digit:]]{1,5}: (DH GEX group out of range|message authentication code incorrect|incomplete message|Broken pipe) \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (fatal: )?ssh_dispatch_run_fatal: Connection from ([:.[:xdigit:]]+|UNKNOWN) port [[:digit:]]{1,5}: (DH GEX group out of range|message authentication code incorrect|incomplete message|Broken pipe|Connection corrupted) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: invalid public DH value: <= 1 \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: pam_systemd\(sshd:session\): Failed to create session: No such file or directory$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: dispatch_protocol_error: type [[:digit:]]+ seq [[:digit:]]+ \[preauth\]$
