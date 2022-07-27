@@ -3,8 +3,5 @@
 export USER=root
 source $HOME/.nix-profile/etc/profile.d/nix.sh
 
-CRONIC=/bootstrap.sh/scripts/cronic
-DUPLY=/bootstrap.sh/scripts/duply.nix.sh
-
-${CRONIC} ${DUPLY} awsS3 backup
-${CRONIC} ${DUPLY} awsS3 purgeIncr_purgeFull_purge --force
+duply-cronic awsS3 backup
+duply-cronic awsS3 purgeIncr_purgeFull_purge --force
