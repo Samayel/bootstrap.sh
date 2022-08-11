@@ -9,6 +9,7 @@
 
 - /dev
 - /lost+found
+- /matrix/postgres-backup
 - /media
 - /mnt
 - /proc
