@@ -1,53 +1,3 @@
- check host vpn.nyc3-ipv6 with address vpn.nyc3.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.fra1-ipv6 with address vpn.fra1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.ams3-ipv6 with address vpn.ams3.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.sgp1-ipv6 with address vpn.sgp1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.sfo2-ipv6 with address vpn.sfo2.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.tor1-ipv6 with address vpn.tor1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.lon1-ipv6 with address vpn.lon1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host vpn.blr1-ipv6 with address vpn.blr1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host dox.fra1-ipv6 with address dox.fra1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host dox.ams3-ipv6 with address dox.ams3.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
  check host ns.fra1-ipv6 with address ns.fra1.do.quyo.net
    group network
    if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
@@ -59,11 +9,6 @@
    every 5 cycles
 
  check host docker.fra1-ipv6 with address docker.fra1.do.quyo.net
-   group network
-   if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
-   every 5 cycles
-
- check host rancher.fra1-ipv6 with address rancher.fra1.do.quyo.net
    group network
    if failed ping6 for 3 times within 12 cycles then alert  # IPv6 only
    every 5 cycles
